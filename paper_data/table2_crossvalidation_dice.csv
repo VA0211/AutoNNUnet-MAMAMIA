@@ -1,0 +1,11 @@
+backbone,fold,validation_dice,n_cases
+ConvolutionalEncoder,0,0.7333,240
+ConvolutionalEncoder,1,0.7783,240
+ConvolutionalEncoder,2,0.7321,240
+ConvolutionalEncoder,3,0.76,240
+ConvolutionalEncoder,4,0.7381,240
+ResidualEncoderL,0,0.7502,240
+ResidualEncoderL,1,0.7889,240
+ResidualEncoderL,2,0.7847,240
+ResidualEncoderL,3,0.7757,240
+ResidualEncoderL,4,0.7579,240

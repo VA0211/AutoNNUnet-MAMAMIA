@@ -1,0 +1,2877 @@
+[2026-08-03 09:12:31,688][root][INFO] - Starting training script
+[2026-08-03 09:12:31,688][root][INFO] - torch.cuda.is_available(): True
+[2026-08-03 09:12:31,688][root][INFO] - Setting seed
+[2026-08-03 09:12:31,690][root][INFO] - Sleeping for 15 seconds
+[2026-08-03 09:12:46,691][root][INFO] - Setting up emissions tracker
+[2026-08-03 09:12:48,067][root][INFO] - Creating trainer
+[2026-08-03 09:12:49,512][AutoExperimentPlanner][INFO] - Using base_num_features: 32
+[2026-08-03 09:12:49,513][AutoExperimentPlanner][INFO] - Using max_features: 320
+[2026-08-03 09:12:49,513][AutoExperimentPlanner][INFO] - Applied model_scale = 1.00
+[2026-08-03 09:12:49,513][AutoExperimentPlanner][INFO] - Encoder blocks per stage: (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)
+[2026-08-03 09:12:49,514][AutoExperimentPlanner][INFO] - Decoder blocks per stage: (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)
+[2026-08-03 09:12:49,527][AutoExperimentPlanner][INFO] - Using normalization: <class 'torch.nn.modules.instancenorm.InstanceNorm3d'>
+[2026-08-03 09:12:49,527][AutoExperimentPlanner][INFO] - Using activation function: torch.nn.LeakyReLU
+[2026-08-03 09:12:49,527][AutoExperimentPlanner][INFO] - Using dropout: None
+[2026-08-03 09:12:50,831][AutoExperimentPlanner][INFO] - Using normalization: <class 'torch.nn.modules.instancenorm.InstanceNorm2d'>
+[2026-08-03 09:12:50,832][AutoExperimentPlanner][INFO] - Using activation function: torch.nn.LeakyReLU
+[2026-08-03 09:12:50,832][AutoExperimentPlanner][INFO] - Using dropout: None
+[2026-08-03 09:12:51,331][Trainer][INFO] - 
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+[2026-08-03 09:12:51,331][Trainer][INFO] - Updated hyperparameter config:
+[2026-08-03 09:12:51,332][Trainer][INFO] - num_epochs: 300
+[2026-08-03 09:12:51,332][Trainer][INFO] - total_epochs: 300
+[2026-08-03 09:12:51,332][Trainer][INFO] - optimizer: SGD
+[2026-08-03 09:12:51,332][Trainer][INFO] - momentum: 0.99
+[2026-08-03 09:12:51,332][Trainer][INFO] - initial_lr: 0.01
+[2026-08-03 09:12:51,332][Trainer][INFO] - weight_decay: 3e-05
+[2026-08-03 09:12:51,332][Trainer][INFO] - lr_scheduler: PolyLRScheduler
+[2026-08-03 09:12:51,332][Trainer][INFO] - oversample_foreground_percent: 0.33
+[2026-08-03 09:12:51,332][Trainer][INFO] - loss_function: DiceAndCrossEntropyLoss
+[2026-08-03 09:12:51,332][Trainer][INFO] - aug_factor: 1.0
+[2026-08-03 09:12:51,332][Trainer][INFO] - aug_scale_prob: 0.2
+[2026-08-03 09:12:51,332][Trainer][INFO] - aug_rotate_prob: 0.2
+[2026-08-03 09:12:51,332][Trainer][INFO] - aug_gaussian_noise_prob: 0.1
+[2026-08-03 09:12:51,332][Trainer][INFO] - aug_gaussian_blur_prob: 0.2
+[2026-08-03 09:12:51,332][Trainer][INFO] - aug_brightness_prob: 0.15
+[2026-08-03 09:12:51,332][Trainer][INFO] - aug_contrast_prob: 0.15
+[2026-08-03 09:12:51,332][Trainer][INFO] - aug_lowres_prob: 0.25
+[2026-08-03 09:12:51,332][Trainer][INFO] - aug_gamma_1_prob: 0.1
+[2026-08-03 09:12:51,332][Trainer][INFO] - aug_gamma_2_prob: 0.3
+[2026-08-03 09:12:51,332][Trainer][INFO] - encoder_type: ConvolutionalEncoder
+[2026-08-03 09:12:51,333][Trainer][INFO] - base_num_features: 32
+[2026-08-03 09:12:51,333][Trainer][INFO] - max_features: 320
+[2026-08-03 09:12:51,333][Trainer][INFO] - activation: LeakyReLU
+[2026-08-03 09:12:51,333][Trainer][INFO] - dropout_rate: 0.0
+[2026-08-03 09:12:51,333][Trainer][INFO] - model_scale: 1
+[2026-08-03 09:12:51,333][Trainer][INFO] - normalization: InstanceNorm
+[2026-08-03 09:12:51,355][root][INFO] - Starting training
+[2026-08-03 09:12:51,356][Trainer][INFO] - do_dummy_2d_data_aug: True
+[2026-08-03 09:12:51,360][Trainer][INFO] - Using splits from existing split file: /home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/splits_final.json
+[2026-08-03 09:12:51,362][Trainer][INFO] - The split file contains 5 splits.
+[2026-08-03 09:12:51,362][Trainer][INFO] - Desired fold for training: 3
+[2026-08-03 09:12:51,362][Trainer][INFO] - This split has 960 training and 240 validation cases.
+[2026-08-03 09:12:59,318][Trainer][INFO] - Using torch.compile...
+[2026-08-03 09:13:00,338][Trainer][INFO] - Set optimizer to SGD
+[2026-08-03 09:13:00,338][Trainer][INFO] - Set lr_scheduler to PolyLRScheduler
+[2026-08-03 09:13:00,339][Trainer][INFO] - Set loss to DeepSupervisionWrapper
+[2026-08-03 09:13:00,340][Trainer][INFO] - 
+This is the configuration used by this training:
+Configuration name: 3d_fullres
+ {'data_identifier': 'nnUNetPlans_3d_fullres', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 2, 'patch_size': (56, 192, 192), 'median_image_size_in_voxels': [80.0, 256.0, 256.0], 'spacing': [2.0, 0.7031000256538391, 0.7031000256538391], 'normalization_schemes': ['ZScoreNormalization', 'ZScoreNormalization', 'ZScoreNormalization'], 'use_mask_for_norm': [False, False, False], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.PlainConvUNet', 'arch_kwargs': {'n_stages': 6, 'features_per_stage': (32, 64, 128, 256, 320, 320), 'conv_op': 'torch.nn.modules.conv.Conv3d', 'kernel_sizes': ((1, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3)), 'strides': ((1, 1, 1), (1, 2, 2), (2, 2, 2), (2, 2, 2), (2, 2, 2), (1, 2, 2)), 'n_conv_per_stage': (2, 2, 2, 2, 2, 2), 'n_conv_per_stage_decoder': (2, 2, 2, 2, 2), 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm3d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}, 'deep_supervision': True}, '_kw_requires_import': ('conv_op', 'norm_op', 'dropout_op', 'nonlin')}, 'batch_dice': False} 
+
+[2026-08-03 09:13:00,340][Trainer][INFO] - These are the global plan.json settings:
+ {'dataset_name': 'Dataset501_MAMAMIA', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [2.0, 0.7031000256538391, 0.7031000256538391], 'original_median_shape_after_transp': [80, 256, 256], 'image_reader_writer': 'SimpleITKIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'AutoExperimentPlanner', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 8399.0, 'mean': 526.5316162109375, 'median': 358.0, 'min': 0.0, 'percentile_00_5': 22.0, 'percentile_99_5': 2252.0, 'std': 497.0259704589844}, '1': {'max': 13172.0, 'mean': 1096.2913818359375, 'median': 659.0, 'min': 0.0, 'percentile_00_5': 51.0, 'percentile_99_5': 5549.0, 'std': 1145.160888671875}, '2': {'max': 13668.0, 'mean': 1225.3990478515625, 'median': 762.0, 'min': 0.0, 'percentile_00_5': 54.0, 'percentile_99_5': 5765.0, 'std': 1223.5499267578125}}} 
+
+[2026-08-03 09:13:00,341][Trainer][INFO] - Unable to plot network architecture: nnUNet_compile is enabled!
+[2026-08-03 09:13:00,347][Trainer][INFO] - 
+[2026-08-03 09:13:00,347][Trainer][INFO] - Epoch 0
+[2026-08-03 09:13:00,347][Trainer][INFO] - Current learning rate: 0.01
+[2026-08-03 09:14:35,471][Trainer][INFO] - train_loss -0.2463
+[2026-08-03 09:14:35,471][Trainer][INFO] - val_loss -0.3757
+[2026-08-03 09:14:35,471][Trainer][INFO] - Pseudo dice 0.4454
+[2026-08-03 09:14:35,471][Trainer][INFO] - Epoch time: 95.13 s
+[2026-08-03 09:14:35,471][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.4454
+[2026-08-03 09:14:36,553][Trainer][INFO] - 
+[2026-08-03 09:14:36,553][Trainer][INFO] - Epoch 1
+[2026-08-03 09:14:36,553][Trainer][INFO] - Current learning rate: 0.00997
+[2026-08-03 09:15:34,860][Trainer][INFO] - train_loss -0.3785
+[2026-08-03 09:15:34,860][Trainer][INFO] - val_loss -0.4827
+[2026-08-03 09:15:34,860][Trainer][INFO] - Pseudo dice 0.5506
+[2026-08-03 09:15:34,860][Trainer][INFO] - Epoch time: 58.31 s
+[2026-08-03 09:15:34,860][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.456
+[2026-08-03 09:15:36,134][Trainer][INFO] - 
+[2026-08-03 09:15:36,134][Trainer][INFO] - Epoch 2
+[2026-08-03 09:15:36,134][Trainer][INFO] - Current learning rate: 0.00994
+[2026-08-03 09:16:34,329][Trainer][INFO] - train_loss -0.4338
+[2026-08-03 09:16:34,329][Trainer][INFO] - val_loss -0.3988
+[2026-08-03 09:16:34,329][Trainer][INFO] - Pseudo dice 0.3508
+[2026-08-03 09:16:34,330][Trainer][INFO] - Epoch time: 58.2 s
+[2026-08-03 09:16:35,210][Trainer][INFO] - 
+[2026-08-03 09:16:35,210][Trainer][INFO] - Epoch 3
+[2026-08-03 09:16:35,210][Trainer][INFO] - Current learning rate: 0.00991
+[2026-08-03 09:17:33,451][Trainer][INFO] - train_loss -0.4838
+[2026-08-03 09:17:33,451][Trainer][INFO] - val_loss -0.605
+[2026-08-03 09:17:33,451][Trainer][INFO] - Pseudo dice 0.6876
+[2026-08-03 09:17:33,451][Trainer][INFO] - Epoch time: 58.24 s
+[2026-08-03 09:17:33,451][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.4697
+[2026-08-03 09:17:34,764][Trainer][INFO] - 
+[2026-08-03 09:17:34,764][Trainer][INFO] - Epoch 4
+[2026-08-03 09:17:34,764][Trainer][INFO] - Current learning rate: 0.00988
+[2026-08-03 09:18:33,591][Trainer][INFO] - train_loss -0.486
+[2026-08-03 09:18:33,591][Trainer][INFO] - val_loss -0.5416
+[2026-08-03 09:18:33,591][Trainer][INFO] - Pseudo dice 0.6329
+[2026-08-03 09:18:33,591][Trainer][INFO] - Epoch time: 58.83 s
+[2026-08-03 09:18:33,591][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.486
+[2026-08-03 09:18:34,927][Trainer][INFO] - 
+[2026-08-03 09:18:34,928][Trainer][INFO] - Epoch 5
+[2026-08-03 09:18:34,928][Trainer][INFO] - Current learning rate: 0.00985
+[2026-08-03 09:19:33,122][Trainer][INFO] - train_loss -0.5222
+[2026-08-03 09:19:33,122][Trainer][INFO] - val_loss -0.5113
+[2026-08-03 09:19:33,122][Trainer][INFO] - Pseudo dice 0.5125
+[2026-08-03 09:19:33,122][Trainer][INFO] - Epoch time: 58.2 s
+[2026-08-03 09:19:33,122][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.4886
+[2026-08-03 09:19:34,405][Trainer][INFO] - 
+[2026-08-03 09:19:34,405][Trainer][INFO] - Epoch 6
+[2026-08-03 09:19:34,405][Trainer][INFO] - Current learning rate: 0.00982
+[2026-08-03 09:20:32,723][Trainer][INFO] - train_loss -0.5283
+[2026-08-03 09:20:32,723][Trainer][INFO] - val_loss -0.5514
+[2026-08-03 09:20:32,723][Trainer][INFO] - Pseudo dice 0.6076
+[2026-08-03 09:20:32,724][Trainer][INFO] - Epoch time: 58.32 s
+[2026-08-03 09:20:32,724][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.5005
+[2026-08-03 09:20:34,071][Trainer][INFO] - 
+[2026-08-03 09:20:34,071][Trainer][INFO] - Epoch 7
+[2026-08-03 09:20:34,071][Trainer][INFO] - Current learning rate: 0.00979
+[2026-08-03 09:21:32,452][Trainer][INFO] - train_loss -0.517
+[2026-08-03 09:21:32,452][Trainer][INFO] - val_loss -0.5818
+[2026-08-03 09:21:32,452][Trainer][INFO] - Pseudo dice 0.6475
+[2026-08-03 09:21:32,452][Trainer][INFO] - Epoch time: 58.38 s
+[2026-08-03 09:21:32,452][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.5152
+[2026-08-03 09:21:33,767][Trainer][INFO] - 
+[2026-08-03 09:21:33,767][Trainer][INFO] - Epoch 8
+[2026-08-03 09:21:33,767][Trainer][INFO] - Current learning rate: 0.00976
+[2026-08-03 09:22:32,034][Trainer][INFO] - train_loss -0.5206
+[2026-08-03 09:22:32,034][Trainer][INFO] - val_loss -0.5183
+[2026-08-03 09:22:32,034][Trainer][INFO] - Pseudo dice 0.5706
+[2026-08-03 09:22:32,034][Trainer][INFO] - Epoch time: 58.27 s
+[2026-08-03 09:22:32,034][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.5208
+[2026-08-03 09:22:33,419][Trainer][INFO] - 
+[2026-08-03 09:22:33,419][Trainer][INFO] - Epoch 9
+[2026-08-03 09:22:33,419][Trainer][INFO] - Current learning rate: 0.00973
+[2026-08-03 09:23:31,843][Trainer][INFO] - train_loss -0.515
+[2026-08-03 09:23:31,843][Trainer][INFO] - val_loss -0.6151
+[2026-08-03 09:23:31,843][Trainer][INFO] - Pseudo dice 0.5973
+[2026-08-03 09:23:31,843][Trainer][INFO] - Epoch time: 58.43 s
+[2026-08-03 09:23:31,844][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.5284
+[2026-08-03 09:23:33,158][Trainer][INFO] - 
+[2026-08-03 09:23:33,158][Trainer][INFO] - Epoch 10
+[2026-08-03 09:23:33,159][Trainer][INFO] - Current learning rate: 0.0097
+[2026-08-03 09:24:31,395][Trainer][INFO] - train_loss -0.5249
+[2026-08-03 09:24:31,395][Trainer][INFO] - val_loss -0.5397
+[2026-08-03 09:24:31,395][Trainer][INFO] - Pseudo dice 0.5804
+[2026-08-03 09:24:31,395][Trainer][INFO] - Epoch time: 58.24 s
+[2026-08-03 09:24:31,395][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.5336
+[2026-08-03 09:24:32,700][Trainer][INFO] - 
+[2026-08-03 09:24:32,700][Trainer][INFO] - Epoch 11
+[2026-08-03 09:24:32,700][Trainer][INFO] - Current learning rate: 0.00967
+[2026-08-03 09:25:31,106][Trainer][INFO] - train_loss -0.5239
+[2026-08-03 09:25:31,107][Trainer][INFO] - val_loss -0.5628
+[2026-08-03 09:25:31,107][Trainer][INFO] - Pseudo dice 0.5052
+[2026-08-03 09:25:31,107][Trainer][INFO] - Epoch time: 58.41 s
+[2026-08-03 09:25:31,968][Trainer][INFO] - 
+[2026-08-03 09:25:31,968][Trainer][INFO] - Epoch 12
+[2026-08-03 09:25:31,968][Trainer][INFO] - Current learning rate: 0.00964
+[2026-08-03 09:26:30,319][Trainer][INFO] - train_loss -0.5382
+[2026-08-03 09:26:30,319][Trainer][INFO] - val_loss -0.5777
+[2026-08-03 09:26:30,319][Trainer][INFO] - Pseudo dice 0.6933
+[2026-08-03 09:26:30,319][Trainer][INFO] - Epoch time: 58.35 s
+[2026-08-03 09:26:30,319][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.547
+[2026-08-03 09:26:31,644][Trainer][INFO] - 
+[2026-08-03 09:26:31,644][Trainer][INFO] - Epoch 13
+[2026-08-03 09:26:31,644][Trainer][INFO] - Current learning rate: 0.00961
+[2026-08-03 09:27:30,211][Trainer][INFO] - train_loss -0.5762
+[2026-08-03 09:27:30,211][Trainer][INFO] - val_loss -0.609
+[2026-08-03 09:27:30,211][Trainer][INFO] - Pseudo dice 0.6372
+[2026-08-03 09:27:30,212][Trainer][INFO] - Epoch time: 58.57 s
+[2026-08-03 09:27:30,212][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.556
+[2026-08-03 09:27:31,591][Trainer][INFO] - 
+[2026-08-03 09:27:31,592][Trainer][INFO] - Epoch 14
+[2026-08-03 09:27:31,592][Trainer][INFO] - Current learning rate: 0.00958
+[2026-08-03 09:28:30,010][Trainer][INFO] - train_loss -0.5595
+[2026-08-03 09:28:30,011][Trainer][INFO] - val_loss -0.5663
+[2026-08-03 09:28:30,011][Trainer][INFO] - Pseudo dice 0.6155
+[2026-08-03 09:28:30,011][Trainer][INFO] - Epoch time: 58.42 s
+[2026-08-03 09:28:30,011][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.562
+[2026-08-03 09:28:32,544][Trainer][INFO] - 
+[2026-08-03 09:28:32,544][Trainer][INFO] - Epoch 15
+[2026-08-03 09:28:32,544][Trainer][INFO] - Current learning rate: 0.00955
+[2026-08-03 09:29:31,027][Trainer][INFO] - train_loss -0.5536
+[2026-08-03 09:29:31,027][Trainer][INFO] - val_loss -0.62
+[2026-08-03 09:29:31,028][Trainer][INFO] - Pseudo dice 0.6388
+[2026-08-03 09:29:31,028][Trainer][INFO] - Epoch time: 58.48 s
+[2026-08-03 09:29:31,028][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.5697
+[2026-08-03 09:29:32,378][Trainer][INFO] - 
+[2026-08-03 09:29:32,378][Trainer][INFO] - Epoch 16
+[2026-08-03 09:29:32,378][Trainer][INFO] - Current learning rate: 0.00952
+[2026-08-03 09:30:30,861][Trainer][INFO] - train_loss -0.6042
+[2026-08-03 09:30:30,861][Trainer][INFO] - val_loss -0.5092
+[2026-08-03 09:30:30,861][Trainer][INFO] - Pseudo dice 0.5243
+[2026-08-03 09:30:30,861][Trainer][INFO] - Epoch time: 58.48 s
+[2026-08-03 09:30:31,774][Trainer][INFO] - 
+[2026-08-03 09:30:31,774][Trainer][INFO] - Epoch 17
+[2026-08-03 09:30:31,774][Trainer][INFO] - Current learning rate: 0.00949
+[2026-08-03 09:31:30,275][Trainer][INFO] - train_loss -0.5808
+[2026-08-03 09:31:30,276][Trainer][INFO] - val_loss -0.6279
+[2026-08-03 09:31:30,276][Trainer][INFO] - Pseudo dice 0.6819
+[2026-08-03 09:31:30,276][Trainer][INFO] - Epoch time: 58.5 s
+[2026-08-03 09:31:30,276][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.5768
+[2026-08-03 09:31:31,621][Trainer][INFO] - 
+[2026-08-03 09:31:31,621][Trainer][INFO] - Epoch 18
+[2026-08-03 09:31:31,621][Trainer][INFO] - Current learning rate: 0.00946
+[2026-08-03 09:32:29,999][Trainer][INFO] - train_loss -0.563
+[2026-08-03 09:32:29,999][Trainer][INFO] - val_loss -0.5672
+[2026-08-03 09:32:29,999][Trainer][INFO] - Pseudo dice 0.5884
+[2026-08-03 09:32:29,999][Trainer][INFO] - Epoch time: 58.38 s
+[2026-08-03 09:32:29,999][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.578
+[2026-08-03 09:32:31,358][Trainer][INFO] - 
+[2026-08-03 09:32:31,358][Trainer][INFO] - Epoch 19
+[2026-08-03 09:32:31,358][Trainer][INFO] - Current learning rate: 0.00943
+[2026-08-03 09:33:29,715][Trainer][INFO] - train_loss -0.5486
+[2026-08-03 09:33:29,716][Trainer][INFO] - val_loss -0.6392
+[2026-08-03 09:33:29,716][Trainer][INFO] - Pseudo dice 0.7225
+[2026-08-03 09:33:29,716][Trainer][INFO] - Epoch time: 58.36 s
+[2026-08-03 09:33:29,716][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.5924
+[2026-08-03 09:33:31,084][Trainer][INFO] - 
+[2026-08-03 09:33:31,084][Trainer][INFO] - Epoch 20
+[2026-08-03 09:33:31,084][Trainer][INFO] - Current learning rate: 0.0094
+[2026-08-03 09:34:29,596][Trainer][INFO] - train_loss -0.5908
+[2026-08-03 09:34:29,596][Trainer][INFO] - val_loss -0.6154
+[2026-08-03 09:34:29,596][Trainer][INFO] - Pseudo dice 0.643
+[2026-08-03 09:34:29,596][Trainer][INFO] - Epoch time: 58.51 s
+[2026-08-03 09:34:29,596][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.5975
+[2026-08-03 09:34:31,020][Trainer][INFO] - 
+[2026-08-03 09:34:31,021][Trainer][INFO] - Epoch 21
+[2026-08-03 09:34:31,021][Trainer][INFO] - Current learning rate: 0.00937
+[2026-08-03 09:35:29,485][Trainer][INFO] - train_loss -0.5716
+[2026-08-03 09:35:29,485][Trainer][INFO] - val_loss -0.5464
+[2026-08-03 09:35:29,485][Trainer][INFO] - Pseudo dice 0.5907
+[2026-08-03 09:35:29,485][Trainer][INFO] - Epoch time: 58.47 s
+[2026-08-03 09:35:30,373][Trainer][INFO] - 
+[2026-08-03 09:35:30,373][Trainer][INFO] - Epoch 22
+[2026-08-03 09:35:30,373][Trainer][INFO] - Current learning rate: 0.00934
+[2026-08-03 09:36:28,790][Trainer][INFO] - train_loss -0.597
+[2026-08-03 09:36:28,790][Trainer][INFO] - val_loss -0.6736
+[2026-08-03 09:36:28,791][Trainer][INFO] - Pseudo dice 0.7626
+[2026-08-03 09:36:28,791][Trainer][INFO] - Epoch time: 58.42 s
+[2026-08-03 09:36:28,791][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.6134
+[2026-08-03 09:36:30,106][Trainer][INFO] - 
+[2026-08-03 09:36:30,107][Trainer][INFO] - Epoch 23
+[2026-08-03 09:36:30,107][Trainer][INFO] - Current learning rate: 0.00931
+[2026-08-03 09:37:28,497][Trainer][INFO] - train_loss -0.6057
+[2026-08-03 09:37:28,498][Trainer][INFO] - val_loss -0.6307
+[2026-08-03 09:37:28,498][Trainer][INFO] - Pseudo dice 0.7278
+[2026-08-03 09:37:28,498][Trainer][INFO] - Epoch time: 58.39 s
+[2026-08-03 09:37:28,498][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.6248
+[2026-08-03 09:37:29,874][Trainer][INFO] - 
+[2026-08-03 09:37:29,874][Trainer][INFO] - Epoch 24
+[2026-08-03 09:37:29,874][Trainer][INFO] - Current learning rate: 0.00928
+[2026-08-03 09:38:28,214][Trainer][INFO] - train_loss -0.6135
+[2026-08-03 09:38:28,214][Trainer][INFO] - val_loss -0.6256
+[2026-08-03 09:38:28,214][Trainer][INFO] - Pseudo dice 0.6793
+[2026-08-03 09:38:28,214][Trainer][INFO] - Epoch time: 58.34 s
+[2026-08-03 09:38:28,214][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.6303
+[2026-08-03 09:38:29,570][Trainer][INFO] - 
+[2026-08-03 09:38:29,570][Trainer][INFO] - Epoch 25
+[2026-08-03 09:38:29,570][Trainer][INFO] - Current learning rate: 0.00925
+[2026-08-03 09:39:27,986][Trainer][INFO] - train_loss -0.5903
+[2026-08-03 09:39:27,986][Trainer][INFO] - val_loss -0.6087
+[2026-08-03 09:39:27,986][Trainer][INFO] - Pseudo dice 0.6744
+[2026-08-03 09:39:27,986][Trainer][INFO] - Epoch time: 58.42 s
+[2026-08-03 09:39:27,986][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.6347
+[2026-08-03 09:39:29,375][Trainer][INFO] - 
+[2026-08-03 09:39:29,375][Trainer][INFO] - Epoch 26
+[2026-08-03 09:39:29,375][Trainer][INFO] - Current learning rate: 0.00922
+[2026-08-03 09:40:27,875][Trainer][INFO] - train_loss -0.5899
+[2026-08-03 09:40:27,875][Trainer][INFO] - val_loss -0.6782
+[2026-08-03 09:40:27,875][Trainer][INFO] - Pseudo dice 0.7478
+[2026-08-03 09:40:27,875][Trainer][INFO] - Epoch time: 58.5 s
+[2026-08-03 09:40:27,875][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.646
+[2026-08-03 09:40:29,207][Trainer][INFO] - 
+[2026-08-03 09:40:29,207][Trainer][INFO] - Epoch 27
+[2026-08-03 09:40:29,207][Trainer][INFO] - Current learning rate: 0.00919
+[2026-08-03 09:41:27,799][Trainer][INFO] - train_loss -0.5683
+[2026-08-03 09:41:27,800][Trainer][INFO] - val_loss -0.5608
+[2026-08-03 09:41:27,800][Trainer][INFO] - Pseudo dice 0.6953
+[2026-08-03 09:41:27,800][Trainer][INFO] - Epoch time: 58.59 s
+[2026-08-03 09:41:27,800][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.6509
+[2026-08-03 09:41:29,166][Trainer][INFO] - 
+[2026-08-03 09:41:29,166][Trainer][INFO] - Epoch 28
+[2026-08-03 09:41:29,166][Trainer][INFO] - Current learning rate: 0.00916
+[2026-08-03 09:42:27,567][Trainer][INFO] - train_loss -0.557
+[2026-08-03 09:42:27,567][Trainer][INFO] - val_loss -0.6261
+[2026-08-03 09:42:27,567][Trainer][INFO] - Pseudo dice 0.6045
+[2026-08-03 09:42:27,567][Trainer][INFO] - Epoch time: 58.4 s
+[2026-08-03 09:42:28,415][Trainer][INFO] - 
+[2026-08-03 09:42:28,415][Trainer][INFO] - Epoch 29
+[2026-08-03 09:42:28,415][Trainer][INFO] - Current learning rate: 0.00913
+[2026-08-03 09:43:26,928][Trainer][INFO] - train_loss -0.5816
+[2026-08-03 09:43:26,929][Trainer][INFO] - val_loss -0.5937
+[2026-08-03 09:43:26,929][Trainer][INFO] - Pseudo dice 0.6305
+[2026-08-03 09:43:26,929][Trainer][INFO] - Epoch time: 58.51 s
+[2026-08-03 09:43:27,786][Trainer][INFO] - 
+[2026-08-03 09:43:27,786][Trainer][INFO] - Epoch 30
+[2026-08-03 09:43:27,786][Trainer][INFO] - Current learning rate: 0.0091
+[2026-08-03 09:44:26,618][Trainer][INFO] - train_loss -0.5759
+[2026-08-03 09:44:26,618][Trainer][INFO] - val_loss -0.645
+[2026-08-03 09:44:26,618][Trainer][INFO] - Pseudo dice 0.6477
+[2026-08-03 09:44:26,618][Trainer][INFO] - Epoch time: 58.83 s
+[2026-08-03 09:44:27,478][Trainer][INFO] - 
+[2026-08-03 09:44:27,478][Trainer][INFO] - Epoch 31
+[2026-08-03 09:44:27,478][Trainer][INFO] - Current learning rate: 0.00907
+[2026-08-03 09:45:25,866][Trainer][INFO] - train_loss -0.6028
+[2026-08-03 09:45:25,867][Trainer][INFO] - val_loss -0.6621
+[2026-08-03 09:45:25,867][Trainer][INFO] - Pseudo dice 0.7443
+[2026-08-03 09:45:25,867][Trainer][INFO] - Epoch time: 58.39 s
+[2026-08-03 09:45:25,867][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.6549
+[2026-08-03 09:45:27,209][Trainer][INFO] - 
+[2026-08-03 09:45:27,210][Trainer][INFO] - Epoch 32
+[2026-08-03 09:45:27,210][Trainer][INFO] - Current learning rate: 0.00903
+[2026-08-03 09:46:25,696][Trainer][INFO] - train_loss -0.6506
+[2026-08-03 09:46:25,696][Trainer][INFO] - val_loss -0.6243
+[2026-08-03 09:46:25,696][Trainer][INFO] - Pseudo dice 0.658
+[2026-08-03 09:46:25,697][Trainer][INFO] - Epoch time: 58.49 s
+[2026-08-03 09:46:25,697][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.6552
+[2026-08-03 09:46:27,051][Trainer][INFO] - 
+[2026-08-03 09:46:27,051][Trainer][INFO] - Epoch 33
+[2026-08-03 09:46:27,051][Trainer][INFO] - Current learning rate: 0.009
+[2026-08-03 09:47:25,588][Trainer][INFO] - train_loss -0.6371
+[2026-08-03 09:47:25,588][Trainer][INFO] - val_loss -0.6808
+[2026-08-03 09:47:25,588][Trainer][INFO] - Pseudo dice 0.8032
+[2026-08-03 09:47:25,588][Trainer][INFO] - Epoch time: 58.54 s
+[2026-08-03 09:47:25,588][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.67
+[2026-08-03 09:47:26,933][Trainer][INFO] - 
+[2026-08-03 09:47:26,933][Trainer][INFO] - Epoch 34
+[2026-08-03 09:47:26,933][Trainer][INFO] - Current learning rate: 0.00897
+[2026-08-03 09:48:26,095][Trainer][INFO] - train_loss -0.6398
+[2026-08-03 09:48:26,095][Trainer][INFO] - val_loss -0.6061
+[2026-08-03 09:48:26,095][Trainer][INFO] - Pseudo dice 0.6363
+[2026-08-03 09:48:26,095][Trainer][INFO] - Epoch time: 59.16 s
+[2026-08-03 09:48:26,996][Trainer][INFO] - 
+[2026-08-03 09:48:26,996][Trainer][INFO] - Epoch 35
+[2026-08-03 09:48:26,996][Trainer][INFO] - Current learning rate: 0.00894
+[2026-08-03 09:49:25,436][Trainer][INFO] - train_loss -0.6392
+[2026-08-03 09:49:25,437][Trainer][INFO] - val_loss -0.6629
+[2026-08-03 09:49:25,437][Trainer][INFO] - Pseudo dice 0.6344
+[2026-08-03 09:49:25,437][Trainer][INFO] - Epoch time: 58.44 s
+[2026-08-03 09:49:26,294][Trainer][INFO] - 
+[2026-08-03 09:49:26,295][Trainer][INFO] - Epoch 36
+[2026-08-03 09:49:26,295][Trainer][INFO] - Current learning rate: 0.00891
+[2026-08-03 09:50:24,943][Trainer][INFO] - train_loss -0.6504
+[2026-08-03 09:50:24,943][Trainer][INFO] - val_loss -0.6638
+[2026-08-03 09:50:24,943][Trainer][INFO] - Pseudo dice 0.739
+[2026-08-03 09:50:24,944][Trainer][INFO] - Epoch time: 58.65 s
+[2026-08-03 09:50:24,944][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.671
+[2026-08-03 09:50:27,644][Trainer][INFO] - 
+[2026-08-03 09:50:27,644][Trainer][INFO] - Epoch 37
+[2026-08-03 09:50:27,644][Trainer][INFO] - Current learning rate: 0.00888
+[2026-08-03 09:51:26,073][Trainer][INFO] - train_loss -0.6288
+[2026-08-03 09:51:26,074][Trainer][INFO] - val_loss -0.6499
+[2026-08-03 09:51:26,074][Trainer][INFO] - Pseudo dice 0.7363
+[2026-08-03 09:51:26,074][Trainer][INFO] - Epoch time: 58.43 s
+[2026-08-03 09:51:26,074][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.6775
+[2026-08-03 09:51:27,425][Trainer][INFO] - 
+[2026-08-03 09:51:27,425][Trainer][INFO] - Epoch 38
+[2026-08-03 09:51:27,425][Trainer][INFO] - Current learning rate: 0.00885
+[2026-08-03 09:52:26,000][Trainer][INFO] - train_loss -0.637
+[2026-08-03 09:52:26,001][Trainer][INFO] - val_loss -0.6641
+[2026-08-03 09:52:26,001][Trainer][INFO] - Pseudo dice 0.7809
+[2026-08-03 09:52:26,001][Trainer][INFO] - Epoch time: 58.58 s
+[2026-08-03 09:52:26,001][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.6878
+[2026-08-03 09:52:27,354][Trainer][INFO] - 
+[2026-08-03 09:52:27,354][Trainer][INFO] - Epoch 39
+[2026-08-03 09:52:27,355][Trainer][INFO] - Current learning rate: 0.00882
+[2026-08-03 09:53:25,787][Trainer][INFO] - train_loss -0.6268
+[2026-08-03 09:53:25,787][Trainer][INFO] - val_loss -0.6832
+[2026-08-03 09:53:25,787][Trainer][INFO] - Pseudo dice 0.804
+[2026-08-03 09:53:25,787][Trainer][INFO] - Epoch time: 58.43 s
+[2026-08-03 09:53:25,788][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.6995
+[2026-08-03 09:53:27,149][Trainer][INFO] - 
+[2026-08-03 09:53:27,150][Trainer][INFO] - Epoch 40
+[2026-08-03 09:53:27,150][Trainer][INFO] - Current learning rate: 0.00879
+[2026-08-03 09:54:26,150][Trainer][INFO] - train_loss -0.6341
+[2026-08-03 09:54:26,150][Trainer][INFO] - val_loss -0.6401
+[2026-08-03 09:54:26,150][Trainer][INFO] - Pseudo dice 0.6498
+[2026-08-03 09:54:26,150][Trainer][INFO] - Epoch time: 59.0 s
+[2026-08-03 09:54:27,132][Trainer][INFO] - 
+[2026-08-03 09:54:27,133][Trainer][INFO] - Epoch 41
+[2026-08-03 09:54:27,133][Trainer][INFO] - Current learning rate: 0.00876
+[2026-08-03 09:55:25,679][Trainer][INFO] - train_loss -0.6271
+[2026-08-03 09:55:25,679][Trainer][INFO] - val_loss -0.6791
+[2026-08-03 09:55:25,679][Trainer][INFO] - Pseudo dice 0.7683
+[2026-08-03 09:55:25,679][Trainer][INFO] - Epoch time: 58.55 s
+[2026-08-03 09:55:25,679][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7019
+[2026-08-03 09:55:27,039][Trainer][INFO] - 
+[2026-08-03 09:55:27,040][Trainer][INFO] - Epoch 42
+[2026-08-03 09:55:27,040][Trainer][INFO] - Current learning rate: 0.00873
+[2026-08-03 09:56:25,643][Trainer][INFO] - train_loss -0.6245
+[2026-08-03 09:56:25,643][Trainer][INFO] - val_loss -0.6736
+[2026-08-03 09:56:25,643][Trainer][INFO] - Pseudo dice 0.7656
+[2026-08-03 09:56:25,643][Trainer][INFO] - Epoch time: 58.6 s
+[2026-08-03 09:56:25,644][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7083
+[2026-08-03 09:56:26,974][Trainer][INFO] - 
+[2026-08-03 09:56:26,975][Trainer][INFO] - Epoch 43
+[2026-08-03 09:56:26,975][Trainer][INFO] - Current learning rate: 0.0087
+[2026-08-03 09:57:25,588][Trainer][INFO] - train_loss -0.6717
+[2026-08-03 09:57:25,589][Trainer][INFO] - val_loss -0.5898
+[2026-08-03 09:57:25,589][Trainer][INFO] - Pseudo dice 0.5601
+[2026-08-03 09:57:25,589][Trainer][INFO] - Epoch time: 58.62 s
+[2026-08-03 09:57:26,458][Trainer][INFO] - 
+[2026-08-03 09:57:26,459][Trainer][INFO] - Epoch 44
+[2026-08-03 09:57:26,459][Trainer][INFO] - Current learning rate: 0.00867
+[2026-08-03 09:58:24,875][Trainer][INFO] - train_loss -0.6411
+[2026-08-03 09:58:24,875][Trainer][INFO] - val_loss -0.6266
+[2026-08-03 09:58:24,876][Trainer][INFO] - Pseudo dice 0.6518
+[2026-08-03 09:58:24,876][Trainer][INFO] - Epoch time: 58.42 s
+[2026-08-03 09:58:25,737][Trainer][INFO] - 
+[2026-08-03 09:58:25,737][Trainer][INFO] - Epoch 45
+[2026-08-03 09:58:25,737][Trainer][INFO] - Current learning rate: 0.00864
+[2026-08-03 09:59:24,219][Trainer][INFO] - train_loss -0.6439
+[2026-08-03 09:59:24,219][Trainer][INFO] - val_loss -0.6155
+[2026-08-03 09:59:24,220][Trainer][INFO] - Pseudo dice 0.6154
+[2026-08-03 09:59:24,220][Trainer][INFO] - Epoch time: 58.48 s
+[2026-08-03 09:59:25,074][Trainer][INFO] - 
+[2026-08-03 09:59:25,074][Trainer][INFO] - Epoch 46
+[2026-08-03 09:59:25,074][Trainer][INFO] - Current learning rate: 0.00861
+[2026-08-03 10:00:23,673][Trainer][INFO] - train_loss -0.6388
+[2026-08-03 10:00:23,674][Trainer][INFO] - val_loss -0.613
+[2026-08-03 10:00:23,674][Trainer][INFO] - Pseudo dice 0.6734
+[2026-08-03 10:00:23,674][Trainer][INFO] - Epoch time: 58.6 s
+[2026-08-03 10:00:24,533][Trainer][INFO] - 
+[2026-08-03 10:00:24,533][Trainer][INFO] - Epoch 47
+[2026-08-03 10:00:24,533][Trainer][INFO] - Current learning rate: 0.00858
+[2026-08-03 10:01:23,044][Trainer][INFO] - train_loss -0.6066
+[2026-08-03 10:01:23,045][Trainer][INFO] - val_loss -0.6486
+[2026-08-03 10:01:23,045][Trainer][INFO] - Pseudo dice 0.6398
+[2026-08-03 10:01:23,045][Trainer][INFO] - Epoch time: 58.51 s
+[2026-08-03 10:01:23,891][Trainer][INFO] - 
+[2026-08-03 10:01:23,891][Trainer][INFO] - Epoch 48
+[2026-08-03 10:01:23,891][Trainer][INFO] - Current learning rate: 0.00855
+[2026-08-03 10:02:22,400][Trainer][INFO] - train_loss -0.6147
+[2026-08-03 10:02:22,400][Trainer][INFO] - val_loss -0.632
+[2026-08-03 10:02:22,400][Trainer][INFO] - Pseudo dice 0.6777
+[2026-08-03 10:02:22,400][Trainer][INFO] - Epoch time: 58.51 s
+[2026-08-03 10:02:23,280][Trainer][INFO] - 
+[2026-08-03 10:02:23,280][Trainer][INFO] - Epoch 49
+[2026-08-03 10:02:23,280][Trainer][INFO] - Current learning rate: 0.00852
+[2026-08-03 10:03:21,744][Trainer][INFO] - train_loss -0.6612
+[2026-08-03 10:03:21,745][Trainer][INFO] - val_loss -0.5824
+[2026-08-03 10:03:21,745][Trainer][INFO] - Pseudo dice 0.6106
+[2026-08-03 10:03:21,745][Trainer][INFO] - Epoch time: 58.47 s
+[2026-08-03 10:03:22,983][Trainer][INFO] - 
+[2026-08-03 10:03:22,983][Trainer][INFO] - Epoch 50
+[2026-08-03 10:03:22,983][Trainer][INFO] - Current learning rate: 0.00849
+[2026-08-03 10:04:21,586][Trainer][INFO] - train_loss -0.6327
+[2026-08-03 10:04:21,587][Trainer][INFO] - val_loss -0.6786
+[2026-08-03 10:04:21,587][Trainer][INFO] - Pseudo dice 0.7011
+[2026-08-03 10:04:21,587][Trainer][INFO] - Epoch time: 58.6 s
+[2026-08-03 10:04:22,451][Trainer][INFO] - 
+[2026-08-03 10:04:22,451][Trainer][INFO] - Epoch 51
+[2026-08-03 10:04:22,451][Trainer][INFO] - Current learning rate: 0.00846
+[2026-08-03 10:05:20,913][Trainer][INFO] - train_loss -0.6068
+[2026-08-03 10:05:20,914][Trainer][INFO] - val_loss -0.7283
+[2026-08-03 10:05:20,914][Trainer][INFO] - Pseudo dice 0.7983
+[2026-08-03 10:05:20,914][Trainer][INFO] - Epoch time: 58.46 s
+[2026-08-03 10:05:21,788][Trainer][INFO] - 
+[2026-08-03 10:05:21,788][Trainer][INFO] - Epoch 52
+[2026-08-03 10:05:21,788][Trainer][INFO] - Current learning rate: 0.00843
+[2026-08-03 10:06:20,396][Trainer][INFO] - train_loss -0.6169
+[2026-08-03 10:06:20,396][Trainer][INFO] - val_loss -0.6232
+[2026-08-03 10:06:20,396][Trainer][INFO] - Pseudo dice 0.677
+[2026-08-03 10:06:20,396][Trainer][INFO] - Epoch time: 58.61 s
+[2026-08-03 10:06:21,254][Trainer][INFO] - 
+[2026-08-03 10:06:21,254][Trainer][INFO] - Epoch 53
+[2026-08-03 10:06:21,254][Trainer][INFO] - Current learning rate: 0.00839
+[2026-08-03 10:07:19,786][Trainer][INFO] - train_loss -0.6517
+[2026-08-03 10:07:19,787][Trainer][INFO] - val_loss -0.7033
+[2026-08-03 10:07:19,787][Trainer][INFO] - Pseudo dice 0.7651
+[2026-08-03 10:07:19,787][Trainer][INFO] - Epoch time: 58.53 s
+[2026-08-03 10:07:20,654][Trainer][INFO] - 
+[2026-08-03 10:07:20,654][Trainer][INFO] - Epoch 54
+[2026-08-03 10:07:20,654][Trainer][INFO] - Current learning rate: 0.00836
+[2026-08-03 10:08:19,281][Trainer][INFO] - train_loss -0.6492
+[2026-08-03 10:08:19,282][Trainer][INFO] - val_loss -0.7207
+[2026-08-03 10:08:19,282][Trainer][INFO] - Pseudo dice 0.7301
+[2026-08-03 10:08:19,282][Trainer][INFO] - Epoch time: 58.63 s
+[2026-08-03 10:08:20,144][Trainer][INFO] - 
+[2026-08-03 10:08:20,145][Trainer][INFO] - Epoch 55
+[2026-08-03 10:08:20,145][Trainer][INFO] - Current learning rate: 0.00833
+[2026-08-03 10:09:19,022][Trainer][INFO] - train_loss -0.6409
+[2026-08-03 10:09:19,022][Trainer][INFO] - val_loss -0.717
+[2026-08-03 10:09:19,022][Trainer][INFO] - Pseudo dice 0.8175
+[2026-08-03 10:09:19,022][Trainer][INFO] - Epoch time: 58.88 s
+[2026-08-03 10:09:19,022][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7088
+[2026-08-03 10:09:20,387][Trainer][INFO] - 
+[2026-08-03 10:09:20,388][Trainer][INFO] - Epoch 56
+[2026-08-03 10:09:20,388][Trainer][INFO] - Current learning rate: 0.0083
+[2026-08-03 10:10:19,371][Trainer][INFO] - train_loss -0.6473
+[2026-08-03 10:10:19,371][Trainer][INFO] - val_loss -0.6489
+[2026-08-03 10:10:19,371][Trainer][INFO] - Pseudo dice 0.7355
+[2026-08-03 10:10:19,371][Trainer][INFO] - Epoch time: 58.98 s
+[2026-08-03 10:10:19,371][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7115
+[2026-08-03 10:10:20,785][Trainer][INFO] - 
+[2026-08-03 10:10:20,786][Trainer][INFO] - Epoch 57
+[2026-08-03 10:10:20,786][Trainer][INFO] - Current learning rate: 0.00827
+[2026-08-03 10:11:19,387][Trainer][INFO] - train_loss -0.6323
+[2026-08-03 10:11:19,387][Trainer][INFO] - val_loss -0.6292
+[2026-08-03 10:11:19,387][Trainer][INFO] - Pseudo dice 0.6878
+[2026-08-03 10:11:19,387][Trainer][INFO] - Epoch time: 58.6 s
+[2026-08-03 10:11:20,256][Trainer][INFO] - 
+[2026-08-03 10:11:20,256][Trainer][INFO] - Epoch 58
+[2026-08-03 10:11:20,256][Trainer][INFO] - Current learning rate: 0.00824
+[2026-08-03 10:12:18,718][Trainer][INFO] - train_loss -0.6526
+[2026-08-03 10:12:18,718][Trainer][INFO] - val_loss -0.682
+[2026-08-03 10:12:18,718][Trainer][INFO] - Pseudo dice 0.6885
+[2026-08-03 10:12:18,718][Trainer][INFO] - Epoch time: 58.46 s
+[2026-08-03 10:12:19,586][Trainer][INFO] - 
+[2026-08-03 10:12:19,587][Trainer][INFO] - Epoch 59
+[2026-08-03 10:12:19,587][Trainer][INFO] - Current learning rate: 0.00821
+[2026-08-03 10:13:18,122][Trainer][INFO] - train_loss -0.6395
+[2026-08-03 10:13:18,123][Trainer][INFO] - val_loss -0.6472
+[2026-08-03 10:13:18,123][Trainer][INFO] - Pseudo dice 0.6412
+[2026-08-03 10:13:18,123][Trainer][INFO] - Epoch time: 58.54 s
+[2026-08-03 10:13:20,324][Trainer][INFO] - 
+[2026-08-03 10:13:20,324][Trainer][INFO] - Epoch 60
+[2026-08-03 10:13:20,324][Trainer][INFO] - Current learning rate: 0.00818
+[2026-08-03 10:14:18,940][Trainer][INFO] - train_loss -0.6539
+[2026-08-03 10:14:18,941][Trainer][INFO] - val_loss -0.6518
+[2026-08-03 10:14:18,941][Trainer][INFO] - Pseudo dice 0.6836
+[2026-08-03 10:14:18,941][Trainer][INFO] - Epoch time: 58.62 s
+[2026-08-03 10:14:19,829][Trainer][INFO] - 
+[2026-08-03 10:14:19,830][Trainer][INFO] - Epoch 61
+[2026-08-03 10:14:19,830][Trainer][INFO] - Current learning rate: 0.00815
+[2026-08-03 10:15:18,311][Trainer][INFO] - train_loss -0.6368
+[2026-08-03 10:15:18,311][Trainer][INFO] - val_loss -0.6368
+[2026-08-03 10:15:18,311][Trainer][INFO] - Pseudo dice 0.6807
+[2026-08-03 10:15:18,311][Trainer][INFO] - Epoch time: 58.48 s
+[2026-08-03 10:15:19,197][Trainer][INFO] - 
+[2026-08-03 10:15:19,197][Trainer][INFO] - Epoch 62
+[2026-08-03 10:15:19,197][Trainer][INFO] - Current learning rate: 0.00812
+[2026-08-03 10:16:17,916][Trainer][INFO] - train_loss -0.6545
+[2026-08-03 10:16:17,916][Trainer][INFO] - val_loss -0.7076
+[2026-08-03 10:16:17,916][Trainer][INFO] - Pseudo dice 0.6658
+[2026-08-03 10:16:17,916][Trainer][INFO] - Epoch time: 58.72 s
+[2026-08-03 10:16:18,798][Trainer][INFO] - 
+[2026-08-03 10:16:18,798][Trainer][INFO] - Epoch 63
+[2026-08-03 10:16:18,798][Trainer][INFO] - Current learning rate: 0.00809
+[2026-08-03 10:17:17,456][Trainer][INFO] - train_loss -0.673
+[2026-08-03 10:17:17,456][Trainer][INFO] - val_loss -0.6905
+[2026-08-03 10:17:17,456][Trainer][INFO] - Pseudo dice 0.7439
+[2026-08-03 10:17:17,456][Trainer][INFO] - Epoch time: 58.66 s
+[2026-08-03 10:17:18,340][Trainer][INFO] - 
+[2026-08-03 10:17:18,340][Trainer][INFO] - Epoch 64
+[2026-08-03 10:17:18,341][Trainer][INFO] - Current learning rate: 0.00806
+[2026-08-03 10:18:17,129][Trainer][INFO] - train_loss -0.6702
+[2026-08-03 10:18:17,129][Trainer][INFO] - val_loss -0.6592
+[2026-08-03 10:18:17,129][Trainer][INFO] - Pseudo dice 0.7436
+[2026-08-03 10:18:17,129][Trainer][INFO] - Epoch time: 58.79 s
+[2026-08-03 10:18:18,009][Trainer][INFO] - 
+[2026-08-03 10:18:18,009][Trainer][INFO] - Epoch 65
+[2026-08-03 10:18:18,009][Trainer][INFO] - Current learning rate: 0.00803
+[2026-08-03 10:19:17,068][Trainer][INFO] - train_loss -0.6641
+[2026-08-03 10:19:17,068][Trainer][INFO] - val_loss -0.6917
+[2026-08-03 10:19:17,068][Trainer][INFO] - Pseudo dice 0.7372
+[2026-08-03 10:19:17,068][Trainer][INFO] - Epoch time: 59.06 s
+[2026-08-03 10:19:17,939][Trainer][INFO] - 
+[2026-08-03 10:19:17,939][Trainer][INFO] - Epoch 66
+[2026-08-03 10:19:17,939][Trainer][INFO] - Current learning rate: 0.008
+[2026-08-03 10:20:16,446][Trainer][INFO] - train_loss -0.6906
+[2026-08-03 10:20:16,446][Trainer][INFO] - val_loss -0.6784
+[2026-08-03 10:20:16,446][Trainer][INFO] - Pseudo dice 0.7064
+[2026-08-03 10:20:16,446][Trainer][INFO] - Epoch time: 58.51 s
+[2026-08-03 10:20:17,315][Trainer][INFO] - 
+[2026-08-03 10:20:17,315][Trainer][INFO] - Epoch 67
+[2026-08-03 10:20:17,315][Trainer][INFO] - Current learning rate: 0.00797
+[2026-08-03 10:21:16,018][Trainer][INFO] - train_loss -0.6425
+[2026-08-03 10:21:16,019][Trainer][INFO] - val_loss -0.7145
+[2026-08-03 10:21:16,019][Trainer][INFO] - Pseudo dice 0.8001
+[2026-08-03 10:21:16,019][Trainer][INFO] - Epoch time: 58.7 s
+[2026-08-03 10:21:16,019][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.716
+[2026-08-03 10:21:17,405][Trainer][INFO] - 
+[2026-08-03 10:21:17,405][Trainer][INFO] - Epoch 68
+[2026-08-03 10:21:17,405][Trainer][INFO] - Current learning rate: 0.00793
+[2026-08-03 10:22:15,950][Trainer][INFO] - train_loss -0.6711
+[2026-08-03 10:22:15,950][Trainer][INFO] - val_loss -0.6692
+[2026-08-03 10:22:15,951][Trainer][INFO] - Pseudo dice 0.7812
+[2026-08-03 10:22:15,951][Trainer][INFO] - Epoch time: 58.55 s
+[2026-08-03 10:22:15,951][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7225
+[2026-08-03 10:22:17,316][Trainer][INFO] - 
+[2026-08-03 10:22:17,316][Trainer][INFO] - Epoch 69
+[2026-08-03 10:22:17,316][Trainer][INFO] - Current learning rate: 0.0079
+[2026-08-03 10:23:16,444][Trainer][INFO] - train_loss -0.679
+[2026-08-03 10:23:16,444][Trainer][INFO] - val_loss -0.6476
+[2026-08-03 10:23:16,444][Trainer][INFO] - Pseudo dice 0.7616
+[2026-08-03 10:23:16,444][Trainer][INFO] - Epoch time: 59.13 s
+[2026-08-03 10:23:16,444][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7264
+[2026-08-03 10:23:17,804][Trainer][INFO] - 
+[2026-08-03 10:23:17,804][Trainer][INFO] - Epoch 70
+[2026-08-03 10:23:17,804][Trainer][INFO] - Current learning rate: 0.00787
+[2026-08-03 10:24:16,346][Trainer][INFO] - train_loss -0.6669
+[2026-08-03 10:24:16,346][Trainer][INFO] - val_loss -0.6525
+[2026-08-03 10:24:16,346][Trainer][INFO] - Pseudo dice 0.7195
+[2026-08-03 10:24:16,346][Trainer][INFO] - Epoch time: 58.54 s
+[2026-08-03 10:24:17,261][Trainer][INFO] - 
+[2026-08-03 10:24:17,261][Trainer][INFO] - Epoch 71
+[2026-08-03 10:24:17,261][Trainer][INFO] - Current learning rate: 0.00784
+[2026-08-03 10:25:15,941][Trainer][INFO] - train_loss -0.6371
+[2026-08-03 10:25:15,941][Trainer][INFO] - val_loss -0.6934
+[2026-08-03 10:25:15,942][Trainer][INFO] - Pseudo dice 0.7758
+[2026-08-03 10:25:15,942][Trainer][INFO] - Epoch time: 58.68 s
+[2026-08-03 10:25:15,942][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7308
+[2026-08-03 10:25:17,274][Trainer][INFO] - 
+[2026-08-03 10:25:17,274][Trainer][INFO] - Epoch 72
+[2026-08-03 10:25:17,274][Trainer][INFO] - Current learning rate: 0.00781
+[2026-08-03 10:26:16,128][Trainer][INFO] - train_loss -0.6748
+[2026-08-03 10:26:16,128][Trainer][INFO] - val_loss -0.7167
+[2026-08-03 10:26:16,128][Trainer][INFO] - Pseudo dice 0.7807
+[2026-08-03 10:26:16,129][Trainer][INFO] - Epoch time: 58.85 s
+[2026-08-03 10:26:16,129][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7357
+[2026-08-03 10:26:17,456][Trainer][INFO] - 
+[2026-08-03 10:26:17,456][Trainer][INFO] - Epoch 73
+[2026-08-03 10:26:17,456][Trainer][INFO] - Current learning rate: 0.00778
+[2026-08-03 10:27:16,280][Trainer][INFO] - train_loss -0.666
+[2026-08-03 10:27:16,280][Trainer][INFO] - val_loss -0.6735
+[2026-08-03 10:27:16,280][Trainer][INFO] - Pseudo dice 0.7877
+[2026-08-03 10:27:16,281][Trainer][INFO] - Epoch time: 58.82 s
+[2026-08-03 10:27:16,281][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7409
+[2026-08-03 10:27:17,636][Trainer][INFO] - 
+[2026-08-03 10:27:17,637][Trainer][INFO] - Epoch 74
+[2026-08-03 10:27:17,637][Trainer][INFO] - Current learning rate: 0.00775
+[2026-08-03 10:28:16,308][Trainer][INFO] - train_loss -0.6596
+[2026-08-03 10:28:16,308][Trainer][INFO] - val_loss -0.682
+[2026-08-03 10:28:16,309][Trainer][INFO] - Pseudo dice 0.7752
+[2026-08-03 10:28:16,309][Trainer][INFO] - Epoch time: 58.67 s
+[2026-08-03 10:28:16,309][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7444
+[2026-08-03 10:28:17,652][Trainer][INFO] - 
+[2026-08-03 10:28:17,652][Trainer][INFO] - Epoch 75
+[2026-08-03 10:28:17,652][Trainer][INFO] - Current learning rate: 0.00772
+[2026-08-03 10:29:16,344][Trainer][INFO] - train_loss -0.6523
+[2026-08-03 10:29:16,345][Trainer][INFO] - val_loss -0.6943
+[2026-08-03 10:29:16,345][Trainer][INFO] - Pseudo dice 0.7521
+[2026-08-03 10:29:16,345][Trainer][INFO] - Epoch time: 58.69 s
+[2026-08-03 10:29:16,345][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7451
+[2026-08-03 10:29:17,720][Trainer][INFO] - 
+[2026-08-03 10:29:17,720][Trainer][INFO] - Epoch 76
+[2026-08-03 10:29:17,720][Trainer][INFO] - Current learning rate: 0.00769
+[2026-08-03 10:30:16,254][Trainer][INFO] - train_loss -0.6622
+[2026-08-03 10:30:16,254][Trainer][INFO] - val_loss -0.611
+[2026-08-03 10:30:16,254][Trainer][INFO] - Pseudo dice 0.5503
+[2026-08-03 10:30:16,254][Trainer][INFO] - Epoch time: 58.54 s
+[2026-08-03 10:30:17,129][Trainer][INFO] - 
+[2026-08-03 10:30:17,129][Trainer][INFO] - Epoch 77
+[2026-08-03 10:30:17,129][Trainer][INFO] - Current learning rate: 0.00766
+[2026-08-03 10:31:15,737][Trainer][INFO] - train_loss -0.6644
+[2026-08-03 10:31:15,738][Trainer][INFO] - val_loss -0.6248
+[2026-08-03 10:31:15,738][Trainer][INFO] - Pseudo dice 0.693
+[2026-08-03 10:31:15,738][Trainer][INFO] - Epoch time: 58.61 s
+[2026-08-03 10:31:16,611][Trainer][INFO] - 
+[2026-08-03 10:31:16,611][Trainer][INFO] - Epoch 78
+[2026-08-03 10:31:16,612][Trainer][INFO] - Current learning rate: 0.00763
+[2026-08-03 10:32:15,147][Trainer][INFO] - train_loss -0.6759
+[2026-08-03 10:32:15,147][Trainer][INFO] - val_loss -0.6862
+[2026-08-03 10:32:15,147][Trainer][INFO] - Pseudo dice 0.8077
+[2026-08-03 10:32:15,148][Trainer][INFO] - Epoch time: 58.54 s
+[2026-08-03 10:32:16,026][Trainer][INFO] - 
+[2026-08-03 10:32:16,026][Trainer][INFO] - Epoch 79
+[2026-08-03 10:32:16,026][Trainer][INFO] - Current learning rate: 0.0076
+[2026-08-03 10:33:14,617][Trainer][INFO] - train_loss -0.673
+[2026-08-03 10:33:14,617][Trainer][INFO] - val_loss -0.6512
+[2026-08-03 10:33:14,617][Trainer][INFO] - Pseudo dice 0.7507
+[2026-08-03 10:33:14,617][Trainer][INFO] - Epoch time: 58.59 s
+[2026-08-03 10:33:15,489][Trainer][INFO] - 
+[2026-08-03 10:33:15,490][Trainer][INFO] - Epoch 80
+[2026-08-03 10:33:15,490][Trainer][INFO] - Current learning rate: 0.00756
+[2026-08-03 10:34:13,911][Trainer][INFO] - train_loss -0.6569
+[2026-08-03 10:34:13,912][Trainer][INFO] - val_loss -0.6696
+[2026-08-03 10:34:13,912][Trainer][INFO] - Pseudo dice 0.7159
+[2026-08-03 10:34:13,912][Trainer][INFO] - Epoch time: 58.42 s
+[2026-08-03 10:34:14,790][Trainer][INFO] - 
+[2026-08-03 10:34:14,790][Trainer][INFO] - Epoch 81
+[2026-08-03 10:34:14,790][Trainer][INFO] - Current learning rate: 0.00753
+[2026-08-03 10:35:13,233][Trainer][INFO] - train_loss -0.6703
+[2026-08-03 10:35:13,233][Trainer][INFO] - val_loss -0.7069
+[2026-08-03 10:35:13,233][Trainer][INFO] - Pseudo dice 0.7253
+[2026-08-03 10:35:13,234][Trainer][INFO] - Epoch time: 58.44 s
+[2026-08-03 10:35:15,293][Trainer][INFO] - 
+[2026-08-03 10:35:15,293][Trainer][INFO] - Epoch 82
+[2026-08-03 10:35:15,293][Trainer][INFO] - Current learning rate: 0.0075
+[2026-08-03 10:36:13,778][Trainer][INFO] - train_loss -0.6521
+[2026-08-03 10:36:13,778][Trainer][INFO] - val_loss -0.7281
+[2026-08-03 10:36:13,778][Trainer][INFO] - Pseudo dice 0.8172
+[2026-08-03 10:36:13,778][Trainer][INFO] - Epoch time: 58.49 s
+[2026-08-03 10:36:14,639][Trainer][INFO] - 
+[2026-08-03 10:36:14,640][Trainer][INFO] - Epoch 83
+[2026-08-03 10:36:14,640][Trainer][INFO] - Current learning rate: 0.00747
+[2026-08-03 10:37:13,131][Trainer][INFO] - train_loss -0.6465
+[2026-08-03 10:37:13,131][Trainer][INFO] - val_loss -0.6767
+[2026-08-03 10:37:13,131][Trainer][INFO] - Pseudo dice 0.65
+[2026-08-03 10:37:13,131][Trainer][INFO] - Epoch time: 58.49 s
+[2026-08-03 10:37:13,973][Trainer][INFO] - 
+[2026-08-03 10:37:13,973][Trainer][INFO] - Epoch 84
+[2026-08-03 10:37:13,974][Trainer][INFO] - Current learning rate: 0.00744
+[2026-08-03 10:38:12,568][Trainer][INFO] - train_loss -0.6594
+[2026-08-03 10:38:12,569][Trainer][INFO] - val_loss -0.6948
+[2026-08-03 10:38:12,569][Trainer][INFO] - Pseudo dice 0.7919
+[2026-08-03 10:38:12,569][Trainer][INFO] - Epoch time: 58.6 s
+[2026-08-03 10:38:13,418][Trainer][INFO] - 
+[2026-08-03 10:38:13,418][Trainer][INFO] - Epoch 85
+[2026-08-03 10:38:13,418][Trainer][INFO] - Current learning rate: 0.00741
+[2026-08-03 10:39:11,804][Trainer][INFO] - train_loss -0.647
+[2026-08-03 10:39:11,804][Trainer][INFO] - val_loss -0.6939
+[2026-08-03 10:39:11,804][Trainer][INFO] - Pseudo dice 0.6928
+[2026-08-03 10:39:11,804][Trainer][INFO] - Epoch time: 58.39 s
+[2026-08-03 10:39:12,658][Trainer][INFO] - 
+[2026-08-03 10:39:12,658][Trainer][INFO] - Epoch 86
+[2026-08-03 10:39:12,658][Trainer][INFO] - Current learning rate: 0.00738
+[2026-08-03 10:40:11,118][Trainer][INFO] - train_loss -0.6726
+[2026-08-03 10:40:11,119][Trainer][INFO] - val_loss -0.675
+[2026-08-03 10:40:11,119][Trainer][INFO] - Pseudo dice 0.788
+[2026-08-03 10:40:11,119][Trainer][INFO] - Epoch time: 58.46 s
+[2026-08-03 10:40:11,969][Trainer][INFO] - 
+[2026-08-03 10:40:11,969][Trainer][INFO] - Epoch 87
+[2026-08-03 10:40:11,969][Trainer][INFO] - Current learning rate: 0.00735
+[2026-08-03 10:41:10,768][Trainer][INFO] - train_loss -0.6588
+[2026-08-03 10:41:10,768][Trainer][INFO] - val_loss -0.6884
+[2026-08-03 10:41:10,768][Trainer][INFO] - Pseudo dice 0.7337
+[2026-08-03 10:41:10,768][Trainer][INFO] - Epoch time: 58.8 s
+[2026-08-03 10:41:11,638][Trainer][INFO] - 
+[2026-08-03 10:41:11,639][Trainer][INFO] - Epoch 88
+[2026-08-03 10:41:11,639][Trainer][INFO] - Current learning rate: 0.00732
+[2026-08-03 10:42:10,383][Trainer][INFO] - train_loss -0.6822
+[2026-08-03 10:42:10,384][Trainer][INFO] - val_loss -0.7139
+[2026-08-03 10:42:10,384][Trainer][INFO] - Pseudo dice 0.7938
+[2026-08-03 10:42:10,384][Trainer][INFO] - Epoch time: 58.75 s
+[2026-08-03 10:42:11,231][Trainer][INFO] - 
+[2026-08-03 10:42:11,231][Trainer][INFO] - Epoch 89
+[2026-08-03 10:42:11,231][Trainer][INFO] - Current learning rate: 0.00729
+[2026-08-03 10:43:09,740][Trainer][INFO] - train_loss -0.6875
+[2026-08-03 10:43:09,740][Trainer][INFO] - val_loss -0.7067
+[2026-08-03 10:43:09,740][Trainer][INFO] - Pseudo dice 0.7266
+[2026-08-03 10:43:09,740][Trainer][INFO] - Epoch time: 58.51 s
+[2026-08-03 10:43:10,603][Trainer][INFO] - 
+[2026-08-03 10:43:10,603][Trainer][INFO] - Epoch 90
+[2026-08-03 10:43:10,603][Trainer][INFO] - Current learning rate: 0.00725
+[2026-08-03 10:44:09,127][Trainer][INFO] - train_loss -0.6898
+[2026-08-03 10:44:09,127][Trainer][INFO] - val_loss -0.738
+[2026-08-03 10:44:09,127][Trainer][INFO] - Pseudo dice 0.776
+[2026-08-03 10:44:09,128][Trainer][INFO] - Epoch time: 58.52 s
+[2026-08-03 10:44:09,992][Trainer][INFO] - 
+[2026-08-03 10:44:09,992][Trainer][INFO] - Epoch 91
+[2026-08-03 10:44:09,992][Trainer][INFO] - Current learning rate: 0.00722
+[2026-08-03 10:45:08,569][Trainer][INFO] - train_loss -0.6661
+[2026-08-03 10:45:08,570][Trainer][INFO] - val_loss -0.6093
+[2026-08-03 10:45:08,570][Trainer][INFO] - Pseudo dice 0.6438
+[2026-08-03 10:45:08,570][Trainer][INFO] - Epoch time: 58.58 s
+[2026-08-03 10:45:09,416][Trainer][INFO] - 
+[2026-08-03 10:45:09,417][Trainer][INFO] - Epoch 92
+[2026-08-03 10:45:09,417][Trainer][INFO] - Current learning rate: 0.00719
+[2026-08-03 10:46:07,963][Trainer][INFO] - train_loss -0.6459
+[2026-08-03 10:46:07,964][Trainer][INFO] - val_loss -0.6784
+[2026-08-03 10:46:07,964][Trainer][INFO] - Pseudo dice 0.6852
+[2026-08-03 10:46:07,964][Trainer][INFO] - Epoch time: 58.55 s
+[2026-08-03 10:46:08,829][Trainer][INFO] - 
+[2026-08-03 10:46:08,829][Trainer][INFO] - Epoch 93
+[2026-08-03 10:46:08,829][Trainer][INFO] - Current learning rate: 0.00716
+[2026-08-03 10:47:07,490][Trainer][INFO] - train_loss -0.6673
+[2026-08-03 10:47:07,490][Trainer][INFO] - val_loss -0.6522
+[2026-08-03 10:47:07,490][Trainer][INFO] - Pseudo dice 0.7382
+[2026-08-03 10:47:07,490][Trainer][INFO] - Epoch time: 58.66 s
+[2026-08-03 10:47:08,344][Trainer][INFO] - 
+[2026-08-03 10:47:08,344][Trainer][INFO] - Epoch 94
+[2026-08-03 10:47:08,344][Trainer][INFO] - Current learning rate: 0.00713
+[2026-08-03 10:48:06,943][Trainer][INFO] - train_loss -0.6447
+[2026-08-03 10:48:06,943][Trainer][INFO] - val_loss -0.7083
+[2026-08-03 10:48:06,943][Trainer][INFO] - Pseudo dice 0.7558
+[2026-08-03 10:48:06,943][Trainer][INFO] - Epoch time: 58.6 s
+[2026-08-03 10:48:07,830][Trainer][INFO] - 
+[2026-08-03 10:48:07,830][Trainer][INFO] - Epoch 95
+[2026-08-03 10:48:07,830][Trainer][INFO] - Current learning rate: 0.0071
+[2026-08-03 10:49:06,469][Trainer][INFO] - train_loss -0.6484
+[2026-08-03 10:49:06,470][Trainer][INFO] - val_loss -0.7264
+[2026-08-03 10:49:06,470][Trainer][INFO] - Pseudo dice 0.7874
+[2026-08-03 10:49:06,470][Trainer][INFO] - Epoch time: 58.64 s
+[2026-08-03 10:49:07,346][Trainer][INFO] - 
+[2026-08-03 10:49:07,346][Trainer][INFO] - Epoch 96
+[2026-08-03 10:49:07,346][Trainer][INFO] - Current learning rate: 0.00707
+[2026-08-03 10:50:06,016][Trainer][INFO] - train_loss -0.6803
+[2026-08-03 10:50:06,016][Trainer][INFO] - val_loss -0.6934
+[2026-08-03 10:50:06,016][Trainer][INFO] - Pseudo dice 0.7806
+[2026-08-03 10:50:06,016][Trainer][INFO] - Epoch time: 58.67 s
+[2026-08-03 10:50:06,870][Trainer][INFO] - 
+[2026-08-03 10:50:06,870][Trainer][INFO] - Epoch 97
+[2026-08-03 10:50:06,870][Trainer][INFO] - Current learning rate: 0.00704
+[2026-08-03 10:51:05,450][Trainer][INFO] - train_loss -0.6596
+[2026-08-03 10:51:05,451][Trainer][INFO] - val_loss -0.6269
+[2026-08-03 10:51:05,451][Trainer][INFO] - Pseudo dice 0.6964
+[2026-08-03 10:51:05,451][Trainer][INFO] - Epoch time: 58.58 s
+[2026-08-03 10:51:06,341][Trainer][INFO] - 
+[2026-08-03 10:51:06,342][Trainer][INFO] - Epoch 98
+[2026-08-03 10:51:06,342][Trainer][INFO] - Current learning rate: 0.007
+[2026-08-03 10:52:05,154][Trainer][INFO] - train_loss -0.6851
+[2026-08-03 10:52:05,155][Trainer][INFO] - val_loss -0.6597
+[2026-08-03 10:52:05,155][Trainer][INFO] - Pseudo dice 0.7109
+[2026-08-03 10:52:05,155][Trainer][INFO] - Epoch time: 58.81 s
+[2026-08-03 10:52:06,040][Trainer][INFO] - 
+[2026-08-03 10:52:06,040][Trainer][INFO] - Epoch 99
+[2026-08-03 10:52:06,040][Trainer][INFO] - Current learning rate: 0.00697
+[2026-08-03 10:53:04,481][Trainer][INFO] - train_loss -0.6792
+[2026-08-03 10:53:04,481][Trainer][INFO] - val_loss -0.691
+[2026-08-03 10:53:04,481][Trainer][INFO] - Pseudo dice 0.7103
+[2026-08-03 10:53:04,481][Trainer][INFO] - Epoch time: 58.44 s
+[2026-08-03 10:53:05,825][Trainer][INFO] - 
+[2026-08-03 10:53:05,825][Trainer][INFO] - Epoch 100
+[2026-08-03 10:53:05,825][Trainer][INFO] - Current learning rate: 0.00694
+[2026-08-03 10:54:04,384][Trainer][INFO] - train_loss -0.6597
+[2026-08-03 10:54:04,384][Trainer][INFO] - val_loss -0.6746
+[2026-08-03 10:54:04,385][Trainer][INFO] - Pseudo dice 0.633
+[2026-08-03 10:54:04,385][Trainer][INFO] - Epoch time: 58.56 s
+[2026-08-03 10:54:05,348][Trainer][INFO] - 
+[2026-08-03 10:54:05,349][Trainer][INFO] - Epoch 101
+[2026-08-03 10:54:05,349][Trainer][INFO] - Current learning rate: 0.00691
+[2026-08-03 10:55:03,828][Trainer][INFO] - train_loss -0.6752
+[2026-08-03 10:55:03,828][Trainer][INFO] - val_loss -0.6819
+[2026-08-03 10:55:03,828][Trainer][INFO] - Pseudo dice 0.7993
+[2026-08-03 10:55:03,828][Trainer][INFO] - Epoch time: 58.48 s
+[2026-08-03 10:55:04,713][Trainer][INFO] - 
+[2026-08-03 10:55:04,713][Trainer][INFO] - Epoch 102
+[2026-08-03 10:55:04,713][Trainer][INFO] - Current learning rate: 0.00688
+[2026-08-03 10:56:03,203][Trainer][INFO] - train_loss -0.6917
+[2026-08-03 10:56:03,203][Trainer][INFO] - val_loss -0.686
+[2026-08-03 10:56:03,203][Trainer][INFO] - Pseudo dice 0.7863
+[2026-08-03 10:56:03,203][Trainer][INFO] - Epoch time: 58.49 s
+[2026-08-03 10:56:04,096][Trainer][INFO] - 
+[2026-08-03 10:56:04,096][Trainer][INFO] - Epoch 103
+[2026-08-03 10:56:04,096][Trainer][INFO] - Current learning rate: 0.00685
+[2026-08-03 10:57:02,663][Trainer][INFO] - train_loss -0.6773
+[2026-08-03 10:57:02,664][Trainer][INFO] - val_loss -0.7293
+[2026-08-03 10:57:02,664][Trainer][INFO] - Pseudo dice 0.7636
+[2026-08-03 10:57:02,664][Trainer][INFO] - Epoch time: 58.57 s
+[2026-08-03 10:57:03,527][Trainer][INFO] - 
+[2026-08-03 10:57:03,527][Trainer][INFO] - Epoch 104
+[2026-08-03 10:57:03,527][Trainer][INFO] - Current learning rate: 0.00682
+[2026-08-03 10:58:02,093][Trainer][INFO] - train_loss -0.6723
+[2026-08-03 10:58:02,093][Trainer][INFO] - val_loss -0.6817
+[2026-08-03 10:58:02,093][Trainer][INFO] - Pseudo dice 0.7315
+[2026-08-03 10:58:02,093][Trainer][INFO] - Epoch time: 58.57 s
+[2026-08-03 10:58:04,300][Trainer][INFO] - 
+[2026-08-03 10:58:04,300][Trainer][INFO] - Epoch 105
+[2026-08-03 10:58:04,300][Trainer][INFO] - Current learning rate: 0.00679
+[2026-08-03 10:59:02,778][Trainer][INFO] - train_loss -0.7009
+[2026-08-03 10:59:02,778][Trainer][INFO] - val_loss -0.6721
+[2026-08-03 10:59:02,778][Trainer][INFO] - Pseudo dice 0.7487
+[2026-08-03 10:59:02,778][Trainer][INFO] - Epoch time: 58.48 s
+[2026-08-03 10:59:03,644][Trainer][INFO] - 
+[2026-08-03 10:59:03,644][Trainer][INFO] - Epoch 106
+[2026-08-03 10:59:03,644][Trainer][INFO] - Current learning rate: 0.00675
+[2026-08-03 11:00:02,085][Trainer][INFO] - train_loss -0.6832
+[2026-08-03 11:00:02,086][Trainer][INFO] - val_loss -0.7284
+[2026-08-03 11:00:02,086][Trainer][INFO] - Pseudo dice 0.819
+[2026-08-03 11:00:02,086][Trainer][INFO] - Epoch time: 58.44 s
+[2026-08-03 11:00:02,086][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7472
+[2026-08-03 11:00:03,427][Trainer][INFO] - 
+[2026-08-03 11:00:03,427][Trainer][INFO] - Epoch 107
+[2026-08-03 11:00:03,427][Trainer][INFO] - Current learning rate: 0.00672
+[2026-08-03 11:01:01,968][Trainer][INFO] - train_loss -0.6739
+[2026-08-03 11:01:01,969][Trainer][INFO] - val_loss -0.7236
+[2026-08-03 11:01:01,969][Trainer][INFO] - Pseudo dice 0.81
+[2026-08-03 11:01:01,969][Trainer][INFO] - Epoch time: 58.54 s
+[2026-08-03 11:01:01,969][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7534
+[2026-08-03 11:01:03,291][Trainer][INFO] - 
+[2026-08-03 11:01:03,291][Trainer][INFO] - Epoch 108
+[2026-08-03 11:01:03,291][Trainer][INFO] - Current learning rate: 0.00669
+[2026-08-03 11:21:11,452][root][INFO] - Starting training script
+[2026-08-03 11:21:11,452][root][INFO] - torch.cuda.is_available(): True
+[2026-08-03 11:21:11,452][root][INFO] - Setting seed
+[2026-08-03 11:21:11,455][root][INFO] - Sleeping for 15 seconds
+[2026-08-03 11:21:26,455][root][INFO] - Setting up emissions tracker
+[2026-08-03 11:21:27,805][root][INFO] - Creating trainer
+[2026-08-03 11:21:29,198][AutoExperimentPlanner][INFO] - Using base_num_features: 32
+[2026-08-03 11:21:29,199][AutoExperimentPlanner][INFO] - Using max_features: 320
+[2026-08-03 11:21:29,199][AutoExperimentPlanner][INFO] - Applied model_scale = 1.00
+[2026-08-03 11:21:29,199][AutoExperimentPlanner][INFO] - Encoder blocks per stage: (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)
+[2026-08-03 11:21:29,199][AutoExperimentPlanner][INFO] - Decoder blocks per stage: (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)
+[2026-08-03 11:21:29,211][AutoExperimentPlanner][INFO] - Using normalization: <class 'torch.nn.modules.instancenorm.InstanceNorm3d'>
+[2026-08-03 11:21:29,211][AutoExperimentPlanner][INFO] - Using activation function: torch.nn.LeakyReLU
+[2026-08-03 11:21:29,212][AutoExperimentPlanner][INFO] - Using dropout: None
+[2026-08-03 11:21:30,829][AutoExperimentPlanner][INFO] - Using normalization: <class 'torch.nn.modules.instancenorm.InstanceNorm2d'>
+[2026-08-03 11:21:30,829][AutoExperimentPlanner][INFO] - Using activation function: torch.nn.LeakyReLU
+[2026-08-03 11:21:30,829][AutoExperimentPlanner][INFO] - Using dropout: None
+[2026-08-03 11:21:31,384][Trainer][INFO] - 
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+[2026-08-03 11:21:31,384][Trainer][INFO] - Updated hyperparameter config:
+[2026-08-03 11:21:31,384][Trainer][INFO] - num_epochs: 300
+[2026-08-03 11:21:31,384][Trainer][INFO] - total_epochs: 300
+[2026-08-03 11:21:31,384][Trainer][INFO] - optimizer: SGD
+[2026-08-03 11:21:31,384][Trainer][INFO] - momentum: 0.99
+[2026-08-03 11:21:31,384][Trainer][INFO] - initial_lr: 0.01
+[2026-08-03 11:21:31,385][Trainer][INFO] - weight_decay: 3e-05
+[2026-08-03 11:21:31,385][Trainer][INFO] - lr_scheduler: PolyLRScheduler
+[2026-08-03 11:21:31,385][Trainer][INFO] - oversample_foreground_percent: 0.33
+[2026-08-03 11:21:31,385][Trainer][INFO] - loss_function: DiceAndCrossEntropyLoss
+[2026-08-03 11:21:31,385][Trainer][INFO] - aug_factor: 1.0
+[2026-08-03 11:21:31,385][Trainer][INFO] - aug_scale_prob: 0.2
+[2026-08-03 11:21:31,385][Trainer][INFO] - aug_rotate_prob: 0.2
+[2026-08-03 11:21:31,385][Trainer][INFO] - aug_gaussian_noise_prob: 0.1
+[2026-08-03 11:21:31,385][Trainer][INFO] - aug_gaussian_blur_prob: 0.2
+[2026-08-03 11:21:31,385][Trainer][INFO] - aug_brightness_prob: 0.15
+[2026-08-03 11:21:31,385][Trainer][INFO] - aug_contrast_prob: 0.15
+[2026-08-03 11:21:31,385][Trainer][INFO] - aug_lowres_prob: 0.25
+[2026-08-03 11:21:31,385][Trainer][INFO] - aug_gamma_1_prob: 0.1
+[2026-08-03 11:21:31,385][Trainer][INFO] - aug_gamma_2_prob: 0.3
+[2026-08-03 11:21:31,385][Trainer][INFO] - encoder_type: ConvolutionalEncoder
+[2026-08-03 11:21:31,385][Trainer][INFO] - base_num_features: 32
+[2026-08-03 11:21:31,385][Trainer][INFO] - max_features: 320
+[2026-08-03 11:21:31,385][Trainer][INFO] - activation: LeakyReLU
+[2026-08-03 11:21:31,385][Trainer][INFO] - dropout_rate: 0.0
+[2026-08-03 11:21:31,385][Trainer][INFO] - model_scale: 1
+[2026-08-03 11:21:31,385][Trainer][INFO] - normalization: InstanceNorm
+[2026-08-03 11:21:32,072][Trainer][INFO] - Using torch.compile...
+[2026-08-03 11:21:33,250][Trainer][INFO] - Set optimizer to SGD
+[2026-08-03 11:21:33,250][Trainer][INFO] - Set lr_scheduler to PolyLRScheduler
+[2026-08-03 11:21:33,251][Trainer][INFO] - Set loss to DeepSupervisionWrapper
+[2026-08-03 11:21:33,667][root][INFO] - Starting training
+[2026-08-03 11:21:33,668][Trainer][INFO] - do_dummy_2d_data_aug: True
+[2026-08-03 11:21:33,672][Trainer][INFO] - Using splits from existing split file: /home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/splits_final.json
+[2026-08-03 11:21:33,673][Trainer][INFO] - The split file contains 5 splits.
+[2026-08-03 11:21:33,673][Trainer][INFO] - Desired fold for training: 3
+[2026-08-03 11:21:33,673][Trainer][INFO] - This split has 960 training and 240 validation cases.
+[2026-08-03 11:21:40,025][Trainer][INFO] - 
+This is the configuration used by this training:
+Configuration name: 3d_fullres
+ {'data_identifier': 'nnUNetPlans_3d_fullres', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 2, 'patch_size': (56, 192, 192), 'median_image_size_in_voxels': [80.0, 256.0, 256.0], 'spacing': [2.0, 0.7031000256538391, 0.7031000256538391], 'normalization_schemes': ['ZScoreNormalization', 'ZScoreNormalization', 'ZScoreNormalization'], 'use_mask_for_norm': [False, False, False], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.PlainConvUNet', 'arch_kwargs': {'n_stages': 6, 'features_per_stage': (32, 64, 128, 256, 320, 320), 'conv_op': 'torch.nn.modules.conv.Conv3d', 'kernel_sizes': ((1, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3)), 'strides': ((1, 1, 1), (1, 2, 2), (2, 2, 2), (2, 2, 2), (2, 2, 2), (1, 2, 2)), 'n_conv_per_stage': (2, 2, 2, 2, 2, 2), 'n_conv_per_stage_decoder': (2, 2, 2, 2, 2), 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm3d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}, 'deep_supervision': True}, '_kw_requires_import': ('conv_op', 'norm_op', 'dropout_op', 'nonlin')}, 'batch_dice': False} 
+
+[2026-08-03 11:21:40,025][Trainer][INFO] - These are the global plan.json settings:
+ {'dataset_name': 'Dataset501_MAMAMIA', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [2.0, 0.7031000256538391, 0.7031000256538391], 'original_median_shape_after_transp': [80, 256, 256], 'image_reader_writer': 'SimpleITKIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'AutoExperimentPlanner', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 8399.0, 'mean': 526.5316162109375, 'median': 358.0, 'min': 0.0, 'percentile_00_5': 22.0, 'percentile_99_5': 2252.0, 'std': 497.0259704589844}, '1': {'max': 13172.0, 'mean': 1096.2913818359375, 'median': 659.0, 'min': 0.0, 'percentile_00_5': 51.0, 'percentile_99_5': 5549.0, 'std': 1145.160888671875}, '2': {'max': 13668.0, 'mean': 1225.3990478515625, 'median': 762.0, 'min': 0.0, 'percentile_00_5': 54.0, 'percentile_99_5': 5765.0, 'std': 1223.5499267578125}}} 
+
+[2026-08-03 11:21:40,035][Trainer][INFO] - Unable to plot network architecture: nnUNet_compile is enabled!
+[2026-08-03 11:21:40,046][Trainer][INFO] - 
+[2026-08-03 11:21:40,046][Trainer][INFO] - Epoch 100
+[2026-08-03 11:21:40,046][Trainer][INFO] - Current learning rate: 0.00694
+[2026-08-03 11:23:14,630][Trainer][INFO] - train_loss -0.6842
+[2026-08-03 11:23:14,631][Trainer][INFO] - val_loss -0.6944
+[2026-08-03 11:23:14,631][Trainer][INFO] - Pseudo dice 0.7405
+[2026-08-03 11:23:14,631][Trainer][INFO] - Epoch time: 94.59 s
+[2026-08-03 11:23:15,554][Trainer][INFO] - 
+[2026-08-03 11:23:15,554][Trainer][INFO] - Epoch 101
+[2026-08-03 11:23:15,554][Trainer][INFO] - Current learning rate: 0.00691
+[2026-08-03 11:24:14,810][Trainer][INFO] - train_loss -0.666
+[2026-08-03 11:24:14,811][Trainer][INFO] - val_loss -0.6695
+[2026-08-03 11:24:14,811][Trainer][INFO] - Pseudo dice 0.6754
+[2026-08-03 11:24:14,811][Trainer][INFO] - Epoch time: 59.26 s
+[2026-08-03 11:24:15,677][Trainer][INFO] - 
+[2026-08-03 11:24:15,677][Trainer][INFO] - Epoch 102
+[2026-08-03 11:24:15,677][Trainer][INFO] - Current learning rate: 0.00688
+[2026-08-03 11:25:14,024][Trainer][INFO] - train_loss -0.6595
+[2026-08-03 11:25:14,024][Trainer][INFO] - val_loss -0.7001
+[2026-08-03 11:25:14,024][Trainer][INFO] - Pseudo dice 0.7256
+[2026-08-03 11:25:14,024][Trainer][INFO] - Epoch time: 58.35 s
+[2026-08-03 11:25:14,885][Trainer][INFO] - 
+[2026-08-03 11:25:14,885][Trainer][INFO] - Epoch 103
+[2026-08-03 11:25:14,885][Trainer][INFO] - Current learning rate: 0.00685
+[2026-08-03 11:26:13,684][Trainer][INFO] - train_loss -0.6818
+[2026-08-03 11:26:13,684][Trainer][INFO] - val_loss -0.6977
+[2026-08-03 11:26:13,684][Trainer][INFO] - Pseudo dice 0.7608
+[2026-08-03 11:26:13,685][Trainer][INFO] - Epoch time: 58.8 s
+[2026-08-03 11:26:14,561][Trainer][INFO] - 
+[2026-08-03 11:26:14,561][Trainer][INFO] - Epoch 104
+[2026-08-03 11:26:14,561][Trainer][INFO] - Current learning rate: 0.00682
+[2026-08-03 11:27:13,267][Trainer][INFO] - train_loss -0.6737
+[2026-08-03 11:27:13,267][Trainer][INFO] - val_loss -0.6885
+[2026-08-03 11:27:13,267][Trainer][INFO] - Pseudo dice 0.8039
+[2026-08-03 11:27:13,267][Trainer][INFO] - Epoch time: 58.71 s
+[2026-08-03 11:27:14,137][Trainer][INFO] - 
+[2026-08-03 11:27:14,137][Trainer][INFO] - Epoch 105
+[2026-08-03 11:27:14,137][Trainer][INFO] - Current learning rate: 0.00679
+[2026-08-03 11:28:12,830][Trainer][INFO] - train_loss -0.7015
+[2026-08-03 11:28:12,831][Trainer][INFO] - val_loss -0.68
+[2026-08-03 11:28:12,831][Trainer][INFO] - Pseudo dice 0.6986
+[2026-08-03 11:28:12,831][Trainer][INFO] - Epoch time: 58.69 s
+[2026-08-03 11:28:13,776][Trainer][INFO] - 
+[2026-08-03 11:28:13,776][Trainer][INFO] - Epoch 106
+[2026-08-03 11:28:13,776][Trainer][INFO] - Current learning rate: 0.00675
+[2026-08-03 11:29:12,222][Trainer][INFO] - train_loss -0.6795
+[2026-08-03 11:29:12,223][Trainer][INFO] - val_loss -0.7004
+[2026-08-03 11:29:12,223][Trainer][INFO] - Pseudo dice 0.7622
+[2026-08-03 11:29:12,223][Trainer][INFO] - Epoch time: 58.45 s
+[2026-08-03 11:29:13,142][Trainer][INFO] - 
+[2026-08-03 11:29:13,142][Trainer][INFO] - Epoch 107
+[2026-08-03 11:29:13,142][Trainer][INFO] - Current learning rate: 0.00672
+[2026-08-03 11:30:11,560][Trainer][INFO] - train_loss -0.6701
+[2026-08-03 11:30:11,560][Trainer][INFO] - val_loss -0.7481
+[2026-08-03 11:30:11,560][Trainer][INFO] - Pseudo dice 0.759
+[2026-08-03 11:30:11,561][Trainer][INFO] - Epoch time: 58.42 s
+[2026-08-03 11:30:12,432][Trainer][INFO] - 
+[2026-08-03 11:30:12,432][Trainer][INFO] - Epoch 108
+[2026-08-03 11:30:12,432][Trainer][INFO] - Current learning rate: 0.00669
+[2026-08-03 11:31:11,066][Trainer][INFO] - train_loss -0.6944
+[2026-08-03 11:31:11,066][Trainer][INFO] - val_loss -0.7493
+[2026-08-03 11:31:11,066][Trainer][INFO] - Pseudo dice 0.7654
+[2026-08-03 11:31:11,067][Trainer][INFO] - Epoch time: 58.63 s
+[2026-08-03 11:31:11,951][Trainer][INFO] - 
+[2026-08-03 11:31:11,951][Trainer][INFO] - Epoch 109
+[2026-08-03 11:31:11,951][Trainer][INFO] - Current learning rate: 0.00666
+[2026-08-03 11:32:10,264][Trainer][INFO] - train_loss -0.6572
+[2026-08-03 11:32:10,264][Trainer][INFO] - val_loss -0.6976
+[2026-08-03 11:32:10,264][Trainer][INFO] - Pseudo dice 0.755
+[2026-08-03 11:32:10,264][Trainer][INFO] - Epoch time: 58.31 s
+[2026-08-03 11:32:11,164][Trainer][INFO] - 
+[2026-08-03 11:32:11,164][Trainer][INFO] - Epoch 110
+[2026-08-03 11:32:11,164][Trainer][INFO] - Current learning rate: 0.00663
+[2026-08-03 11:33:09,993][Trainer][INFO] - train_loss -0.6327
+[2026-08-03 11:33:09,994][Trainer][INFO] - val_loss -0.6727
+[2026-08-03 11:33:09,994][Trainer][INFO] - Pseudo dice 0.7407
+[2026-08-03 11:33:09,994][Trainer][INFO] - Epoch time: 58.83 s
+[2026-08-03 11:33:10,876][Trainer][INFO] - 
+[2026-08-03 11:33:10,876][Trainer][INFO] - Epoch 111
+[2026-08-03 11:33:10,876][Trainer][INFO] - Current learning rate: 0.0066
+[2026-08-03 11:34:09,211][Trainer][INFO] - train_loss -0.6459
+[2026-08-03 11:34:09,212][Trainer][INFO] - val_loss -0.6629
+[2026-08-03 11:34:09,212][Trainer][INFO] - Pseudo dice 0.6839
+[2026-08-03 11:34:09,212][Trainer][INFO] - Epoch time: 58.34 s
+[2026-08-03 11:34:10,118][Trainer][INFO] - 
+[2026-08-03 11:34:10,119][Trainer][INFO] - Epoch 112
+[2026-08-03 11:34:10,119][Trainer][INFO] - Current learning rate: 0.00657
+[2026-08-03 11:35:08,579][Trainer][INFO] - train_loss -0.6623
+[2026-08-03 11:35:08,579][Trainer][INFO] - val_loss -0.6854
+[2026-08-03 11:35:08,579][Trainer][INFO] - Pseudo dice 0.7367
+[2026-08-03 11:35:08,579][Trainer][INFO] - Epoch time: 58.46 s
+[2026-08-03 11:35:09,454][Trainer][INFO] - 
+[2026-08-03 11:35:09,454][Trainer][INFO] - Epoch 113
+[2026-08-03 11:35:09,454][Trainer][INFO] - Current learning rate: 0.00654
+[2026-08-03 11:36:07,894][Trainer][INFO] - train_loss -0.6871
+[2026-08-03 11:36:07,894][Trainer][INFO] - val_loss -0.7326
+[2026-08-03 11:36:07,894][Trainer][INFO] - Pseudo dice 0.8257
+[2026-08-03 11:36:07,894][Trainer][INFO] - Epoch time: 58.44 s
+[2026-08-03 11:36:07,895][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7459
+[2026-08-03 11:36:09,283][Trainer][INFO] - 
+[2026-08-03 11:36:09,283][Trainer][INFO] - Epoch 114
+[2026-08-03 11:36:09,283][Trainer][INFO] - Current learning rate: 0.0065
+[2026-08-03 11:37:08,760][Trainer][INFO] - train_loss -0.6589
+[2026-08-03 11:37:08,760][Trainer][INFO] - val_loss -0.6744
+[2026-08-03 11:37:08,760][Trainer][INFO] - Pseudo dice 0.794
+[2026-08-03 11:37:08,760][Trainer][INFO] - Epoch time: 59.48 s
+[2026-08-03 11:37:08,760][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7507
+[2026-08-03 11:37:10,897][Trainer][INFO] - 
+[2026-08-03 11:37:10,897][Trainer][INFO] - Epoch 115
+[2026-08-03 11:37:10,897][Trainer][INFO] - Current learning rate: 0.00647
+[2026-08-03 11:38:09,401][Trainer][INFO] - train_loss -0.6626
+[2026-08-03 11:38:09,401][Trainer][INFO] - val_loss -0.7166
+[2026-08-03 11:38:09,401][Trainer][INFO] - Pseudo dice 0.7601
+[2026-08-03 11:38:09,401][Trainer][INFO] - Epoch time: 58.5 s
+[2026-08-03 11:38:09,401][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7516
+[2026-08-03 11:38:10,774][Trainer][INFO] - 
+[2026-08-03 11:38:10,774][Trainer][INFO] - Epoch 116
+[2026-08-03 11:38:10,774][Trainer][INFO] - Current learning rate: 0.00644
+[2026-08-03 11:39:09,385][Trainer][INFO] - train_loss -0.6493
+[2026-08-03 11:39:09,386][Trainer][INFO] - val_loss -0.6604
+[2026-08-03 11:39:09,386][Trainer][INFO] - Pseudo dice 0.6321
+[2026-08-03 11:39:09,386][Trainer][INFO] - Epoch time: 58.61 s
+[2026-08-03 11:39:10,300][Trainer][INFO] - 
+[2026-08-03 11:39:10,301][Trainer][INFO] - Epoch 117
+[2026-08-03 11:39:10,301][Trainer][INFO] - Current learning rate: 0.00641
+[2026-08-03 11:40:08,777][Trainer][INFO] - train_loss -0.6833
+[2026-08-03 11:40:08,777][Trainer][INFO] - val_loss -0.711
+[2026-08-03 11:40:08,777][Trainer][INFO] - Pseudo dice 0.7597
+[2026-08-03 11:40:08,777][Trainer][INFO] - Epoch time: 58.48 s
+[2026-08-03 11:40:09,663][Trainer][INFO] - 
+[2026-08-03 11:40:09,664][Trainer][INFO] - Epoch 118
+[2026-08-03 11:40:09,664][Trainer][INFO] - Current learning rate: 0.00638
+[2026-08-03 11:41:08,775][Trainer][INFO] - train_loss -0.6973
+[2026-08-03 11:41:08,776][Trainer][INFO] - val_loss -0.7052
+[2026-08-03 11:41:08,776][Trainer][INFO] - Pseudo dice 0.7554
+[2026-08-03 11:41:08,776][Trainer][INFO] - Epoch time: 59.11 s
+[2026-08-03 11:41:09,681][Trainer][INFO] - 
+[2026-08-03 11:41:09,681][Trainer][INFO] - Epoch 119
+[2026-08-03 11:41:09,681][Trainer][INFO] - Current learning rate: 0.00635
+[2026-08-03 11:42:07,974][Trainer][INFO] - train_loss -0.7131
+[2026-08-03 11:42:07,975][Trainer][INFO] - val_loss -0.6846
+[2026-08-03 11:42:07,975][Trainer][INFO] - Pseudo dice 0.6886
+[2026-08-03 11:42:07,976][Trainer][INFO] - Epoch time: 58.29 s
+[2026-08-03 11:42:08,866][Trainer][INFO] - 
+[2026-08-03 11:42:08,866][Trainer][INFO] - Epoch 120
+[2026-08-03 11:42:08,866][Trainer][INFO] - Current learning rate: 0.00631
+[2026-08-03 11:43:07,452][Trainer][INFO] - train_loss -0.6771
+[2026-08-03 11:43:07,452][Trainer][INFO] - val_loss -0.6917
+[2026-08-03 11:43:07,452][Trainer][INFO] - Pseudo dice 0.7203
+[2026-08-03 11:43:07,452][Trainer][INFO] - Epoch time: 58.59 s
+[2026-08-03 11:43:08,340][Trainer][INFO] - 
+[2026-08-03 11:43:08,340][Trainer][INFO] - Epoch 121
+[2026-08-03 11:43:08,340][Trainer][INFO] - Current learning rate: 0.00628
+[2026-08-03 11:44:06,803][Trainer][INFO] - train_loss -0.6544
+[2026-08-03 11:44:06,803][Trainer][INFO] - val_loss -0.7643
+[2026-08-03 11:44:06,804][Trainer][INFO] - Pseudo dice 0.8524
+[2026-08-03 11:44:06,804][Trainer][INFO] - Epoch time: 58.46 s
+[2026-08-03 11:44:07,686][Trainer][INFO] - 
+[2026-08-03 11:44:07,686][Trainer][INFO] - Epoch 122
+[2026-08-03 11:44:07,686][Trainer][INFO] - Current learning rate: 0.00625
+[2026-08-03 11:45:07,054][Trainer][INFO] - train_loss -0.6422
+[2026-08-03 11:45:07,054][Trainer][INFO] - val_loss -0.7055
+[2026-08-03 11:45:07,054][Trainer][INFO] - Pseudo dice 0.8076
+[2026-08-03 11:45:07,055][Trainer][INFO] - Epoch time: 59.37 s
+[2026-08-03 11:45:07,055][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7535
+[2026-08-03 11:45:08,441][Trainer][INFO] - 
+[2026-08-03 11:45:08,441][Trainer][INFO] - Epoch 123
+[2026-08-03 11:45:08,441][Trainer][INFO] - Current learning rate: 0.00622
+[2026-08-03 11:46:07,082][Trainer][INFO] - train_loss -0.6798
+[2026-08-03 11:46:07,082][Trainer][INFO] - val_loss -0.7354
+[2026-08-03 11:46:07,082][Trainer][INFO] - Pseudo dice 0.8279
+[2026-08-03 11:46:07,082][Trainer][INFO] - Epoch time: 58.64 s
+[2026-08-03 11:46:07,082][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.761
+[2026-08-03 11:46:08,450][Trainer][INFO] - 
+[2026-08-03 11:46:08,450][Trainer][INFO] - Epoch 124
+[2026-08-03 11:46:08,450][Trainer][INFO] - Current learning rate: 0.00619
+[2026-08-03 11:47:06,870][Trainer][INFO] - train_loss -0.6685
+[2026-08-03 11:47:06,870][Trainer][INFO] - val_loss -0.6909
+[2026-08-03 11:47:06,870][Trainer][INFO] - Pseudo dice 0.834
+[2026-08-03 11:47:06,870][Trainer][INFO] - Epoch time: 58.42 s
+[2026-08-03 11:47:06,870][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7683
+[2026-08-03 11:47:08,237][Trainer][INFO] - 
+[2026-08-03 11:47:08,237][Trainer][INFO] - Epoch 125
+[2026-08-03 11:47:08,237][Trainer][INFO] - Current learning rate: 0.00616
+[2026-08-03 11:48:06,764][Trainer][INFO] - train_loss -0.6992
+[2026-08-03 11:48:06,765][Trainer][INFO] - val_loss -0.6967
+[2026-08-03 11:48:06,765][Trainer][INFO] - Pseudo dice 0.7708
+[2026-08-03 11:48:06,765][Trainer][INFO] - Epoch time: 58.53 s
+[2026-08-03 11:48:06,765][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7685
+[2026-08-03 11:48:08,144][Trainer][INFO] - 
+[2026-08-03 11:48:08,144][Trainer][INFO] - Epoch 126
+[2026-08-03 11:48:08,144][Trainer][INFO] - Current learning rate: 0.00612
+[2026-08-03 11:49:06,742][Trainer][INFO] - train_loss -0.6856
+[2026-08-03 11:49:06,743][Trainer][INFO] - val_loss -0.6873
+[2026-08-03 11:49:06,743][Trainer][INFO] - Pseudo dice 0.7696
+[2026-08-03 11:49:06,743][Trainer][INFO] - Epoch time: 58.6 s
+[2026-08-03 11:49:06,743][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7686
+[2026-08-03 11:49:08,089][Trainer][INFO] - 
+[2026-08-03 11:49:08,090][Trainer][INFO] - Epoch 127
+[2026-08-03 11:49:08,090][Trainer][INFO] - Current learning rate: 0.00609
+[2026-08-03 11:50:08,051][Trainer][INFO] - train_loss -0.6932
+[2026-08-03 11:50:08,052][Trainer][INFO] - val_loss -0.7536
+[2026-08-03 11:50:08,052][Trainer][INFO] - Pseudo dice 0.7986
+[2026-08-03 11:50:08,052][Trainer][INFO] - Epoch time: 59.96 s
+[2026-08-03 11:50:08,052][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7716
+[2026-08-03 11:50:09,437][Trainer][INFO] - 
+[2026-08-03 11:50:09,437][Trainer][INFO] - Epoch 128
+[2026-08-03 11:50:09,437][Trainer][INFO] - Current learning rate: 0.00606
+[2026-08-03 11:51:07,931][Trainer][INFO] - train_loss -0.686
+[2026-08-03 11:51:07,932][Trainer][INFO] - val_loss -0.6835
+[2026-08-03 11:51:07,932][Trainer][INFO] - Pseudo dice 0.7306
+[2026-08-03 11:51:07,932][Trainer][INFO] - Epoch time: 58.5 s
+[2026-08-03 11:51:08,813][Trainer][INFO] - 
+[2026-08-03 11:51:08,813][Trainer][INFO] - Epoch 129
+[2026-08-03 11:51:08,813][Trainer][INFO] - Current learning rate: 0.00603
+[2026-08-03 11:52:07,351][Trainer][INFO] - train_loss -0.676
+[2026-08-03 11:52:07,352][Trainer][INFO] - val_loss -0.7004
+[2026-08-03 11:52:07,352][Trainer][INFO] - Pseudo dice 0.8012
+[2026-08-03 11:52:07,352][Trainer][INFO] - Epoch time: 58.54 s
+[2026-08-03 11:52:08,295][Trainer][INFO] - 
+[2026-08-03 11:52:08,296][Trainer][INFO] - Epoch 130
+[2026-08-03 11:52:08,296][Trainer][INFO] - Current learning rate: 0.006
+[2026-08-03 11:53:06,512][Trainer][INFO] - train_loss -0.6951
+[2026-08-03 11:53:06,512][Trainer][INFO] - val_loss -0.7149
+[2026-08-03 11:53:06,512][Trainer][INFO] - Pseudo dice 0.8215
+[2026-08-03 11:53:06,512][Trainer][INFO] - Epoch time: 58.22 s
+[2026-08-03 11:53:06,513][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7759
+[2026-08-03 11:53:07,889][Trainer][INFO] - 
+[2026-08-03 11:53:07,889][Trainer][INFO] - Epoch 131
+[2026-08-03 11:53:07,889][Trainer][INFO] - Current learning rate: 0.00597
+[2026-08-03 11:54:07,737][Trainer][INFO] - train_loss -0.6553
+[2026-08-03 11:54:07,737][Trainer][INFO] - val_loss -0.6787
+[2026-08-03 11:54:07,737][Trainer][INFO] - Pseudo dice 0.7582
+[2026-08-03 11:54:07,737][Trainer][INFO] - Epoch time: 59.85 s
+[2026-08-03 11:54:08,680][Trainer][INFO] - 
+[2026-08-03 11:54:08,680][Trainer][INFO] - Epoch 132
+[2026-08-03 11:54:08,680][Trainer][INFO] - Current learning rate: 0.00593
+[2026-08-03 11:55:07,317][Trainer][INFO] - train_loss -0.6906
+[2026-08-03 11:55:07,317][Trainer][INFO] - val_loss -0.6954
+[2026-08-03 11:55:07,318][Trainer][INFO] - Pseudo dice 0.7908
+[2026-08-03 11:55:07,318][Trainer][INFO] - Epoch time: 58.64 s
+[2026-08-03 11:55:08,215][Trainer][INFO] - 
+[2026-08-03 11:55:08,215][Trainer][INFO] - Epoch 133
+[2026-08-03 11:55:08,215][Trainer][INFO] - Current learning rate: 0.0059
+[2026-08-03 11:56:06,578][Trainer][INFO] - train_loss -0.6821
+[2026-08-03 11:56:06,578][Trainer][INFO] - val_loss -0.73
+[2026-08-03 11:56:06,578][Trainer][INFO] - Pseudo dice 0.8039
+[2026-08-03 11:56:06,578][Trainer][INFO] - Epoch time: 58.36 s
+[2026-08-03 11:56:06,578][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7786
+[2026-08-03 11:56:07,920][Trainer][INFO] - 
+[2026-08-03 11:56:07,920][Trainer][INFO] - Epoch 134
+[2026-08-03 11:56:07,920][Trainer][INFO] - Current learning rate: 0.00587
+[2026-08-03 11:57:06,645][Trainer][INFO] - train_loss -0.6672
+[2026-08-03 11:57:06,646][Trainer][INFO] - val_loss -0.6722
+[2026-08-03 11:57:06,646][Trainer][INFO] - Pseudo dice 0.7463
+[2026-08-03 11:57:06,646][Trainer][INFO] - Epoch time: 58.73 s
+[2026-08-03 11:57:07,549][Trainer][INFO] - 
+[2026-08-03 11:57:07,550][Trainer][INFO] - Epoch 135
+[2026-08-03 11:57:07,550][Trainer][INFO] - Current learning rate: 0.00584
+[2026-08-03 11:58:06,246][Trainer][INFO] - train_loss -0.7047
+[2026-08-03 11:58:06,246][Trainer][INFO] - val_loss -0.6769
+[2026-08-03 11:58:06,246][Trainer][INFO] - Pseudo dice 0.6929
+[2026-08-03 11:58:06,246][Trainer][INFO] - Epoch time: 58.7 s
+[2026-08-03 11:58:07,124][Trainer][INFO] - 
+[2026-08-03 11:58:07,124][Trainer][INFO] - Epoch 136
+[2026-08-03 11:58:07,125][Trainer][INFO] - Current learning rate: 0.00581
+[2026-08-03 11:59:06,409][Trainer][INFO] - train_loss -0.7023
+[2026-08-03 11:59:06,409][Trainer][INFO] - val_loss -0.7177
+[2026-08-03 11:59:06,409][Trainer][INFO] - Pseudo dice 0.781
+[2026-08-03 11:59:06,410][Trainer][INFO] - Epoch time: 59.29 s
+[2026-08-03 11:59:08,321][Trainer][INFO] - 
+[2026-08-03 11:59:08,321][Trainer][INFO] - Epoch 137
+[2026-08-03 11:59:08,321][Trainer][INFO] - Current learning rate: 0.00578
+[2026-08-03 12:00:06,471][Trainer][INFO] - train_loss -0.6676
+[2026-08-03 12:00:06,472][Trainer][INFO] - val_loss -0.7022
+[2026-08-03 12:00:06,472][Trainer][INFO] - Pseudo dice 0.8048
+[2026-08-03 12:00:06,472][Trainer][INFO] - Epoch time: 58.15 s
+[2026-08-03 12:00:07,373][Trainer][INFO] - 
+[2026-08-03 12:00:07,373][Trainer][INFO] - Epoch 138
+[2026-08-03 12:00:07,373][Trainer][INFO] - Current learning rate: 0.00574
+[2026-08-03 12:01:05,653][Trainer][INFO] - train_loss -0.6672
+[2026-08-03 12:01:05,653][Trainer][INFO] - val_loss -0.7306
+[2026-08-03 12:01:05,653][Trainer][INFO] - Pseudo dice 0.7436
+[2026-08-03 12:01:05,653][Trainer][INFO] - Epoch time: 58.28 s
+[2026-08-03 12:01:06,555][Trainer][INFO] - 
+[2026-08-03 12:01:06,555][Trainer][INFO] - Epoch 139
+[2026-08-03 12:01:06,555][Trainer][INFO] - Current learning rate: 0.00571
+[2026-08-03 12:02:04,825][Trainer][INFO] - train_loss -0.6635
+[2026-08-03 12:02:04,825][Trainer][INFO] - val_loss -0.6878
+[2026-08-03 12:02:04,825][Trainer][INFO] - Pseudo dice 0.7849
+[2026-08-03 12:02:04,825][Trainer][INFO] - Epoch time: 58.27 s
+[2026-08-03 12:02:05,709][Trainer][INFO] - 
+[2026-08-03 12:02:05,709][Trainer][INFO] - Epoch 140
+[2026-08-03 12:02:05,710][Trainer][INFO] - Current learning rate: 0.00568
+[2026-08-03 12:03:05,573][Trainer][INFO] - train_loss -0.6969
+[2026-08-03 12:03:05,573][Trainer][INFO] - val_loss -0.7015
+[2026-08-03 12:03:05,573][Trainer][INFO] - Pseudo dice 0.8314
+[2026-08-03 12:03:05,573][Trainer][INFO] - Epoch time: 59.86 s
+[2026-08-03 12:03:06,491][Trainer][INFO] - 
+[2026-08-03 12:03:06,491][Trainer][INFO] - Epoch 141
+[2026-08-03 12:03:06,491][Trainer][INFO] - Current learning rate: 0.00565
+[2026-08-03 12:04:04,821][Trainer][INFO] - train_loss -0.6614
+[2026-08-03 12:04:04,821][Trainer][INFO] - val_loss -0.7564
+[2026-08-03 12:04:04,821][Trainer][INFO] - Pseudo dice 0.7842
+[2026-08-03 12:04:04,822][Trainer][INFO] - Epoch time: 58.33 s
+[2026-08-03 12:04:05,725][Trainer][INFO] - 
+[2026-08-03 12:04:05,725][Trainer][INFO] - Epoch 142
+[2026-08-03 12:04:05,725][Trainer][INFO] - Current learning rate: 0.00562
+[2026-08-03 12:05:04,035][Trainer][INFO] - train_loss -0.6727
+[2026-08-03 12:05:04,035][Trainer][INFO] - val_loss -0.7391
+[2026-08-03 12:05:04,035][Trainer][INFO] - Pseudo dice 0.822
+[2026-08-03 12:05:04,035][Trainer][INFO] - Epoch time: 58.31 s
+[2026-08-03 12:05:04,035][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7821
+[2026-08-03 12:05:05,400][Trainer][INFO] - 
+[2026-08-03 12:05:05,401][Trainer][INFO] - Epoch 143
+[2026-08-03 12:05:05,401][Trainer][INFO] - Current learning rate: 0.00558
+[2026-08-03 12:06:03,774][Trainer][INFO] - train_loss -0.6967
+[2026-08-03 12:06:03,774][Trainer][INFO] - val_loss -0.6693
+[2026-08-03 12:06:03,774][Trainer][INFO] - Pseudo dice 0.683
+[2026-08-03 12:06:03,774][Trainer][INFO] - Epoch time: 58.37 s
+[2026-08-03 12:06:04,684][Trainer][INFO] - 
+[2026-08-03 12:06:04,684][Trainer][INFO] - Epoch 144
+[2026-08-03 12:06:04,684][Trainer][INFO] - Current learning rate: 0.00555
+[2026-08-03 12:07:04,316][Trainer][INFO] - train_loss -0.7081
+[2026-08-03 12:07:04,316][Trainer][INFO] - val_loss -0.6976
+[2026-08-03 12:07:04,316][Trainer][INFO] - Pseudo dice 0.7304
+[2026-08-03 12:07:04,316][Trainer][INFO] - Epoch time: 59.63 s
+[2026-08-03 12:07:05,224][Trainer][INFO] - 
+[2026-08-03 12:07:05,224][Trainer][INFO] - Epoch 145
+[2026-08-03 12:07:05,224][Trainer][INFO] - Current learning rate: 0.00552
+[2026-08-03 12:08:03,481][Trainer][INFO] - train_loss -0.6924
+[2026-08-03 12:08:03,482][Trainer][INFO] - val_loss -0.7303
+[2026-08-03 12:08:03,482][Trainer][INFO] - Pseudo dice 0.7768
+[2026-08-03 12:08:03,482][Trainer][INFO] - Epoch time: 58.26 s
+[2026-08-03 12:08:04,369][Trainer][INFO] - 
+[2026-08-03 12:08:04,369][Trainer][INFO] - Epoch 146
+[2026-08-03 12:08:04,369][Trainer][INFO] - Current learning rate: 0.00549
+[2026-08-03 12:09:02,878][Trainer][INFO] - train_loss -0.6632
+[2026-08-03 12:09:02,879][Trainer][INFO] - val_loss -0.7091
+[2026-08-03 12:09:02,879][Trainer][INFO] - Pseudo dice 0.8033
+[2026-08-03 12:09:02,879][Trainer][INFO] - Epoch time: 58.51 s
+[2026-08-03 12:09:03,775][Trainer][INFO] - 
+[2026-08-03 12:09:03,775][Trainer][INFO] - Epoch 147
+[2026-08-03 12:09:03,775][Trainer][INFO] - Current learning rate: 0.00546
+[2026-08-03 12:10:02,289][Trainer][INFO] - train_loss -0.6652
+[2026-08-03 12:10:02,289][Trainer][INFO] - val_loss -0.6987
+[2026-08-03 12:10:02,290][Trainer][INFO] - Pseudo dice 0.7838
+[2026-08-03 12:10:02,290][Trainer][INFO] - Epoch time: 58.51 s
+[2026-08-03 12:10:03,172][Trainer][INFO] - 
+[2026-08-03 12:10:03,172][Trainer][INFO] - Epoch 148
+[2026-08-03 12:10:03,172][Trainer][INFO] - Current learning rate: 0.00542
+[2026-08-03 12:11:02,660][Trainer][INFO] - train_loss -0.6818
+[2026-08-03 12:11:02,660][Trainer][INFO] - val_loss -0.6978
+[2026-08-03 12:11:02,660][Trainer][INFO] - Pseudo dice 0.7435
+[2026-08-03 12:11:02,661][Trainer][INFO] - Epoch time: 59.49 s
+[2026-08-03 12:11:03,557][Trainer][INFO] - 
+[2026-08-03 12:11:03,557][Trainer][INFO] - Epoch 149
+[2026-08-03 12:11:03,557][Trainer][INFO] - Current learning rate: 0.00539
+[2026-08-03 12:12:01,756][Trainer][INFO] - train_loss -0.7068
+[2026-08-03 12:12:01,757][Trainer][INFO] - val_loss -0.7229
+[2026-08-03 12:12:01,757][Trainer][INFO] - Pseudo dice 0.7559
+[2026-08-03 12:12:01,757][Trainer][INFO] - Epoch time: 58.2 s
+[2026-08-03 12:12:03,150][Trainer][INFO] - 
+[2026-08-03 12:12:03,150][Trainer][INFO] - Epoch 150
+[2026-08-03 12:12:03,150][Trainer][INFO] - Current learning rate: 0.00536
+[2026-08-03 12:13:01,946][Trainer][INFO] - train_loss -0.6895
+[2026-08-03 12:13:01,946][Trainer][INFO] - val_loss -0.7304
+[2026-08-03 12:13:01,946][Trainer][INFO] - Pseudo dice 0.8209
+[2026-08-03 12:13:01,946][Trainer][INFO] - Epoch time: 58.8 s
+[2026-08-03 12:13:02,828][Trainer][INFO] - 
+[2026-08-03 12:13:02,829][Trainer][INFO] - Epoch 151
+[2026-08-03 12:13:02,829][Trainer][INFO] - Current learning rate: 0.00533
+[2026-08-03 12:14:01,226][Trainer][INFO] - train_loss -0.6726
+[2026-08-03 12:14:01,226][Trainer][INFO] - val_loss -0.6192
+[2026-08-03 12:14:01,227][Trainer][INFO] - Pseudo dice 0.6277
+[2026-08-03 12:14:01,227][Trainer][INFO] - Epoch time: 58.4 s
+[2026-08-03 12:14:02,107][Trainer][INFO] - 
+[2026-08-03 12:14:02,107][Trainer][INFO] - Epoch 152
+[2026-08-03 12:14:02,107][Trainer][INFO] - Current learning rate: 0.00529
+[2026-08-03 12:15:01,179][Trainer][INFO] - train_loss -0.6873
+[2026-08-03 12:15:01,180][Trainer][INFO] - val_loss -0.7632
+[2026-08-03 12:15:01,180][Trainer][INFO] - Pseudo dice 0.8172
+[2026-08-03 12:15:01,180][Trainer][INFO] - Epoch time: 59.07 s
+[2026-08-03 12:15:02,131][Trainer][INFO] - 
+[2026-08-03 12:15:02,131][Trainer][INFO] - Epoch 153
+[2026-08-03 12:15:02,131][Trainer][INFO] - Current learning rate: 0.00526
+[2026-08-03 12:16:00,788][Trainer][INFO] - train_loss -0.6955
+[2026-08-03 12:16:00,788][Trainer][INFO] - val_loss -0.6474
+[2026-08-03 12:16:00,788][Trainer][INFO] - Pseudo dice 0.7474
+[2026-08-03 12:16:00,789][Trainer][INFO] - Epoch time: 58.66 s
+[2026-08-03 12:16:01,724][Trainer][INFO] - 
+[2026-08-03 12:16:01,724][Trainer][INFO] - Epoch 154
+[2026-08-03 12:16:01,724][Trainer][INFO] - Current learning rate: 0.00523
+[2026-08-03 12:17:00,077][Trainer][INFO] - train_loss -0.6818
+[2026-08-03 12:17:00,077][Trainer][INFO] - val_loss -0.6748
+[2026-08-03 12:17:00,077][Trainer][INFO] - Pseudo dice 0.7445
+[2026-08-03 12:17:00,078][Trainer][INFO] - Epoch time: 58.35 s
+[2026-08-03 12:17:00,984][Trainer][INFO] - 
+[2026-08-03 12:17:00,984][Trainer][INFO] - Epoch 155
+[2026-08-03 12:17:00,984][Trainer][INFO] - Current learning rate: 0.0052
+[2026-08-03 12:17:59,608][Trainer][INFO] - train_loss -0.654
+[2026-08-03 12:17:59,608][Trainer][INFO] - val_loss -0.6514
+[2026-08-03 12:17:59,608][Trainer][INFO] - Pseudo dice 0.751
+[2026-08-03 12:17:59,609][Trainer][INFO] - Epoch time: 58.62 s
+[2026-08-03 12:18:00,501][Trainer][INFO] - 
+[2026-08-03 12:18:00,501][Trainer][INFO] - Epoch 156
+[2026-08-03 12:18:00,501][Trainer][INFO] - Current learning rate: 0.00517
+[2026-08-03 12:18:58,910][Trainer][INFO] - train_loss -0.6474
+[2026-08-03 12:18:58,911][Trainer][INFO] - val_loss -0.6614
+[2026-08-03 12:18:58,911][Trainer][INFO] - Pseudo dice 0.7061
+[2026-08-03 12:18:58,911][Trainer][INFO] - Epoch time: 58.41 s
+[2026-08-03 12:18:59,910][Trainer][INFO] - 
+[2026-08-03 12:18:59,911][Trainer][INFO] - Epoch 157
+[2026-08-03 12:18:59,911][Trainer][INFO] - Current learning rate: 0.00513
+[2026-08-03 12:19:58,859][Trainer][INFO] - train_loss -0.6545
+[2026-08-03 12:19:58,859][Trainer][INFO] - val_loss -0.6918
+[2026-08-03 12:19:58,859][Trainer][INFO] - Pseudo dice 0.7729
+[2026-08-03 12:19:58,859][Trainer][INFO] - Epoch time: 58.95 s
+[2026-08-03 12:19:59,760][Trainer][INFO] - 
+[2026-08-03 12:19:59,760][Trainer][INFO] - Epoch 158
+[2026-08-03 12:19:59,760][Trainer][INFO] - Current learning rate: 0.0051
+[2026-08-03 12:20:58,219][Trainer][INFO] - train_loss -0.6991
+[2026-08-03 12:20:58,219][Trainer][INFO] - val_loss -0.7529
+[2026-08-03 12:20:58,219][Trainer][INFO] - Pseudo dice 0.8261
+[2026-08-03 12:20:58,219][Trainer][INFO] - Epoch time: 58.46 s
+[2026-08-03 12:21:00,023][Trainer][INFO] - 
+[2026-08-03 12:21:00,023][Trainer][INFO] - Epoch 159
+[2026-08-03 12:21:00,023][Trainer][INFO] - Current learning rate: 0.00507
+[2026-08-03 12:21:58,772][Trainer][INFO] - train_loss -0.6973
+[2026-08-03 12:21:58,772][Trainer][INFO] - val_loss -0.6652
+[2026-08-03 12:21:58,772][Trainer][INFO] - Pseudo dice 0.7263
+[2026-08-03 12:21:58,772][Trainer][INFO] - Epoch time: 58.75 s
+[2026-08-03 12:21:59,665][Trainer][INFO] - 
+[2026-08-03 12:21:59,665][Trainer][INFO] - Epoch 160
+[2026-08-03 12:21:59,665][Trainer][INFO] - Current learning rate: 0.00504
+[2026-08-03 12:22:58,142][Trainer][INFO] - train_loss -0.687
+[2026-08-03 12:22:58,142][Trainer][INFO] - val_loss -0.6639
+[2026-08-03 12:22:58,142][Trainer][INFO] - Pseudo dice 0.7182
+[2026-08-03 12:22:58,142][Trainer][INFO] - Epoch time: 58.48 s
+[2026-08-03 12:22:59,048][Trainer][INFO] - 
+[2026-08-03 12:22:59,048][Trainer][INFO] - Epoch 161
+[2026-08-03 12:22:59,048][Trainer][INFO] - Current learning rate: 0.005
+[2026-08-03 12:23:59,927][Trainer][INFO] - train_loss -0.6907
+[2026-08-03 12:23:59,927][Trainer][INFO] - val_loss -0.6584
+[2026-08-03 12:23:59,927][Trainer][INFO] - Pseudo dice 0.7597
+[2026-08-03 12:23:59,927][Trainer][INFO] - Epoch time: 60.88 s
+[2026-08-03 12:24:00,836][Trainer][INFO] - 
+[2026-08-03 12:24:00,836][Trainer][INFO] - Epoch 162
+[2026-08-03 12:24:00,836][Trainer][INFO] - Current learning rate: 0.00497
+[2026-08-03 12:24:59,193][Trainer][INFO] - train_loss -0.6698
+[2026-08-03 12:24:59,193][Trainer][INFO] - val_loss -0.6975
+[2026-08-03 12:24:59,193][Trainer][INFO] - Pseudo dice 0.7781
+[2026-08-03 12:24:59,193][Trainer][INFO] - Epoch time: 58.36 s
+[2026-08-03 12:25:00,070][Trainer][INFO] - 
+[2026-08-03 12:25:00,070][Trainer][INFO] - Epoch 163
+[2026-08-03 12:25:00,070][Trainer][INFO] - Current learning rate: 0.00494
+[2026-08-03 12:25:58,668][Trainer][INFO] - train_loss -0.681
+[2026-08-03 12:25:58,668][Trainer][INFO] - val_loss -0.7289
+[2026-08-03 12:25:58,668][Trainer][INFO] - Pseudo dice 0.8107
+[2026-08-03 12:25:58,668][Trainer][INFO] - Epoch time: 58.6 s
+[2026-08-03 12:25:59,559][Trainer][INFO] - 
+[2026-08-03 12:25:59,559][Trainer][INFO] - Epoch 164
+[2026-08-03 12:25:59,559][Trainer][INFO] - Current learning rate: 0.00491
+[2026-08-03 12:26:58,080][Trainer][INFO] - train_loss -0.7036
+[2026-08-03 12:26:58,080][Trainer][INFO] - val_loss -0.715
+[2026-08-03 12:26:58,080][Trainer][INFO] - Pseudo dice 0.7743
+[2026-08-03 12:26:58,080][Trainer][INFO] - Epoch time: 58.52 s
+[2026-08-03 12:26:58,980][Trainer][INFO] - 
+[2026-08-03 12:26:58,980][Trainer][INFO] - Epoch 165
+[2026-08-03 12:26:58,980][Trainer][INFO] - Current learning rate: 0.00487
+[2026-08-03 12:27:58,667][Trainer][INFO] - train_loss -0.7115
+[2026-08-03 12:27:58,668][Trainer][INFO] - val_loss -0.6389
+[2026-08-03 12:27:58,668][Trainer][INFO] - Pseudo dice 0.7709
+[2026-08-03 12:27:58,668][Trainer][INFO] - Epoch time: 59.69 s
+[2026-08-03 12:27:59,574][Trainer][INFO] - 
+[2026-08-03 12:27:59,574][Trainer][INFO] - Epoch 166
+[2026-08-03 12:27:59,574][Trainer][INFO] - Current learning rate: 0.00484
+[2026-08-03 12:28:57,924][Trainer][INFO] - train_loss -0.7022
+[2026-08-03 12:28:57,924][Trainer][INFO] - val_loss -0.6875
+[2026-08-03 12:28:57,924][Trainer][INFO] - Pseudo dice 0.7937
+[2026-08-03 12:28:57,924][Trainer][INFO] - Epoch time: 58.35 s
+[2026-08-03 12:28:58,806][Trainer][INFO] - 
+[2026-08-03 12:28:58,806][Trainer][INFO] - Epoch 167
+[2026-08-03 12:28:58,806][Trainer][INFO] - Current learning rate: 0.00481
+[2026-08-03 12:29:57,679][Trainer][INFO] - train_loss -0.6889
+[2026-08-03 12:29:57,679][Trainer][INFO] - val_loss -0.7147
+[2026-08-03 12:29:57,679][Trainer][INFO] - Pseudo dice 0.8303
+[2026-08-03 12:29:57,679][Trainer][INFO] - Epoch time: 58.87 s
+[2026-08-03 12:29:58,578][Trainer][INFO] - 
+[2026-08-03 12:29:58,578][Trainer][INFO] - Epoch 168
+[2026-08-03 12:29:58,578][Trainer][INFO] - Current learning rate: 0.00478
+[2026-08-03 12:30:56,779][Trainer][INFO] - train_loss -0.6977
+[2026-08-03 12:30:56,780][Trainer][INFO] - val_loss -0.7139
+[2026-08-03 12:30:56,780][Trainer][INFO] - Pseudo dice 0.7627
+[2026-08-03 12:30:56,780][Trainer][INFO] - Epoch time: 58.2 s
+[2026-08-03 12:30:57,661][Trainer][INFO] - 
+[2026-08-03 12:30:57,662][Trainer][INFO] - Epoch 169
+[2026-08-03 12:30:57,662][Trainer][INFO] - Current learning rate: 0.00474
+[2026-08-03 12:31:56,826][Trainer][INFO] - train_loss -0.6777
+[2026-08-03 12:31:56,826][Trainer][INFO] - val_loss -0.7376
+[2026-08-03 12:31:56,826][Trainer][INFO] - Pseudo dice 0.7808
+[2026-08-03 12:31:56,826][Trainer][INFO] - Epoch time: 59.17 s
+[2026-08-03 12:31:57,713][Trainer][INFO] - 
+[2026-08-03 12:31:57,713][Trainer][INFO] - Epoch 170
+[2026-08-03 12:31:57,714][Trainer][INFO] - Current learning rate: 0.00471
+[2026-08-03 12:32:56,072][Trainer][INFO] - train_loss -0.6676
+[2026-08-03 12:32:56,072][Trainer][INFO] - val_loss -0.7171
+[2026-08-03 12:32:56,072][Trainer][INFO] - Pseudo dice 0.8143
+[2026-08-03 12:32:56,072][Trainer][INFO] - Epoch time: 58.36 s
+[2026-08-03 12:32:56,970][Trainer][INFO] - 
+[2026-08-03 12:32:56,970][Trainer][INFO] - Epoch 171
+[2026-08-03 12:32:56,970][Trainer][INFO] - Current learning rate: 0.00468
+[2026-08-03 12:33:55,715][Trainer][INFO] - train_loss -0.7142
+[2026-08-03 12:33:55,715][Trainer][INFO] - val_loss -0.7251
+[2026-08-03 12:33:55,715][Trainer][INFO] - Pseudo dice 0.8069
+[2026-08-03 12:33:55,715][Trainer][INFO] - Epoch time: 58.75 s
+[2026-08-03 12:33:56,602][Trainer][INFO] - 
+[2026-08-03 12:33:56,602][Trainer][INFO] - Epoch 172
+[2026-08-03 12:33:56,602][Trainer][INFO] - Current learning rate: 0.00465
+[2026-08-03 12:34:54,931][Trainer][INFO] - train_loss -0.705
+[2026-08-03 12:34:54,931][Trainer][INFO] - val_loss -0.7157
+[2026-08-03 12:34:54,931][Trainer][INFO] - Pseudo dice 0.7625
+[2026-08-03 12:34:54,931][Trainer][INFO] - Epoch time: 58.33 s
+[2026-08-03 12:34:55,807][Trainer][INFO] - 
+[2026-08-03 12:34:55,807][Trainer][INFO] - Epoch 173
+[2026-08-03 12:34:55,807][Trainer][INFO] - Current learning rate: 0.00461
+[2026-08-03 12:35:54,909][Trainer][INFO] - train_loss -0.6946
+[2026-08-03 12:35:54,910][Trainer][INFO] - val_loss -0.6367
+[2026-08-03 12:35:54,910][Trainer][INFO] - Pseudo dice 0.7368
+[2026-08-03 12:35:54,910][Trainer][INFO] - Epoch time: 59.1 s
+[2026-08-03 12:35:55,812][Trainer][INFO] - 
+[2026-08-03 12:35:55,812][Trainer][INFO] - Epoch 174
+[2026-08-03 12:35:55,812][Trainer][INFO] - Current learning rate: 0.00458
+[2026-08-03 12:36:55,332][Trainer][INFO] - train_loss -0.7086
+[2026-08-03 12:36:55,332][Trainer][INFO] - val_loss -0.7335
+[2026-08-03 12:36:55,332][Trainer][INFO] - Pseudo dice 0.8256
+[2026-08-03 12:36:55,332][Trainer][INFO] - Epoch time: 59.52 s
+[2026-08-03 12:36:56,249][Trainer][INFO] - 
+[2026-08-03 12:36:56,249][Trainer][INFO] - Epoch 175
+[2026-08-03 12:36:56,249][Trainer][INFO] - Current learning rate: 0.00455
+[2026-08-03 12:37:54,542][Trainer][INFO] - train_loss -0.6973
+[2026-08-03 12:37:54,542][Trainer][INFO] - val_loss -0.7291
+[2026-08-03 12:37:54,542][Trainer][INFO] - Pseudo dice 0.7422
+[2026-08-03 12:37:54,542][Trainer][INFO] - Epoch time: 58.29 s
+[2026-08-03 12:37:55,440][Trainer][INFO] - 
+[2026-08-03 12:37:55,440][Trainer][INFO] - Epoch 176
+[2026-08-03 12:37:55,440][Trainer][INFO] - Current learning rate: 0.00452
+[2026-08-03 12:38:53,845][Trainer][INFO] - train_loss -0.6953
+[2026-08-03 12:38:53,845][Trainer][INFO] - val_loss -0.7597
+[2026-08-03 12:38:53,845][Trainer][INFO] - Pseudo dice 0.7901
+[2026-08-03 12:38:53,845][Trainer][INFO] - Epoch time: 58.41 s
+[2026-08-03 12:38:54,722][Trainer][INFO] - 
+[2026-08-03 12:38:54,722][Trainer][INFO] - Epoch 177
+[2026-08-03 12:38:54,722][Trainer][INFO] - Current learning rate: 0.00448
+[2026-08-03 12:39:53,514][Trainer][INFO] - train_loss -0.6983
+[2026-08-03 12:39:53,514][Trainer][INFO] - val_loss -0.7269
+[2026-08-03 12:39:53,514][Trainer][INFO] - Pseudo dice 0.8286
+[2026-08-03 12:39:53,514][Trainer][INFO] - Epoch time: 58.79 s
+[2026-08-03 12:39:53,514][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7826
+[2026-08-03 12:39:54,956][Trainer][INFO] - 
+[2026-08-03 12:39:54,956][Trainer][INFO] - Epoch 178
+[2026-08-03 12:39:54,957][Trainer][INFO] - Current learning rate: 0.00445
+[2026-08-03 12:40:54,230][Trainer][INFO] - train_loss -0.6947
+[2026-08-03 12:40:54,231][Trainer][INFO] - val_loss -0.7269
+[2026-08-03 12:40:54,231][Trainer][INFO] - Pseudo dice 0.7945
+[2026-08-03 12:40:54,231][Trainer][INFO] - Epoch time: 59.27 s
+[2026-08-03 12:40:54,231][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7838
+[2026-08-03 12:40:55,623][Trainer][INFO] - 
+[2026-08-03 12:40:55,623][Trainer][INFO] - Epoch 179
+[2026-08-03 12:40:55,624][Trainer][INFO] - Current learning rate: 0.00442
+[2026-08-03 12:41:53,788][Trainer][INFO] - train_loss -0.7008
+[2026-08-03 12:41:53,789][Trainer][INFO] - val_loss -0.7045
+[2026-08-03 12:41:53,789][Trainer][INFO] - Pseudo dice 0.7469
+[2026-08-03 12:41:53,789][Trainer][INFO] - Epoch time: 58.17 s
+[2026-08-03 12:41:54,678][Trainer][INFO] - 
+[2026-08-03 12:41:54,678][Trainer][INFO] - Epoch 180
+[2026-08-03 12:41:54,678][Trainer][INFO] - Current learning rate: 0.00438
+[2026-08-03 12:42:53,140][Trainer][INFO] - train_loss -0.6979
+[2026-08-03 12:42:53,140][Trainer][INFO] - val_loss -0.7397
+[2026-08-03 12:42:53,140][Trainer][INFO] - Pseudo dice 0.7326
+[2026-08-03 12:42:53,140][Trainer][INFO] - Epoch time: 58.46 s
+[2026-08-03 12:42:54,850][Trainer][INFO] - 
+[2026-08-03 12:42:54,850][Trainer][INFO] - Epoch 181
+[2026-08-03 12:42:54,850][Trainer][INFO] - Current learning rate: 0.00435
+[2026-08-03 12:43:53,279][Trainer][INFO] - train_loss -0.6824
+[2026-08-03 12:43:53,280][Trainer][INFO] - val_loss -0.7321
+[2026-08-03 12:43:53,280][Trainer][INFO] - Pseudo dice 0.8379
+[2026-08-03 12:43:53,280][Trainer][INFO] - Epoch time: 58.43 s
+[2026-08-03 12:43:54,190][Trainer][INFO] - 
+[2026-08-03 12:43:54,191][Trainer][INFO] - Epoch 182
+[2026-08-03 12:43:54,191][Trainer][INFO] - Current learning rate: 0.00432
+[2026-08-03 12:44:53,038][Trainer][INFO] - train_loss -0.6842
+[2026-08-03 12:44:53,038][Trainer][INFO] - val_loss -0.7436
+[2026-08-03 12:44:53,038][Trainer][INFO] - Pseudo dice 0.7741
+[2026-08-03 12:44:53,038][Trainer][INFO] - Epoch time: 58.85 s
+[2026-08-03 12:44:53,954][Trainer][INFO] - 
+[2026-08-03 12:44:53,954][Trainer][INFO] - Epoch 183
+[2026-08-03 12:44:53,954][Trainer][INFO] - Current learning rate: 0.00429
+[2026-08-03 12:45:52,178][Trainer][INFO] - train_loss -0.6624
+[2026-08-03 12:45:52,178][Trainer][INFO] - val_loss -0.7397
+[2026-08-03 12:45:52,178][Trainer][INFO] - Pseudo dice 0.7515
+[2026-08-03 12:45:52,178][Trainer][INFO] - Epoch time: 58.22 s
+[2026-08-03 12:45:53,084][Trainer][INFO] - 
+[2026-08-03 12:45:53,084][Trainer][INFO] - Epoch 184
+[2026-08-03 12:45:53,084][Trainer][INFO] - Current learning rate: 0.00425
+[2026-08-03 12:46:51,489][Trainer][INFO] - train_loss -0.7279
+[2026-08-03 12:46:51,489][Trainer][INFO] - val_loss -0.6982
+[2026-08-03 12:46:51,489][Trainer][INFO] - Pseudo dice 0.7888
+[2026-08-03 12:46:51,489][Trainer][INFO] - Epoch time: 58.41 s
+[2026-08-03 12:46:52,390][Trainer][INFO] - 
+[2026-08-03 12:46:52,390][Trainer][INFO] - Epoch 185
+[2026-08-03 12:46:52,390][Trainer][INFO] - Current learning rate: 0.00422
+[2026-08-03 12:47:50,583][Trainer][INFO] - train_loss -0.6937
+[2026-08-03 12:47:50,584][Trainer][INFO] - val_loss -0.7432
+[2026-08-03 12:47:50,584][Trainer][INFO] - Pseudo dice 0.8483
+[2026-08-03 12:47:50,584][Trainer][INFO] - Epoch time: 58.19 s
+[2026-08-03 12:47:50,584][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.786
+[2026-08-03 12:47:51,966][Trainer][INFO] - 
+[2026-08-03 12:47:51,966][Trainer][INFO] - Epoch 186
+[2026-08-03 12:47:51,966][Trainer][INFO] - Current learning rate: 0.00419
+[2026-08-03 12:48:51,215][Trainer][INFO] - train_loss -0.713
+[2026-08-03 12:48:51,216][Trainer][INFO] - val_loss -0.7602
+[2026-08-03 12:48:51,216][Trainer][INFO] - Pseudo dice 0.8227
+[2026-08-03 12:48:51,216][Trainer][INFO] - Epoch time: 59.25 s
+[2026-08-03 12:48:51,216][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7896
+[2026-08-03 12:48:52,595][Trainer][INFO] - 
+[2026-08-03 12:48:52,595][Trainer][INFO] - Epoch 187
+[2026-08-03 12:48:52,595][Trainer][INFO] - Current learning rate: 0.00415
+[2026-08-03 12:49:50,684][Trainer][INFO] - train_loss -0.6862
+[2026-08-03 12:49:50,685][Trainer][INFO] - val_loss -0.7071
+[2026-08-03 12:49:50,685][Trainer][INFO] - Pseudo dice 0.7476
+[2026-08-03 12:49:50,685][Trainer][INFO] - Epoch time: 58.09 s
+[2026-08-03 12:49:51,577][Trainer][INFO] - 
+[2026-08-03 12:49:51,578][Trainer][INFO] - Epoch 188
+[2026-08-03 12:49:51,578][Trainer][INFO] - Current learning rate: 0.00412
+[2026-08-03 12:50:49,787][Trainer][INFO] - train_loss -0.7138
+[2026-08-03 12:50:49,787][Trainer][INFO] - val_loss -0.7063
+[2026-08-03 12:50:49,787][Trainer][INFO] - Pseudo dice 0.7786
+[2026-08-03 12:50:49,787][Trainer][INFO] - Epoch time: 58.21 s
+[2026-08-03 12:50:50,694][Trainer][INFO] - 
+[2026-08-03 12:50:50,694][Trainer][INFO] - Epoch 189
+[2026-08-03 12:50:50,695][Trainer][INFO] - Current learning rate: 0.00409
+[2026-08-03 12:51:49,295][Trainer][INFO] - train_loss -0.7177
+[2026-08-03 12:51:49,295][Trainer][INFO] - val_loss -0.6729
+[2026-08-03 12:51:49,295][Trainer][INFO] - Pseudo dice 0.7673
+[2026-08-03 12:51:49,295][Trainer][INFO] - Epoch time: 58.6 s
+[2026-08-03 12:51:50,202][Trainer][INFO] - 
+[2026-08-03 12:51:50,202][Trainer][INFO] - Epoch 190
+[2026-08-03 12:51:50,202][Trainer][INFO] - Current learning rate: 0.00405
+[2026-08-03 12:52:49,080][Trainer][INFO] - train_loss -0.6941
+[2026-08-03 12:52:49,081][Trainer][INFO] - val_loss -0.7254
+[2026-08-03 12:52:49,081][Trainer][INFO] - Pseudo dice 0.8156
+[2026-08-03 12:52:49,081][Trainer][INFO] - Epoch time: 58.88 s
+[2026-08-03 12:52:49,994][Trainer][INFO] - 
+[2026-08-03 12:52:49,994][Trainer][INFO] - Epoch 191
+[2026-08-03 12:52:49,994][Trainer][INFO] - Current learning rate: 0.00402
+[2026-08-03 12:53:49,142][Trainer][INFO] - train_loss -0.6924
+[2026-08-03 12:53:49,142][Trainer][INFO] - val_loss -0.7358
+[2026-08-03 12:53:49,142][Trainer][INFO] - Pseudo dice 0.8399
+[2026-08-03 12:53:49,142][Trainer][INFO] - Epoch time: 59.15 s
+[2026-08-03 12:53:49,142][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7916
+[2026-08-03 12:53:50,558][Trainer][INFO] - 
+[2026-08-03 12:53:50,559][Trainer][INFO] - Epoch 192
+[2026-08-03 12:53:50,559][Trainer][INFO] - Current learning rate: 0.00399
+[2026-08-03 12:54:48,726][Trainer][INFO] - train_loss -0.6679
+[2026-08-03 12:54:48,726][Trainer][INFO] - val_loss -0.7278
+[2026-08-03 12:54:48,727][Trainer][INFO] - Pseudo dice 0.8127
+[2026-08-03 12:54:48,727][Trainer][INFO] - Epoch time: 58.17 s
+[2026-08-03 12:54:48,727][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7937
+[2026-08-03 12:54:50,076][Trainer][INFO] - 
+[2026-08-03 12:54:50,076][Trainer][INFO] - Epoch 193
+[2026-08-03 12:54:50,076][Trainer][INFO] - Current learning rate: 0.00395
+[2026-08-03 12:55:48,483][Trainer][INFO] - train_loss -0.7019
+[2026-08-03 12:55:48,483][Trainer][INFO] - val_loss -0.7218
+[2026-08-03 12:55:48,483][Trainer][INFO] - Pseudo dice 0.8309
+[2026-08-03 12:55:48,483][Trainer][INFO] - Epoch time: 58.41 s
+[2026-08-03 12:55:48,483][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7974
+[2026-08-03 12:55:49,862][Trainer][INFO] - 
+[2026-08-03 12:55:49,862][Trainer][INFO] - Epoch 194
+[2026-08-03 12:55:49,862][Trainer][INFO] - Current learning rate: 0.00392
+[2026-08-03 12:56:48,077][Trainer][INFO] - train_loss -0.6957
+[2026-08-03 12:56:48,077][Trainer][INFO] - val_loss -0.659
+[2026-08-03 12:56:48,077][Trainer][INFO] - Pseudo dice 0.7982
+[2026-08-03 12:56:48,077][Trainer][INFO] - Epoch time: 58.22 s
+[2026-08-03 12:56:48,077][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.7975
+[2026-08-03 12:56:49,427][Trainer][INFO] - 
+[2026-08-03 12:56:49,427][Trainer][INFO] - Epoch 195
+[2026-08-03 12:56:49,427][Trainer][INFO] - Current learning rate: 0.00389
+[2026-08-03 12:57:48,069][Trainer][INFO] - train_loss -0.6994
+[2026-08-03 12:57:48,069][Trainer][INFO] - val_loss -0.7507
+[2026-08-03 12:57:48,069][Trainer][INFO] - Pseudo dice 0.8464
+[2026-08-03 12:57:48,069][Trainer][INFO] - Epoch time: 58.64 s
+[2026-08-03 12:57:48,069][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8024
+[2026-08-03 12:57:49,476][Trainer][INFO] - 
+[2026-08-03 12:57:49,476][Trainer][INFO] - Epoch 196
+[2026-08-03 12:57:49,477][Trainer][INFO] - Current learning rate: 0.00385
+[2026-08-03 12:58:47,689][Trainer][INFO] - train_loss -0.6745
+[2026-08-03 12:58:47,689][Trainer][INFO] - val_loss -0.6663
+[2026-08-03 12:58:47,689][Trainer][INFO] - Pseudo dice 0.7866
+[2026-08-03 12:58:47,689][Trainer][INFO] - Epoch time: 58.21 s
+[2026-08-03 12:58:48,589][Trainer][INFO] - 
+[2026-08-03 12:58:48,589][Trainer][INFO] - Epoch 197
+[2026-08-03 12:58:48,590][Trainer][INFO] - Current learning rate: 0.00382
+[2026-08-03 12:59:47,015][Trainer][INFO] - train_loss -0.7117
+[2026-08-03 12:59:47,015][Trainer][INFO] - val_loss -0.7025
+[2026-08-03 12:59:47,016][Trainer][INFO] - Pseudo dice 0.8079
+[2026-08-03 12:59:47,016][Trainer][INFO] - Epoch time: 58.43 s
+[2026-08-03 12:59:47,910][Trainer][INFO] - 
+[2026-08-03 12:59:47,910][Trainer][INFO] - Epoch 198
+[2026-08-03 12:59:47,910][Trainer][INFO] - Current learning rate: 0.00379
+[2026-08-03 13:00:46,500][Trainer][INFO] - train_loss -0.6971
+[2026-08-03 13:00:46,500][Trainer][INFO] - val_loss -0.6992
+[2026-08-03 13:00:46,500][Trainer][INFO] - Pseudo dice 0.7936
+[2026-08-03 13:00:46,500][Trainer][INFO] - Epoch time: 58.59 s
+[2026-08-03 13:00:47,444][Trainer][INFO] - 
+[2026-08-03 13:00:47,444][Trainer][INFO] - Epoch 199
+[2026-08-03 13:00:47,444][Trainer][INFO] - Current learning rate: 0.00375
+[2026-08-03 13:01:46,064][Trainer][INFO] - train_loss -0.6792
+[2026-08-03 13:01:46,064][Trainer][INFO] - val_loss -0.7279
+[2026-08-03 13:01:46,064][Trainer][INFO] - Pseudo dice 0.7896
+[2026-08-03 13:01:46,064][Trainer][INFO] - Epoch time: 58.62 s
+[2026-08-03 13:01:47,476][Trainer][INFO] - 
+[2026-08-03 13:01:47,476][Trainer][INFO] - Epoch 200
+[2026-08-03 13:01:47,476][Trainer][INFO] - Current learning rate: 0.00372
+[2026-08-03 13:02:45,801][Trainer][INFO] - train_loss -0.6954
+[2026-08-03 13:02:45,801][Trainer][INFO] - val_loss -0.7517
+[2026-08-03 13:02:45,801][Trainer][INFO] - Pseudo dice 0.8013
+[2026-08-03 13:02:45,801][Trainer][INFO] - Epoch time: 58.33 s
+[2026-08-03 13:02:47,552][Trainer][INFO] - 
+[2026-08-03 13:02:47,552][Trainer][INFO] - Epoch 201
+[2026-08-03 13:02:47,553][Trainer][INFO] - Current learning rate: 0.00369
+[2026-08-03 13:03:45,935][Trainer][INFO] - train_loss -0.7026
+[2026-08-03 13:03:45,936][Trainer][INFO] - val_loss -0.6825
+[2026-08-03 13:03:45,936][Trainer][INFO] - Pseudo dice 0.6767
+[2026-08-03 13:03:45,936][Trainer][INFO] - Epoch time: 58.38 s
+[2026-08-03 13:03:46,839][Trainer][INFO] - 
+[2026-08-03 13:03:46,839][Trainer][INFO] - Epoch 202
+[2026-08-03 13:03:46,839][Trainer][INFO] - Current learning rate: 0.00365
+[2026-08-03 13:04:45,264][Trainer][INFO] - train_loss -0.6954
+[2026-08-03 13:04:45,264][Trainer][INFO] - val_loss -0.6948
+[2026-08-03 13:04:45,264][Trainer][INFO] - Pseudo dice 0.825
+[2026-08-03 13:04:45,264][Trainer][INFO] - Epoch time: 58.43 s
+[2026-08-03 13:04:46,193][Trainer][INFO] - 
+[2026-08-03 13:04:46,193][Trainer][INFO] - Epoch 203
+[2026-08-03 13:04:46,193][Trainer][INFO] - Current learning rate: 0.00362
+[2026-08-03 13:05:45,735][Trainer][INFO] - train_loss -0.704
+[2026-08-03 13:05:45,735][Trainer][INFO] - val_loss -0.654
+[2026-08-03 13:05:45,735][Trainer][INFO] - Pseudo dice 0.7932
+[2026-08-03 13:05:45,735][Trainer][INFO] - Epoch time: 59.54 s
+[2026-08-03 13:05:46,664][Trainer][INFO] - 
+[2026-08-03 13:05:46,664][Trainer][INFO] - Epoch 204
+[2026-08-03 13:05:46,664][Trainer][INFO] - Current learning rate: 0.00359
+[2026-08-03 13:06:44,919][Trainer][INFO] - train_loss -0.7127
+[2026-08-03 13:06:44,919][Trainer][INFO] - val_loss -0.7226
+[2026-08-03 13:06:44,919][Trainer][INFO] - Pseudo dice 0.8025
+[2026-08-03 13:06:44,920][Trainer][INFO] - Epoch time: 58.26 s
+[2026-08-03 13:06:45,828][Trainer][INFO] - 
+[2026-08-03 13:06:45,828][Trainer][INFO] - Epoch 205
+[2026-08-03 13:06:45,828][Trainer][INFO] - Current learning rate: 0.00355
+[2026-08-03 13:07:44,282][Trainer][INFO] - train_loss -0.721
+[2026-08-03 13:07:44,282][Trainer][INFO] - val_loss -0.7156
+[2026-08-03 13:07:44,282][Trainer][INFO] - Pseudo dice 0.7683
+[2026-08-03 13:07:44,282][Trainer][INFO] - Epoch time: 58.46 s
+[2026-08-03 13:07:45,167][Trainer][INFO] - 
+[2026-08-03 13:07:45,167][Trainer][INFO] - Epoch 206
+[2026-08-03 13:07:45,167][Trainer][INFO] - Current learning rate: 0.00352
+[2026-08-03 13:08:43,431][Trainer][INFO] - train_loss -0.7028
+[2026-08-03 13:08:43,431][Trainer][INFO] - val_loss -0.751
+[2026-08-03 13:08:43,431][Trainer][INFO] - Pseudo dice 0.851
+[2026-08-03 13:08:43,431][Trainer][INFO] - Epoch time: 58.27 s
+[2026-08-03 13:08:44,408][Trainer][INFO] - 
+[2026-08-03 13:08:44,408][Trainer][INFO] - Epoch 207
+[2026-08-03 13:08:44,408][Trainer][INFO] - Current learning rate: 0.00349
+[2026-08-03 13:09:43,901][Trainer][INFO] - train_loss -0.7033
+[2026-08-03 13:09:43,901][Trainer][INFO] - val_loss -0.6963
+[2026-08-03 13:09:43,901][Trainer][INFO] - Pseudo dice 0.7561
+[2026-08-03 13:09:43,901][Trainer][INFO] - Epoch time: 59.49 s
+[2026-08-03 13:09:44,817][Trainer][INFO] - 
+[2026-08-03 13:09:44,817][Trainer][INFO] - Epoch 208
+[2026-08-03 13:09:44,818][Trainer][INFO] - Current learning rate: 0.00345
+[2026-08-03 13:10:43,185][Trainer][INFO] - train_loss -0.7187
+[2026-08-03 13:10:43,185][Trainer][INFO] - val_loss -0.7286
+[2026-08-03 13:10:43,185][Trainer][INFO] - Pseudo dice 0.815
+[2026-08-03 13:10:43,185][Trainer][INFO] - Epoch time: 58.37 s
+[2026-08-03 13:10:44,101][Trainer][INFO] - 
+[2026-08-03 13:10:44,101][Trainer][INFO] - Epoch 209
+[2026-08-03 13:10:44,102][Trainer][INFO] - Current learning rate: 0.00342
+[2026-08-03 13:11:42,617][Trainer][INFO] - train_loss -0.6908
+[2026-08-03 13:11:42,617][Trainer][INFO] - val_loss -0.6927
+[2026-08-03 13:11:42,617][Trainer][INFO] - Pseudo dice 0.7999
+[2026-08-03 13:11:42,617][Trainer][INFO] - Epoch time: 58.52 s
+[2026-08-03 13:11:43,500][Trainer][INFO] - 
+[2026-08-03 13:11:43,501][Trainer][INFO] - Epoch 210
+[2026-08-03 13:11:43,501][Trainer][INFO] - Current learning rate: 0.00338
+[2026-08-03 13:12:41,765][Trainer][INFO] - train_loss -0.7205
+[2026-08-03 13:12:41,765][Trainer][INFO] - val_loss -0.7391
+[2026-08-03 13:12:41,765][Trainer][INFO] - Pseudo dice 0.8229
+[2026-08-03 13:12:41,765][Trainer][INFO] - Epoch time: 58.26 s
+[2026-08-03 13:12:42,641][Trainer][INFO] - 
+[2026-08-03 13:12:42,641][Trainer][INFO] - Epoch 211
+[2026-08-03 13:12:42,641][Trainer][INFO] - Current learning rate: 0.00335
+[2026-08-03 13:13:42,252][Trainer][INFO] - train_loss -0.7262
+[2026-08-03 13:13:42,252][Trainer][INFO] - val_loss -0.7108
+[2026-08-03 13:13:42,252][Trainer][INFO] - Pseudo dice 0.8102
+[2026-08-03 13:13:42,252][Trainer][INFO] - Epoch time: 59.61 s
+[2026-08-03 13:13:43,145][Trainer][INFO] - 
+[2026-08-03 13:13:43,145][Trainer][INFO] - Epoch 212
+[2026-08-03 13:13:43,145][Trainer][INFO] - Current learning rate: 0.00332
+[2026-08-03 13:14:41,538][Trainer][INFO] - train_loss -0.717
+[2026-08-03 13:14:41,538][Trainer][INFO] - val_loss -0.7102
+[2026-08-03 13:14:41,538][Trainer][INFO] - Pseudo dice 0.7522
+[2026-08-03 13:14:41,538][Trainer][INFO] - Epoch time: 58.39 s
+[2026-08-03 13:14:42,445][Trainer][INFO] - 
+[2026-08-03 13:14:42,445][Trainer][INFO] - Epoch 213
+[2026-08-03 13:14:42,445][Trainer][INFO] - Current learning rate: 0.00328
+[2026-08-03 13:15:40,607][Trainer][INFO] - train_loss -0.7064
+[2026-08-03 13:15:40,607][Trainer][INFO] - val_loss -0.7184
+[2026-08-03 13:15:40,607][Trainer][INFO] - Pseudo dice 0.7988
+[2026-08-03 13:15:40,607][Trainer][INFO] - Epoch time: 58.16 s
+[2026-08-03 13:15:41,475][Trainer][INFO] - 
+[2026-08-03 13:15:41,475][Trainer][INFO] - Epoch 214
+[2026-08-03 13:15:41,475][Trainer][INFO] - Current learning rate: 0.00325
+[2026-08-03 13:16:39,882][Trainer][INFO] - train_loss -0.6934
+[2026-08-03 13:16:39,882][Trainer][INFO] - val_loss -0.6985
+[2026-08-03 13:16:39,882][Trainer][INFO] - Pseudo dice 0.7806
+[2026-08-03 13:16:39,882][Trainer][INFO] - Epoch time: 58.41 s
+[2026-08-03 13:16:40,766][Trainer][INFO] - 
+[2026-08-03 13:16:40,766][Trainer][INFO] - Epoch 215
+[2026-08-03 13:16:40,766][Trainer][INFO] - Current learning rate: 0.00321
+[2026-08-03 13:17:40,136][Trainer][INFO] - train_loss -0.6862
+[2026-08-03 13:17:40,136][Trainer][INFO] - val_loss -0.6906
+[2026-08-03 13:17:40,136][Trainer][INFO] - Pseudo dice 0.7918
+[2026-08-03 13:17:40,137][Trainer][INFO] - Epoch time: 59.37 s
+[2026-08-03 13:17:41,029][Trainer][INFO] - 
+[2026-08-03 13:17:41,029][Trainer][INFO] - Epoch 216
+[2026-08-03 13:17:41,029][Trainer][INFO] - Current learning rate: 0.00318
+[2026-08-03 13:18:39,400][Trainer][INFO] - train_loss -0.6874
+[2026-08-03 13:18:39,400][Trainer][INFO] - val_loss -0.7263
+[2026-08-03 13:18:39,401][Trainer][INFO] - Pseudo dice 0.7817
+[2026-08-03 13:18:39,401][Trainer][INFO] - Epoch time: 58.37 s
+[2026-08-03 13:18:40,271][Trainer][INFO] - 
+[2026-08-03 13:18:40,271][Trainer][INFO] - Epoch 217
+[2026-08-03 13:18:40,271][Trainer][INFO] - Current learning rate: 0.00315
+[2026-08-03 13:19:38,656][Trainer][INFO] - train_loss -0.7106
+[2026-08-03 13:19:38,656][Trainer][INFO] - val_loss -0.7565
+[2026-08-03 13:19:38,657][Trainer][INFO] - Pseudo dice 0.8209
+[2026-08-03 13:19:38,657][Trainer][INFO] - Epoch time: 58.39 s
+[2026-08-03 13:19:39,530][Trainer][INFO] - 
+[2026-08-03 13:19:39,530][Trainer][INFO] - Epoch 218
+[2026-08-03 13:19:39,530][Trainer][INFO] - Current learning rate: 0.00311
+[2026-08-03 13:20:38,029][Trainer][INFO] - train_loss -0.7057
+[2026-08-03 13:20:38,030][Trainer][INFO] - val_loss -0.7014
+[2026-08-03 13:20:38,030][Trainer][INFO] - Pseudo dice 0.7623
+[2026-08-03 13:20:38,030][Trainer][INFO] - Epoch time: 58.5 s
+[2026-08-03 13:20:38,923][Trainer][INFO] - 
+[2026-08-03 13:20:38,923][Trainer][INFO] - Epoch 219
+[2026-08-03 13:20:38,923][Trainer][INFO] - Current learning rate: 0.00308
+[2026-08-03 13:21:38,149][Trainer][INFO] - train_loss -0.6708
+[2026-08-03 13:21:38,149][Trainer][INFO] - val_loss -0.7022
+[2026-08-03 13:21:38,150][Trainer][INFO] - Pseudo dice 0.7581
+[2026-08-03 13:21:38,150][Trainer][INFO] - Epoch time: 59.23 s
+[2026-08-03 13:21:39,043][Trainer][INFO] - 
+[2026-08-03 13:21:39,043][Trainer][INFO] - Epoch 220
+[2026-08-03 13:21:39,043][Trainer][INFO] - Current learning rate: 0.00304
+[2026-08-03 13:22:37,403][Trainer][INFO] - train_loss -0.7165
+[2026-08-03 13:22:37,403][Trainer][INFO] - val_loss -0.689
+[2026-08-03 13:22:37,403][Trainer][INFO] - Pseudo dice 0.7886
+[2026-08-03 13:22:37,403][Trainer][INFO] - Epoch time: 58.36 s
+[2026-08-03 13:22:38,298][Trainer][INFO] - 
+[2026-08-03 13:22:38,298][Trainer][INFO] - Epoch 221
+[2026-08-03 13:22:38,299][Trainer][INFO] - Current learning rate: 0.00301
+[2026-08-03 13:23:37,113][Trainer][INFO] - train_loss -0.7194
+[2026-08-03 13:23:37,113][Trainer][INFO] - val_loss -0.6816
+[2026-08-03 13:23:37,114][Trainer][INFO] - Pseudo dice 0.8276
+[2026-08-03 13:23:37,114][Trainer][INFO] - Epoch time: 58.82 s
+[2026-08-03 13:23:37,989][Trainer][INFO] - 
+[2026-08-03 13:23:37,989][Trainer][INFO] - Epoch 222
+[2026-08-03 13:23:37,990][Trainer][INFO] - Current learning rate: 0.00297
+[2026-08-03 13:24:36,578][Trainer][INFO] - train_loss -0.6949
+[2026-08-03 13:24:36,578][Trainer][INFO] - val_loss -0.7545
+[2026-08-03 13:24:36,578][Trainer][INFO] - Pseudo dice 0.8293
+[2026-08-03 13:24:36,578][Trainer][INFO] - Epoch time: 58.59 s
+[2026-08-03 13:24:37,453][Trainer][INFO] - 
+[2026-08-03 13:24:37,453][Trainer][INFO] - Epoch 223
+[2026-08-03 13:24:37,453][Trainer][INFO] - Current learning rate: 0.00294
+[2026-08-03 13:25:35,979][Trainer][INFO] - train_loss -0.6949
+[2026-08-03 13:25:35,979][Trainer][INFO] - val_loss -0.7392
+[2026-08-03 13:25:35,979][Trainer][INFO] - Pseudo dice 0.8161
+[2026-08-03 13:25:35,979][Trainer][INFO] - Epoch time: 58.53 s
+[2026-08-03 13:25:36,900][Trainer][INFO] - 
+[2026-08-03 13:25:36,900][Trainer][INFO] - Epoch 224
+[2026-08-03 13:25:36,900][Trainer][INFO] - Current learning rate: 0.00291
+[2026-08-03 13:26:35,827][Trainer][INFO] - train_loss -0.7015
+[2026-08-03 13:26:35,827][Trainer][INFO] - val_loss -0.7131
+[2026-08-03 13:26:35,827][Trainer][INFO] - Pseudo dice 0.8328
+[2026-08-03 13:26:35,827][Trainer][INFO] - Epoch time: 58.93 s
+[2026-08-03 13:26:37,619][Trainer][INFO] - 
+[2026-08-03 13:26:37,620][Trainer][INFO] - Epoch 225
+[2026-08-03 13:26:37,620][Trainer][INFO] - Current learning rate: 0.00287
+[2026-08-03 13:27:36,041][Trainer][INFO] - train_loss -0.7128
+[2026-08-03 13:27:36,041][Trainer][INFO] - val_loss -0.7233
+[2026-08-03 13:27:36,041][Trainer][INFO] - Pseudo dice 0.833
+[2026-08-03 13:27:36,042][Trainer][INFO] - Epoch time: 58.42 s
+[2026-08-03 13:27:36,042][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8046
+[2026-08-03 13:27:37,418][Trainer][INFO] - 
+[2026-08-03 13:27:37,418][Trainer][INFO] - Epoch 226
+[2026-08-03 13:27:37,418][Trainer][INFO] - Current learning rate: 0.00284
+[2026-08-03 13:28:36,144][Trainer][INFO] - train_loss -0.7222
+[2026-08-03 13:28:36,144][Trainer][INFO] - val_loss -0.7107
+[2026-08-03 13:28:36,144][Trainer][INFO] - Pseudo dice 0.7982
+[2026-08-03 13:28:36,144][Trainer][INFO] - Epoch time: 58.73 s
+[2026-08-03 13:28:37,018][Trainer][INFO] - 
+[2026-08-03 13:28:37,018][Trainer][INFO] - Epoch 227
+[2026-08-03 13:28:37,018][Trainer][INFO] - Current learning rate: 0.0028
+[2026-08-03 13:29:35,220][Trainer][INFO] - train_loss -0.6979
+[2026-08-03 13:29:35,220][Trainer][INFO] - val_loss -0.7143
+[2026-08-03 13:29:35,220][Trainer][INFO] - Pseudo dice 0.8358
+[2026-08-03 13:29:35,221][Trainer][INFO] - Epoch time: 58.2 s
+[2026-08-03 13:29:35,221][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8072
+[2026-08-03 13:29:36,782][Trainer][INFO] - 
+[2026-08-03 13:29:36,782][Trainer][INFO] - Epoch 228
+[2026-08-03 13:29:36,783][Trainer][INFO] - Current learning rate: 0.00277
+[2026-08-03 13:30:35,833][Trainer][INFO] - train_loss -0.722
+[2026-08-03 13:30:35,833][Trainer][INFO] - val_loss -0.7359
+[2026-08-03 13:30:35,833][Trainer][INFO] - Pseudo dice 0.8441
+[2026-08-03 13:30:35,833][Trainer][INFO] - Epoch time: 59.05 s
+[2026-08-03 13:30:35,833][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8109
+[2026-08-03 13:30:37,180][Trainer][INFO] - 
+[2026-08-03 13:30:37,180][Trainer][INFO] - Epoch 229
+[2026-08-03 13:30:37,180][Trainer][INFO] - Current learning rate: 0.00273
+[2026-08-03 13:31:35,380][Trainer][INFO] - train_loss -0.7271
+[2026-08-03 13:31:35,380][Trainer][INFO] - val_loss -0.7307
+[2026-08-03 13:31:35,380][Trainer][INFO] - Pseudo dice 0.7411
+[2026-08-03 13:31:35,380][Trainer][INFO] - Epoch time: 58.2 s
+[2026-08-03 13:31:36,268][Trainer][INFO] - 
+[2026-08-03 13:31:36,268][Trainer][INFO] - Epoch 230
+[2026-08-03 13:31:36,268][Trainer][INFO] - Current learning rate: 0.0027
+[2026-08-03 13:32:34,436][Trainer][INFO] - train_loss -0.7
+[2026-08-03 13:32:34,436][Trainer][INFO] - val_loss -0.7328
+[2026-08-03 13:32:34,436][Trainer][INFO] - Pseudo dice 0.7711
+[2026-08-03 13:32:34,437][Trainer][INFO] - Epoch time: 58.17 s
+[2026-08-03 13:32:35,304][Trainer][INFO] - 
+[2026-08-03 13:32:35,304][Trainer][INFO] - Epoch 231
+[2026-08-03 13:32:35,304][Trainer][INFO] - Current learning rate: 0.00266
+[2026-08-03 13:33:33,356][Trainer][INFO] - train_loss -0.6971
+[2026-08-03 13:33:33,356][Trainer][INFO] - val_loss -0.7427
+[2026-08-03 13:33:33,356][Trainer][INFO] - Pseudo dice 0.8233
+[2026-08-03 13:33:33,357][Trainer][INFO] - Epoch time: 58.05 s
+[2026-08-03 13:33:34,220][Trainer][INFO] - 
+[2026-08-03 13:33:34,220][Trainer][INFO] - Epoch 232
+[2026-08-03 13:33:34,220][Trainer][INFO] - Current learning rate: 0.00263
+[2026-08-03 13:34:32,948][Trainer][INFO] - train_loss -0.7156
+[2026-08-03 13:34:32,948][Trainer][INFO] - val_loss -0.7254
+[2026-08-03 13:34:32,948][Trainer][INFO] - Pseudo dice 0.823
+[2026-08-03 13:34:32,948][Trainer][INFO] - Epoch time: 58.73 s
+[2026-08-03 13:34:33,841][Trainer][INFO] - 
+[2026-08-03 13:34:33,841][Trainer][INFO] - Epoch 233
+[2026-08-03 13:34:33,841][Trainer][INFO] - Current learning rate: 0.00259
+[2026-08-03 13:35:32,164][Trainer][INFO] - train_loss -0.6905
+[2026-08-03 13:35:32,164][Trainer][INFO] - val_loss -0.752
+[2026-08-03 13:35:32,164][Trainer][INFO] - Pseudo dice 0.8265
+[2026-08-03 13:35:32,164][Trainer][INFO] - Epoch time: 58.32 s
+[2026-08-03 13:35:33,032][Trainer][INFO] - 
+[2026-08-03 13:35:33,032][Trainer][INFO] - Epoch 234
+[2026-08-03 13:35:33,033][Trainer][INFO] - Current learning rate: 0.00256
+[2026-08-03 13:36:31,343][Trainer][INFO] - train_loss -0.7021
+[2026-08-03 13:36:31,343][Trainer][INFO] - val_loss -0.787
+[2026-08-03 13:36:31,344][Trainer][INFO] - Pseudo dice 0.8459
+[2026-08-03 13:36:31,344][Trainer][INFO] - Epoch time: 58.31 s
+[2026-08-03 13:36:31,344][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8109
+[2026-08-03 13:36:32,714][Trainer][INFO] - 
+[2026-08-03 13:36:32,714][Trainer][INFO] - Epoch 235
+[2026-08-03 13:36:32,714][Trainer][INFO] - Current learning rate: 0.00252
+[2026-08-03 13:37:30,989][Trainer][INFO] - train_loss -0.7253
+[2026-08-03 13:37:30,989][Trainer][INFO] - val_loss -0.7551
+[2026-08-03 13:37:30,989][Trainer][INFO] - Pseudo dice 0.8298
+[2026-08-03 13:37:30,989][Trainer][INFO] - Epoch time: 58.28 s
+[2026-08-03 13:37:30,990][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8128
+[2026-08-03 13:37:32,361][Trainer][INFO] - 
+[2026-08-03 13:37:32,361][Trainer][INFO] - Epoch 236
+[2026-08-03 13:37:32,361][Trainer][INFO] - Current learning rate: 0.00249
+[2026-08-03 13:38:30,648][Trainer][INFO] - train_loss -0.7146
+[2026-08-03 13:38:30,649][Trainer][INFO] - val_loss -0.766
+[2026-08-03 13:38:30,649][Trainer][INFO] - Pseudo dice 0.839
+[2026-08-03 13:38:30,649][Trainer][INFO] - Epoch time: 58.29 s
+[2026-08-03 13:38:30,649][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8154
+[2026-08-03 13:38:32,071][Trainer][INFO] - 
+[2026-08-03 13:38:32,071][Trainer][INFO] - Epoch 237
+[2026-08-03 13:38:32,072][Trainer][INFO] - Current learning rate: 0.00245
+[2026-08-03 13:39:30,314][Trainer][INFO] - train_loss -0.6977
+[2026-08-03 13:39:30,314][Trainer][INFO] - val_loss -0.7079
+[2026-08-03 13:39:30,314][Trainer][INFO] - Pseudo dice 0.8103
+[2026-08-03 13:39:30,314][Trainer][INFO] - Epoch time: 58.24 s
+[2026-08-03 13:39:31,204][Trainer][INFO] - 
+[2026-08-03 13:39:31,204][Trainer][INFO] - Epoch 238
+[2026-08-03 13:39:31,205][Trainer][INFO] - Current learning rate: 0.00242
+[2026-08-03 13:40:29,374][Trainer][INFO] - train_loss -0.7169
+[2026-08-03 13:40:29,374][Trainer][INFO] - val_loss -0.6988
+[2026-08-03 13:40:29,375][Trainer][INFO] - Pseudo dice 0.7763
+[2026-08-03 13:40:29,375][Trainer][INFO] - Epoch time: 58.17 s
+[2026-08-03 13:40:30,259][Trainer][INFO] - 
+[2026-08-03 13:40:30,260][Trainer][INFO] - Epoch 239
+[2026-08-03 13:40:30,260][Trainer][INFO] - Current learning rate: 0.00238
+[2026-08-03 13:41:28,628][Trainer][INFO] - train_loss -0.716
+[2026-08-03 13:41:28,628][Trainer][INFO] - val_loss -0.7627
+[2026-08-03 13:41:28,628][Trainer][INFO] - Pseudo dice 0.8222
+[2026-08-03 13:41:28,629][Trainer][INFO] - Epoch time: 58.37 s
+[2026-08-03 13:41:29,517][Trainer][INFO] - 
+[2026-08-03 13:41:29,517][Trainer][INFO] - Epoch 240
+[2026-08-03 13:41:29,517][Trainer][INFO] - Current learning rate: 0.00235
+[2026-08-03 13:42:28,542][Trainer][INFO] - train_loss -0.7249
+[2026-08-03 13:42:28,543][Trainer][INFO] - val_loss -0.721
+[2026-08-03 13:42:28,543][Trainer][INFO] - Pseudo dice 0.7951
+[2026-08-03 13:42:28,543][Trainer][INFO] - Epoch time: 59.03 s
+[2026-08-03 13:42:29,453][Trainer][INFO] - 
+[2026-08-03 13:42:29,454][Trainer][INFO] - Epoch 241
+[2026-08-03 13:42:29,454][Trainer][INFO] - Current learning rate: 0.00231
+[2026-08-03 13:43:27,686][Trainer][INFO] - train_loss -0.7311
+[2026-08-03 13:43:27,686][Trainer][INFO] - val_loss -0.7501
+[2026-08-03 13:43:27,686][Trainer][INFO] - Pseudo dice 0.8416
+[2026-08-03 13:43:27,686][Trainer][INFO] - Epoch time: 58.23 s
+[2026-08-03 13:43:28,579][Trainer][INFO] - 
+[2026-08-03 13:43:28,579][Trainer][INFO] - Epoch 242
+[2026-08-03 13:43:28,579][Trainer][INFO] - Current learning rate: 0.00228
+[2026-08-03 13:44:27,093][Trainer][INFO] - train_loss -0.7162
+[2026-08-03 13:44:27,093][Trainer][INFO] - val_loss -0.6973
+[2026-08-03 13:44:27,093][Trainer][INFO] - Pseudo dice 0.7974
+[2026-08-03 13:44:27,093][Trainer][INFO] - Epoch time: 58.51 s
+[2026-08-03 13:44:28,030][Trainer][INFO] - 
+[2026-08-03 13:44:28,030][Trainer][INFO] - Epoch 243
+[2026-08-03 13:44:28,030][Trainer][INFO] - Current learning rate: 0.00224
+[2026-08-03 13:45:26,514][Trainer][INFO] - train_loss -0.7109
+[2026-08-03 13:45:26,514][Trainer][INFO] - val_loss -0.6873
+[2026-08-03 13:45:26,514][Trainer][INFO] - Pseudo dice 0.7209
+[2026-08-03 13:45:26,514][Trainer][INFO] - Epoch time: 58.48 s
+[2026-08-03 13:45:27,436][Trainer][INFO] - 
+[2026-08-03 13:45:27,437][Trainer][INFO] - Epoch 244
+[2026-08-03 13:45:27,437][Trainer][INFO] - Current learning rate: 0.00221
+[2026-08-03 13:46:26,602][Trainer][INFO] - train_loss -0.7392
+[2026-08-03 13:46:26,602][Trainer][INFO] - val_loss -0.7211
+[2026-08-03 13:46:26,602][Trainer][INFO] - Pseudo dice 0.8278
+[2026-08-03 13:46:26,602][Trainer][INFO] - Epoch time: 59.17 s
+[2026-08-03 13:46:27,556][Trainer][INFO] - 
+[2026-08-03 13:46:27,556][Trainer][INFO] - Epoch 245
+[2026-08-03 13:46:27,556][Trainer][INFO] - Current learning rate: 0.00217
+[2026-08-03 13:47:25,781][Trainer][INFO] - train_loss -0.7262
+[2026-08-03 13:47:25,781][Trainer][INFO] - val_loss -0.7373
+[2026-08-03 13:47:25,781][Trainer][INFO] - Pseudo dice 0.8493
+[2026-08-03 13:47:25,781][Trainer][INFO] - Epoch time: 58.23 s
+[2026-08-03 13:47:26,744][Trainer][INFO] - 
+[2026-08-03 13:47:26,744][Trainer][INFO] - Epoch 246
+[2026-08-03 13:47:26,744][Trainer][INFO] - Current learning rate: 0.00214
+[2026-08-03 13:48:24,811][Trainer][INFO] - train_loss -0.719
+[2026-08-03 13:48:24,812][Trainer][INFO] - val_loss -0.7307
+[2026-08-03 13:48:24,812][Trainer][INFO] - Pseudo dice 0.8167
+[2026-08-03 13:48:24,812][Trainer][INFO] - Epoch time: 58.07 s
+[2026-08-03 13:48:26,544][Trainer][INFO] - 
+[2026-08-03 13:48:26,545][Trainer][INFO] - Epoch 247
+[2026-08-03 13:48:26,545][Trainer][INFO] - Current learning rate: 0.0021
+[2026-08-03 13:49:24,896][Trainer][INFO] - train_loss -0.7149
+[2026-08-03 13:49:24,896][Trainer][INFO] - val_loss -0.6855
+[2026-08-03 13:49:24,896][Trainer][INFO] - Pseudo dice 0.7747
+[2026-08-03 13:49:24,896][Trainer][INFO] - Epoch time: 58.35 s
+[2026-08-03 13:49:25,821][Trainer][INFO] - 
+[2026-08-03 13:49:25,821][Trainer][INFO] - Epoch 248
+[2026-08-03 13:49:25,821][Trainer][INFO] - Current learning rate: 0.00207
+[2026-08-03 13:50:24,828][Trainer][INFO] - train_loss -0.723
+[2026-08-03 13:50:24,828][Trainer][INFO] - val_loss -0.7098
+[2026-08-03 13:50:24,828][Trainer][INFO] - Pseudo dice 0.7887
+[2026-08-03 13:50:24,828][Trainer][INFO] - Epoch time: 59.01 s
+[2026-08-03 13:50:25,751][Trainer][INFO] - 
+[2026-08-03 13:50:25,751][Trainer][INFO] - Epoch 249
+[2026-08-03 13:50:25,751][Trainer][INFO] - Current learning rate: 0.00203
+[2026-08-03 13:51:24,222][Trainer][INFO] - train_loss -0.7124
+[2026-08-03 13:51:24,222][Trainer][INFO] - val_loss -0.7557
+[2026-08-03 13:51:24,223][Trainer][INFO] - Pseudo dice 0.8064
+[2026-08-03 13:51:24,223][Trainer][INFO] - Epoch time: 58.47 s
+[2026-08-03 13:51:25,589][Trainer][INFO] - 
+[2026-08-03 13:51:25,589][Trainer][INFO] - Epoch 250
+[2026-08-03 13:51:25,589][Trainer][INFO] - Current learning rate: 0.00199
+[2026-08-03 13:52:23,920][Trainer][INFO] - train_loss -0.7193
+[2026-08-03 13:52:23,920][Trainer][INFO] - val_loss -0.6942
+[2026-08-03 13:52:23,920][Trainer][INFO] - Pseudo dice 0.8317
+[2026-08-03 13:52:23,920][Trainer][INFO] - Epoch time: 58.33 s
+[2026-08-03 13:52:24,824][Trainer][INFO] - 
+[2026-08-03 13:52:24,824][Trainer][INFO] - Epoch 251
+[2026-08-03 13:52:24,824][Trainer][INFO] - Current learning rate: 0.00196
+[2026-08-03 13:53:23,482][Trainer][INFO] - train_loss -0.7037
+[2026-08-03 13:53:23,482][Trainer][INFO] - val_loss -0.7623
+[2026-08-03 13:53:23,482][Trainer][INFO] - Pseudo dice 0.8257
+[2026-08-03 13:53:23,482][Trainer][INFO] - Epoch time: 58.66 s
+[2026-08-03 13:53:24,390][Trainer][INFO] - 
+[2026-08-03 13:53:24,390][Trainer][INFO] - Epoch 252
+[2026-08-03 13:53:24,390][Trainer][INFO] - Current learning rate: 0.00192
+[2026-08-03 13:54:22,819][Trainer][INFO] - train_loss -0.7134
+[2026-08-03 13:54:22,819][Trainer][INFO] - val_loss -0.7304
+[2026-08-03 13:54:22,819][Trainer][INFO] - Pseudo dice 0.7892
+[2026-08-03 13:54:22,819][Trainer][INFO] - Epoch time: 58.43 s
+[2026-08-03 13:54:23,759][Trainer][INFO] - 
+[2026-08-03 13:54:23,759][Trainer][INFO] - Epoch 253
+[2026-08-03 13:54:23,759][Trainer][INFO] - Current learning rate: 0.00189
+[2026-08-03 13:55:22,482][Trainer][INFO] - train_loss -0.7142
+[2026-08-03 13:55:22,482][Trainer][INFO] - val_loss -0.7519
+[2026-08-03 13:55:22,482][Trainer][INFO] - Pseudo dice 0.7908
+[2026-08-03 13:55:22,482][Trainer][INFO] - Epoch time: 58.72 s
+[2026-08-03 13:55:23,365][Trainer][INFO] - 
+[2026-08-03 13:55:23,365][Trainer][INFO] - Epoch 254
+[2026-08-03 13:55:23,365][Trainer][INFO] - Current learning rate: 0.00185
+[2026-08-03 13:56:21,789][Trainer][INFO] - train_loss -0.7155
+[2026-08-03 13:56:21,789][Trainer][INFO] - val_loss -0.7215
+[2026-08-03 13:56:21,789][Trainer][INFO] - Pseudo dice 0.8194
+[2026-08-03 13:56:21,789][Trainer][INFO] - Epoch time: 58.42 s
+[2026-08-03 13:56:22,690][Trainer][INFO] - 
+[2026-08-03 13:56:22,690][Trainer][INFO] - Epoch 255
+[2026-08-03 13:56:22,690][Trainer][INFO] - Current learning rate: 0.00181
+[2026-08-03 13:57:21,140][Trainer][INFO] - train_loss -0.7167
+[2026-08-03 13:57:21,140][Trainer][INFO] - val_loss -0.728
+[2026-08-03 13:57:21,140][Trainer][INFO] - Pseudo dice 0.8139
+[2026-08-03 13:57:21,140][Trainer][INFO] - Epoch time: 58.45 s
+[2026-08-03 13:57:22,024][Trainer][INFO] - 
+[2026-08-03 13:57:22,024][Trainer][INFO] - Epoch 256
+[2026-08-03 13:57:22,024][Trainer][INFO] - Current learning rate: 0.00178
+[2026-08-03 13:58:20,416][Trainer][INFO] - train_loss -0.7184
+[2026-08-03 13:58:20,416][Trainer][INFO] - val_loss -0.7128
+[2026-08-03 13:58:20,416][Trainer][INFO] - Pseudo dice 0.8352
+[2026-08-03 13:58:20,416][Trainer][INFO] - Epoch time: 58.39 s
+[2026-08-03 13:58:21,299][Trainer][INFO] - 
+[2026-08-03 13:58:21,299][Trainer][INFO] - Epoch 257
+[2026-08-03 13:58:21,300][Trainer][INFO] - Current learning rate: 0.00174
+[2026-08-03 13:59:20,092][Trainer][INFO] - train_loss -0.708
+[2026-08-03 13:59:20,093][Trainer][INFO] - val_loss -0.7288
+[2026-08-03 13:59:20,093][Trainer][INFO] - Pseudo dice 0.771
+[2026-08-03 13:59:20,093][Trainer][INFO] - Epoch time: 58.79 s
+[2026-08-03 13:59:21,026][Trainer][INFO] - 
+[2026-08-03 13:59:21,026][Trainer][INFO] - Epoch 258
+[2026-08-03 13:59:21,026][Trainer][INFO] - Current learning rate: 0.0017
+[2026-08-03 14:00:19,472][Trainer][INFO] - train_loss -0.7129
+[2026-08-03 14:00:19,472][Trainer][INFO] - val_loss -0.7178
+[2026-08-03 14:00:19,472][Trainer][INFO] - Pseudo dice 0.7838
+[2026-08-03 14:00:19,472][Trainer][INFO] - Epoch time: 58.45 s
+[2026-08-03 14:00:20,360][Trainer][INFO] - 
+[2026-08-03 14:00:20,360][Trainer][INFO] - Epoch 259
+[2026-08-03 14:00:20,360][Trainer][INFO] - Current learning rate: 0.00167
+[2026-08-03 14:01:18,734][Trainer][INFO] - train_loss -0.7291
+[2026-08-03 14:01:18,734][Trainer][INFO] - val_loss -0.7803
+[2026-08-03 14:01:18,734][Trainer][INFO] - Pseudo dice 0.8471
+[2026-08-03 14:01:18,734][Trainer][INFO] - Epoch time: 58.37 s
+[2026-08-03 14:01:19,653][Trainer][INFO] - 
+[2026-08-03 14:01:19,654][Trainer][INFO] - Epoch 260
+[2026-08-03 14:01:19,654][Trainer][INFO] - Current learning rate: 0.00163
+[2026-08-03 14:02:18,057][Trainer][INFO] - train_loss -0.7223
+[2026-08-03 14:02:18,058][Trainer][INFO] - val_loss -0.7457
+[2026-08-03 14:02:18,058][Trainer][INFO] - Pseudo dice 0.7884
+[2026-08-03 14:02:18,058][Trainer][INFO] - Epoch time: 58.4 s
+[2026-08-03 14:02:19,017][Trainer][INFO] - 
+[2026-08-03 14:02:19,017][Trainer][INFO] - Epoch 261
+[2026-08-03 14:02:19,017][Trainer][INFO] - Current learning rate: 0.00159
+[2026-08-03 14:03:17,874][Trainer][INFO] - train_loss -0.7241
+[2026-08-03 14:03:17,874][Trainer][INFO] - val_loss -0.7025
+[2026-08-03 14:03:17,874][Trainer][INFO] - Pseudo dice 0.7838
+[2026-08-03 14:03:17,874][Trainer][INFO] - Epoch time: 58.86 s
+[2026-08-03 14:03:18,817][Trainer][INFO] - 
+[2026-08-03 14:03:18,817][Trainer][INFO] - Epoch 262
+[2026-08-03 14:03:18,817][Trainer][INFO] - Current learning rate: 0.00156
+[2026-08-03 14:04:16,992][Trainer][INFO] - train_loss -0.6977
+[2026-08-03 14:04:16,992][Trainer][INFO] - val_loss -0.7315
+[2026-08-03 14:04:16,993][Trainer][INFO] - Pseudo dice 0.8292
+[2026-08-03 14:04:16,993][Trainer][INFO] - Epoch time: 58.18 s
+[2026-08-03 14:04:17,875][Trainer][INFO] - 
+[2026-08-03 14:04:17,875][Trainer][INFO] - Epoch 263
+[2026-08-03 14:04:17,875][Trainer][INFO] - Current learning rate: 0.00152
+[2026-08-03 14:05:16,212][Trainer][INFO] - train_loss -0.7181
+[2026-08-03 14:05:16,213][Trainer][INFO] - val_loss -0.737
+[2026-08-03 14:05:16,213][Trainer][INFO] - Pseudo dice 0.7866
+[2026-08-03 14:05:16,213][Trainer][INFO] - Epoch time: 58.34 s
+[2026-08-03 14:05:17,100][Trainer][INFO] - 
+[2026-08-03 14:05:17,100][Trainer][INFO] - Epoch 264
+[2026-08-03 14:05:17,100][Trainer][INFO] - Current learning rate: 0.00148
+[2026-08-03 14:06:15,370][Trainer][INFO] - train_loss -0.7136
+[2026-08-03 14:06:15,370][Trainer][INFO] - val_loss -0.7306
+[2026-08-03 14:06:15,370][Trainer][INFO] - Pseudo dice 0.8441
+[2026-08-03 14:06:15,370][Trainer][INFO] - Epoch time: 58.27 s
+[2026-08-03 14:06:16,285][Trainer][INFO] - 
+[2026-08-03 14:06:16,285][Trainer][INFO] - Epoch 265
+[2026-08-03 14:06:16,285][Trainer][INFO] - Current learning rate: 0.00145
+[2026-08-03 14:07:14,966][Trainer][INFO] - train_loss -0.7271
+[2026-08-03 14:07:14,967][Trainer][INFO] - val_loss -0.7229
+[2026-08-03 14:07:14,967][Trainer][INFO] - Pseudo dice 0.7756
+[2026-08-03 14:07:14,967][Trainer][INFO] - Epoch time: 58.68 s
+[2026-08-03 14:07:15,858][Trainer][INFO] - 
+[2026-08-03 14:07:15,858][Trainer][INFO] - Epoch 266
+[2026-08-03 14:07:15,858][Trainer][INFO] - Current learning rate: 0.00141
+[2026-08-03 14:08:14,066][Trainer][INFO] - train_loss -0.7412
+[2026-08-03 14:08:14,067][Trainer][INFO] - val_loss -0.764
+[2026-08-03 14:08:14,067][Trainer][INFO] - Pseudo dice 0.7997
+[2026-08-03 14:08:14,067][Trainer][INFO] - Epoch time: 58.21 s
+[2026-08-03 14:08:14,992][Trainer][INFO] - 
+[2026-08-03 14:08:14,992][Trainer][INFO] - Epoch 267
+[2026-08-03 14:08:14,992][Trainer][INFO] - Current learning rate: 0.00137
+[2026-08-03 14:09:12,955][Trainer][INFO] - train_loss -0.7314
+[2026-08-03 14:09:12,956][Trainer][INFO] - val_loss -0.7259
+[2026-08-03 14:09:12,956][Trainer][INFO] - Pseudo dice 0.8606
+[2026-08-03 14:09:12,956][Trainer][INFO] - Epoch time: 57.96 s
+[2026-08-03 14:09:13,865][Trainer][INFO] - 
+[2026-08-03 14:09:13,865][Trainer][INFO] - Epoch 268
+[2026-08-03 14:09:13,865][Trainer][INFO] - Current learning rate: 0.00133
+[2026-08-03 14:10:12,191][Trainer][INFO] - train_loss -0.7024
+[2026-08-03 14:10:12,191][Trainer][INFO] - val_loss -0.6837
+[2026-08-03 14:10:12,191][Trainer][INFO] - Pseudo dice 0.8325
+[2026-08-03 14:10:12,191][Trainer][INFO] - Epoch time: 58.33 s
+[2026-08-03 14:10:13,066][Trainer][INFO] - 
+[2026-08-03 14:10:13,066][Trainer][INFO] - Epoch 269
+[2026-08-03 14:10:13,066][Trainer][INFO] - Current learning rate: 0.0013
+[2026-08-03 14:11:11,946][Trainer][INFO] - train_loss -0.7179
+[2026-08-03 14:11:11,946][Trainer][INFO] - val_loss -0.7061
+[2026-08-03 14:11:11,946][Trainer][INFO] - Pseudo dice 0.7875
+[2026-08-03 14:11:11,946][Trainer][INFO] - Epoch time: 58.88 s
+[2026-08-03 14:11:13,836][Trainer][INFO] - 
+[2026-08-03 14:11:13,836][Trainer][INFO] - Epoch 270
+[2026-08-03 14:11:13,836][Trainer][INFO] - Current learning rate: 0.00126
+[2026-08-03 14:12:11,943][Trainer][INFO] - train_loss -0.7107
+[2026-08-03 14:12:11,943][Trainer][INFO] - val_loss -0.6577
+[2026-08-03 14:12:11,943][Trainer][INFO] - Pseudo dice 0.8068
+[2026-08-03 14:12:11,943][Trainer][INFO] - Epoch time: 58.11 s
+[2026-08-03 14:12:12,833][Trainer][INFO] - 
+[2026-08-03 14:12:12,833][Trainer][INFO] - Epoch 271
+[2026-08-03 14:12:12,833][Trainer][INFO] - Current learning rate: 0.00122
+[2026-08-03 14:13:10,878][Trainer][INFO] - train_loss -0.7274
+[2026-08-03 14:13:10,879][Trainer][INFO] - val_loss -0.7781
+[2026-08-03 14:13:10,879][Trainer][INFO] - Pseudo dice 0.872
+[2026-08-03 14:13:10,879][Trainer][INFO] - Epoch time: 58.05 s
+[2026-08-03 14:13:10,879][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.816
+[2026-08-03 14:13:12,287][Trainer][INFO] - 
+[2026-08-03 14:13:12,287][Trainer][INFO] - Epoch 272
+[2026-08-03 14:13:12,288][Trainer][INFO] - Current learning rate: 0.00118
+[2026-08-03 14:14:10,390][Trainer][INFO] - train_loss -0.7194
+[2026-08-03 14:14:10,390][Trainer][INFO] - val_loss -0.7404
+[2026-08-03 14:14:10,390][Trainer][INFO] - Pseudo dice 0.8291
+[2026-08-03 14:14:10,390][Trainer][INFO] - Epoch time: 58.1 s
+[2026-08-03 14:14:10,390][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8173
+[2026-08-03 14:14:11,767][Trainer][INFO] - 
+[2026-08-03 14:14:11,767][Trainer][INFO] - Epoch 273
+[2026-08-03 14:14:11,767][Trainer][INFO] - Current learning rate: 0.00115
+[2026-08-03 14:15:10,241][Trainer][INFO] - train_loss -0.6999
+[2026-08-03 14:15:10,241][Trainer][INFO] - val_loss -0.7381
+[2026-08-03 14:15:10,241][Trainer][INFO] - Pseudo dice 0.8576
+[2026-08-03 14:15:10,241][Trainer][INFO] - Epoch time: 58.47 s
+[2026-08-03 14:15:10,241][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8214
+[2026-08-03 14:15:11,615][Trainer][INFO] - 
+[2026-08-03 14:15:11,616][Trainer][INFO] - Epoch 274
+[2026-08-03 14:15:11,616][Trainer][INFO] - Current learning rate: 0.00111
+[2026-08-03 14:16:09,938][Trainer][INFO] - train_loss -0.7317
+[2026-08-03 14:16:09,939][Trainer][INFO] - val_loss -0.7501
+[2026-08-03 14:16:09,939][Trainer][INFO] - Pseudo dice 0.7992
+[2026-08-03 14:16:09,939][Trainer][INFO] - Epoch time: 58.32 s
+[2026-08-03 14:16:10,872][Trainer][INFO] - 
+[2026-08-03 14:16:10,872][Trainer][INFO] - Epoch 275
+[2026-08-03 14:16:10,872][Trainer][INFO] - Current learning rate: 0.00107
+[2026-08-03 14:17:09,241][Trainer][INFO] - train_loss -0.7263
+[2026-08-03 14:17:09,241][Trainer][INFO] - val_loss -0.7219
+[2026-08-03 14:17:09,241][Trainer][INFO] - Pseudo dice 0.8337
+[2026-08-03 14:17:09,241][Trainer][INFO] - Epoch time: 58.37 s
+[2026-08-03 14:17:10,152][Trainer][INFO] - 
+[2026-08-03 14:17:10,152][Trainer][INFO] - Epoch 276
+[2026-08-03 14:17:10,152][Trainer][INFO] - Current learning rate: 0.00103
+[2026-08-03 14:18:08,473][Trainer][INFO] - train_loss -0.7105
+[2026-08-03 14:18:08,473][Trainer][INFO] - val_loss -0.7643
+[2026-08-03 14:18:08,473][Trainer][INFO] - Pseudo dice 0.8535
+[2026-08-03 14:18:08,473][Trainer][INFO] - Epoch time: 58.32 s
+[2026-08-03 14:18:08,473][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8239
+[2026-08-03 14:18:09,847][Trainer][INFO] - 
+[2026-08-03 14:18:09,847][Trainer][INFO] - Epoch 277
+[2026-08-03 14:18:09,847][Trainer][INFO] - Current learning rate: 0.00099
+[2026-08-03 14:19:08,346][Trainer][INFO] - train_loss -0.7435
+[2026-08-03 14:19:08,347][Trainer][INFO] - val_loss -0.7192
+[2026-08-03 14:19:08,347][Trainer][INFO] - Pseudo dice 0.8162
+[2026-08-03 14:19:08,347][Trainer][INFO] - Epoch time: 58.5 s
+[2026-08-03 14:19:09,258][Trainer][INFO] - 
+[2026-08-03 14:19:09,258][Trainer][INFO] - Epoch 278
+[2026-08-03 14:19:09,258][Trainer][INFO] - Current learning rate: 0.00095
+[2026-08-03 14:20:07,619][Trainer][INFO] - train_loss -0.7267
+[2026-08-03 14:20:07,620][Trainer][INFO] - val_loss -0.7747
+[2026-08-03 14:20:07,620][Trainer][INFO] - Pseudo dice 0.8666
+[2026-08-03 14:20:07,620][Trainer][INFO] - Epoch time: 58.36 s
+[2026-08-03 14:20:07,620][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8275
+[2026-08-03 14:20:09,049][Trainer][INFO] - 
+[2026-08-03 14:20:09,049][Trainer][INFO] - Epoch 279
+[2026-08-03 14:20:09,049][Trainer][INFO] - Current learning rate: 0.00091
+[2026-08-03 14:21:07,959][Trainer][INFO] - train_loss -0.7281
+[2026-08-03 14:21:07,960][Trainer][INFO] - val_loss -0.7347
+[2026-08-03 14:21:07,960][Trainer][INFO] - Pseudo dice 0.8297
+[2026-08-03 14:21:07,960][Trainer][INFO] - Epoch time: 58.91 s
+[2026-08-03 14:21:07,960][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8277
+[2026-08-03 14:21:09,336][Trainer][INFO] - 
+[2026-08-03 14:21:09,336][Trainer][INFO] - Epoch 280
+[2026-08-03 14:21:09,336][Trainer][INFO] - Current learning rate: 0.00087
+[2026-08-03 14:22:07,675][Trainer][INFO] - train_loss -0.7351
+[2026-08-03 14:22:07,676][Trainer][INFO] - val_loss -0.7285
+[2026-08-03 14:22:07,676][Trainer][INFO] - Pseudo dice 0.8425
+[2026-08-03 14:22:07,676][Trainer][INFO] - Epoch time: 58.34 s
+[2026-08-03 14:22:07,676][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8292
+[2026-08-03 14:22:09,029][Trainer][INFO] - 
+[2026-08-03 14:22:09,030][Trainer][INFO] - Epoch 281
+[2026-08-03 14:22:09,030][Trainer][INFO] - Current learning rate: 0.00083
+[2026-08-03 14:23:07,452][Trainer][INFO] - train_loss -0.7292
+[2026-08-03 14:23:07,452][Trainer][INFO] - val_loss -0.714
+[2026-08-03 14:23:07,452][Trainer][INFO] - Pseudo dice 0.8606
+[2026-08-03 14:23:07,452][Trainer][INFO] - Epoch time: 58.42 s
+[2026-08-03 14:23:07,453][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8323
+[2026-08-03 14:23:08,822][Trainer][INFO] - 
+[2026-08-03 14:23:08,822][Trainer][INFO] - Epoch 282
+[2026-08-03 14:23:08,822][Trainer][INFO] - Current learning rate: 0.00079
+[2026-08-03 14:24:07,263][Trainer][INFO] - train_loss -0.7134
+[2026-08-03 14:24:07,263][Trainer][INFO] - val_loss -0.7527
+[2026-08-03 14:24:07,264][Trainer][INFO] - Pseudo dice 0.8473
+[2026-08-03 14:24:07,264][Trainer][INFO] - Epoch time: 58.44 s
+[2026-08-03 14:24:07,264][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8338
+[2026-08-03 14:24:08,654][Trainer][INFO] - 
+[2026-08-03 14:24:08,654][Trainer][INFO] - Epoch 283
+[2026-08-03 14:24:08,655][Trainer][INFO] - Current learning rate: 0.00076
+[2026-08-03 14:25:07,240][Trainer][INFO] - train_loss -0.7371
+[2026-08-03 14:25:07,240][Trainer][INFO] - val_loss -0.7626
+[2026-08-03 14:25:07,240][Trainer][INFO] - Pseudo dice 0.88
+[2026-08-03 14:25:07,240][Trainer][INFO] - Epoch time: 58.59 s
+[2026-08-03 14:25:07,240][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8384
+[2026-08-03 14:25:08,612][Trainer][INFO] - 
+[2026-08-03 14:25:08,612][Trainer][INFO] - Epoch 284
+[2026-08-03 14:25:08,612][Trainer][INFO] - Current learning rate: 0.00071
+[2026-08-03 14:26:06,950][Trainer][INFO] - train_loss -0.732
+[2026-08-03 14:26:06,950][Trainer][INFO] - val_loss -0.7416
+[2026-08-03 14:26:06,950][Trainer][INFO] - Pseudo dice 0.8256
+[2026-08-03 14:26:06,950][Trainer][INFO] - Epoch time: 58.34 s
+[2026-08-03 14:26:07,858][Trainer][INFO] - 
+[2026-08-03 14:26:07,858][Trainer][INFO] - Epoch 285
+[2026-08-03 14:26:07,858][Trainer][INFO] - Current learning rate: 0.00067
+[2026-08-03 14:27:06,992][Trainer][INFO] - train_loss -0.7095
+[2026-08-03 14:27:06,992][Trainer][INFO] - val_loss -0.7102
+[2026-08-03 14:27:06,992][Trainer][INFO] - Pseudo dice 0.8597
+[2026-08-03 14:27:06,992][Trainer][INFO] - Epoch time: 59.13 s
+[2026-08-03 14:27:06,992][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8394
+[2026-08-03 14:27:08,359][Trainer][INFO] - 
+[2026-08-03 14:27:08,360][Trainer][INFO] - Epoch 286
+[2026-08-03 14:27:08,360][Trainer][INFO] - Current learning rate: 0.00063
+[2026-08-03 14:28:08,616][Trainer][INFO] - train_loss -0.753
+[2026-08-03 14:28:08,616][Trainer][INFO] - val_loss -0.7087
+[2026-08-03 14:28:08,616][Trainer][INFO] - Pseudo dice 0.8218
+[2026-08-03 14:28:08,617][Trainer][INFO] - Epoch time: 60.26 s
+[2026-08-03 14:28:09,522][Trainer][INFO] - 
+[2026-08-03 14:28:09,522][Trainer][INFO] - Epoch 287
+[2026-08-03 14:28:09,522][Trainer][INFO] - Current learning rate: 0.00059
+[2026-08-03 14:29:08,115][Trainer][INFO] - train_loss -0.7037
+[2026-08-03 14:29:08,115][Trainer][INFO] - val_loss -0.7441
+[2026-08-03 14:29:08,115][Trainer][INFO] - Pseudo dice 0.8328
+[2026-08-03 14:29:08,115][Trainer][INFO] - Epoch time: 58.59 s
+[2026-08-03 14:29:09,064][Trainer][INFO] - 
+[2026-08-03 14:29:09,065][Trainer][INFO] - Epoch 288
+[2026-08-03 14:29:09,065][Trainer][INFO] - Current learning rate: 0.00055
+[2026-08-03 14:30:07,606][Trainer][INFO] - train_loss -0.7386
+[2026-08-03 14:30:07,606][Trainer][INFO] - val_loss -0.7384
+[2026-08-03 14:30:07,606][Trainer][INFO] - Pseudo dice 0.8505
+[2026-08-03 14:30:07,606][Trainer][INFO] - Epoch time: 58.54 s
+[2026-08-03 14:30:08,513][Trainer][INFO] - 
+[2026-08-03 14:30:08,514][Trainer][INFO] - Epoch 289
+[2026-08-03 14:30:08,514][Trainer][INFO] - Current learning rate: 0.00051
+[2026-08-03 14:31:06,744][Trainer][INFO] - train_loss -0.7202
+[2026-08-03 14:31:06,744][Trainer][INFO] - val_loss -0.7375
+[2026-08-03 14:31:06,744][Trainer][INFO] - Pseudo dice 0.8307
+[2026-08-03 14:31:06,744][Trainer][INFO] - Epoch time: 58.23 s
+[2026-08-03 14:31:07,708][Trainer][INFO] - 
+[2026-08-03 14:31:07,708][Trainer][INFO] - Epoch 290
+[2026-08-03 14:31:07,708][Trainer][INFO] - Current learning rate: 0.00047
+[2026-08-03 14:32:06,591][Trainer][INFO] - train_loss -0.7233
+[2026-08-03 14:32:06,592][Trainer][INFO] - val_loss -0.7058
+[2026-08-03 14:32:06,592][Trainer][INFO] - Pseudo dice 0.8473
+[2026-08-03 14:32:06,592][Trainer][INFO] - Epoch time: 58.89 s
+[2026-08-03 14:32:07,519][Trainer][INFO] - 
+[2026-08-03 14:32:07,519][Trainer][INFO] - Epoch 291
+[2026-08-03 14:32:07,519][Trainer][INFO] - Current learning rate: 0.00043
+[2026-08-03 14:33:06,236][Trainer][INFO] - train_loss -0.7251
+[2026-08-03 14:33:06,236][Trainer][INFO] - val_loss -0.7686
+[2026-08-03 14:33:06,236][Trainer][INFO] - Pseudo dice 0.8287
+[2026-08-03 14:33:06,236][Trainer][INFO] - Epoch time: 58.72 s
+[2026-08-03 14:33:08,027][Trainer][INFO] - 
+[2026-08-03 14:33:08,027][Trainer][INFO] - Epoch 292
+[2026-08-03 14:33:08,027][Trainer][INFO] - Current learning rate: 0.00038
+[2026-08-03 14:34:06,512][Trainer][INFO] - train_loss -0.7307
+[2026-08-03 14:34:06,513][Trainer][INFO] - val_loss -0.7626
+[2026-08-03 14:34:06,513][Trainer][INFO] - Pseudo dice 0.856
+[2026-08-03 14:34:06,513][Trainer][INFO] - Epoch time: 58.49 s
+[2026-08-03 14:34:06,513][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8395
+[2026-08-03 14:34:07,903][Trainer][INFO] - 
+[2026-08-03 14:34:07,903][Trainer][INFO] - Epoch 293
+[2026-08-03 14:34:07,903][Trainer][INFO] - Current learning rate: 0.00034
+[2026-08-03 14:35:06,104][Trainer][INFO] - train_loss -0.7232
+[2026-08-03 14:35:06,104][Trainer][INFO] - val_loss -0.7729
+[2026-08-03 14:35:06,104][Trainer][INFO] - Pseudo dice 0.8479
+[2026-08-03 14:35:06,104][Trainer][INFO] - Epoch time: 58.2 s
+[2026-08-03 14:35:06,104][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.8403
+[2026-08-03 14:35:07,484][Trainer][INFO] - 
+[2026-08-03 14:35:07,484][Trainer][INFO] - Epoch 294
+[2026-08-03 14:35:07,484][Trainer][INFO] - Current learning rate: 0.0003
+[2026-08-03 14:36:06,062][Trainer][INFO] - train_loss -0.746
+[2026-08-03 14:36:06,062][Trainer][INFO] - val_loss -0.7947
+[2026-08-03 14:36:06,062][Trainer][INFO] - Pseudo dice 0.8972
+[2026-08-03 14:36:06,062][Trainer][INFO] - Epoch time: 58.58 s
+[2026-08-03 14:36:06,062][Trainer][INFO] - Yayy! New best EMA pseudo Dice: 0.846
+[2026-08-03 14:36:07,455][Trainer][INFO] - 
+[2026-08-03 14:36:07,455][Trainer][INFO] - Epoch 295
+[2026-08-03 14:36:07,455][Trainer][INFO] - Current learning rate: 0.00025
+[2026-08-03 14:37:05,771][Trainer][INFO] - train_loss -0.7371
+[2026-08-03 14:37:05,771][Trainer][INFO] - val_loss -0.7005
+[2026-08-03 14:37:05,771][Trainer][INFO] - Pseudo dice 0.7789
+[2026-08-03 14:37:05,772][Trainer][INFO] - Epoch time: 58.32 s
+[2026-08-03 14:37:06,689][Trainer][INFO] - 
+[2026-08-03 14:37:06,689][Trainer][INFO] - Epoch 296
+[2026-08-03 14:37:06,689][Trainer][INFO] - Current learning rate: 0.00021
+[2026-08-03 14:38:05,175][Trainer][INFO] - train_loss -0.7368
+[2026-08-03 14:38:05,175][Trainer][INFO] - val_loss -0.764
+[2026-08-03 14:38:05,175][Trainer][INFO] - Pseudo dice 0.8493
+[2026-08-03 14:38:05,175][Trainer][INFO] - Epoch time: 58.49 s
+[2026-08-03 14:38:06,078][Trainer][INFO] - 
+[2026-08-03 14:38:06,078][Trainer][INFO] - Epoch 297
+[2026-08-03 14:38:06,078][Trainer][INFO] - Current learning rate: 0.00016
+[2026-08-03 14:39:04,855][Trainer][INFO] - train_loss -0.7274
+[2026-08-03 14:39:04,856][Trainer][INFO] - val_loss -0.7378
+[2026-08-03 14:39:04,856][Trainer][INFO] - Pseudo dice 0.8139
+[2026-08-03 14:39:04,856][Trainer][INFO] - Epoch time: 58.78 s
+[2026-08-03 14:39:05,736][Trainer][INFO] - 
+[2026-08-03 14:39:05,736][Trainer][INFO] - Epoch 298
+[2026-08-03 14:39:05,736][Trainer][INFO] - Current learning rate: 0.00011
+[2026-08-03 14:40:04,003][Trainer][INFO] - train_loss -0.7081
+[2026-08-03 14:40:04,003][Trainer][INFO] - val_loss -0.752
+[2026-08-03 14:40:04,003][Trainer][INFO] - Pseudo dice 0.8202
+[2026-08-03 14:40:04,003][Trainer][INFO] - Epoch time: 58.27 s
+[2026-08-03 14:40:04,896][Trainer][INFO] - 
+[2026-08-03 14:40:04,896][Trainer][INFO] - Epoch 299
+[2026-08-03 14:40:04,896][Trainer][INFO] - Current learning rate: 6e-05
+[2026-08-03 14:41:03,862][Trainer][INFO] - train_loss -0.7115
+[2026-08-03 14:41:03,862][Trainer][INFO] - val_loss -0.7435
+[2026-08-03 14:41:03,862][Trainer][INFO] - Pseudo dice 0.8256
+[2026-08-03 14:41:03,863][Trainer][INFO] - Epoch time: 58.97 s
+[2026-08-03 14:41:05,257][Trainer][INFO] - Training done.
+[2026-08-03 14:41:05,258][root][INFO] - Training finished
+[2026-08-03 14:41:05,295][root][INFO] - Starting validation
+[2026-08-03 14:41:05,756][Trainer][INFO] - Using splits from existing split file: /home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/splits_final.json
+[2026-08-03 14:41:05,758][Trainer][INFO] - The split file contains 5 splits.
+[2026-08-03 14:41:05,758][Trainer][INFO] - Desired fold for training: 3
+[2026-08-03 14:41:05,758][Trainer][INFO] - This split has 960 training and 240 validation cases.
+[2026-08-03 14:41:05,761][Trainer][INFO] - predicting DUKE_005
+[2026-08-03 14:41:06,887][Trainer][INFO] - DUKE_005, shape torch.Size([3, 80, 497, 497]), rank 0
+[2026-08-03 14:41:31,585][Trainer][INFO] - predicting DUKE_040
+[2026-08-03 14:41:32,807][Trainer][INFO] - DUKE_040, shape torch.Size([3, 88, 482, 482]), rank 0
+[2026-08-03 14:41:50,584][Trainer][INFO] - predicting DUKE_045
+[2026-08-03 14:41:51,667][Trainer][INFO] - DUKE_045, shape torch.Size([3, 94, 470, 481]), rank 0
+[2026-08-03 14:42:05,926][Trainer][INFO] - predicting DUKE_048
+[2026-08-03 14:42:07,204][Trainer][INFO] - DUKE_048, shape torch.Size([3, 88, 482, 482]), rank 0
+[2026-08-03 14:42:24,999][Trainer][INFO] - predicting DUKE_061
+[2026-08-03 14:42:26,083][Trainer][INFO] - DUKE_061, shape torch.Size([3, 87, 474, 480]), rank 0
+[2026-08-03 14:42:37,528][Trainer][INFO] - predicting DUKE_071
+[2026-08-03 14:42:38,844][Trainer][INFO] - DUKE_071, shape torch.Size([3, 98, 480, 484]), rank 0
+[2026-08-03 14:42:53,082][Trainer][INFO] - predicting DUKE_077
+[2026-08-03 14:42:54,143][Trainer][INFO] - DUKE_077, shape torch.Size([3, 87, 466, 492]), rank 0
+[2026-08-03 14:43:08,389][Trainer][INFO] - predicting DUKE_103
+[2026-08-03 14:43:09,510][Trainer][INFO] - DUKE_103, shape torch.Size([3, 79, 482, 482]), rank 0
+[2026-08-03 14:43:21,395][Trainer][INFO] - predicting DUKE_114
+[2026-08-03 14:43:22,621][Trainer][INFO] - DUKE_114, shape torch.Size([3, 91, 501, 506]), rank 0
+[2026-08-03 14:43:40,404][Trainer][INFO] - predicting DUKE_144
+[2026-08-03 14:43:41,650][Trainer][INFO] - DUKE_144, shape torch.Size([3, 79, 511, 511]), rank 0
+[2026-08-03 14:43:53,551][Trainer][INFO] - predicting DUKE_150
+[2026-08-03 14:43:54,520][Trainer][INFO] - DUKE_150, shape torch.Size([3, 80, 481, 490]), rank 0
+[2026-08-03 14:44:06,480][Trainer][INFO] - predicting DUKE_185
+[2026-08-03 14:44:07,829][Trainer][INFO] - DUKE_185, shape torch.Size([3, 100, 499, 511]), rank 0
+[2026-08-03 14:44:25,698][Trainer][INFO] - predicting DUKE_192
+[2026-08-03 14:44:27,163][Trainer][INFO] - DUKE_192, shape torch.Size([3, 92, 511, 511]), rank 0
+[2026-08-03 14:44:45,020][Trainer][INFO] - predicting DUKE_198
+[2026-08-03 14:44:45,911][Trainer][INFO] - DUKE_198, shape torch.Size([3, 60, 482, 482]), rank 0
+[2026-08-03 14:44:57,836][Trainer][INFO] - predicting DUKE_298
+[2026-08-03 14:44:59,789][Trainer][INFO] - DUKE_298, shape torch.Size([3, 109, 560, 575]), rank 0
+[2026-08-03 14:45:17,679][Trainer][INFO] - predicting DUKE_345
+[2026-08-03 14:45:18,622][Trainer][INFO] - DUKE_345, shape torch.Size([3, 88, 439, 466]), rank 0
+[2026-08-03 14:45:30,047][Trainer][INFO] - predicting DUKE_363
+[2026-08-03 14:45:31,219][Trainer][INFO] - DUKE_363, shape torch.Size([3, 88, 468, 468]), rank 0
+[2026-08-03 14:45:42,626][Trainer][INFO] - predicting DUKE_395
+[2026-08-03 14:45:43,726][Trainer][INFO] - DUKE_395, shape torch.Size([3, 91, 466, 481]), rank 0
+[2026-08-03 14:45:57,991][Trainer][INFO] - predicting DUKE_444
+[2026-08-03 14:45:59,385][Trainer][INFO] - DUKE_444, shape torch.Size([3, 106, 502, 512]), rank 0
+[2026-08-03 14:46:17,199][Trainer][INFO] - predicting DUKE_501
+[2026-08-03 14:46:18,336][Trainer][INFO] - DUKE_501, shape torch.Size([3, 87, 504, 505]), rank 0
+[2026-08-03 14:46:36,167][Trainer][INFO] - predicting DUKE_506
+[2026-08-03 14:46:37,289][Trainer][INFO] - DUKE_506, shape torch.Size([3, 79, 482, 482]), rank 0
+[2026-08-03 14:46:49,188][Trainer][INFO] - predicting DUKE_534
+[2026-08-03 14:46:50,552][Trainer][INFO] - DUKE_534, shape torch.Size([3, 88, 511, 511]), rank 0
+[2026-08-03 14:47:08,363][Trainer][INFO] - predicting DUKE_610
+[2026-08-03 14:47:09,545][Trainer][INFO] - DUKE_610, shape torch.Size([3, 107, 480, 498]), rank 0
+[2026-08-03 14:47:23,856][Trainer][INFO] - predicting DUKE_633
+[2026-08-03 14:47:25,206][Trainer][INFO] - DUKE_633, shape torch.Size([3, 99, 496, 507]), rank 0
+[2026-08-03 14:47:43,051][Trainer][INFO] - predicting DUKE_685
+[2026-08-03 14:47:43,877][Trainer][INFO] - DUKE_685, shape torch.Size([3, 80, 422, 425]), rank 0
+[2026-08-03 14:47:51,510][Trainer][INFO] - predicting DUKE_723
+[2026-08-03 14:47:52,336][Trainer][INFO] - DUKE_723, shape torch.Size([3, 75, 452, 476]), rank 0
+[2026-08-03 14:47:59,960][Trainer][INFO] - predicting DUKE_724
+[2026-08-03 14:48:01,532][Trainer][INFO] - DUKE_724, shape torch.Size([3, 88, 553, 553]), rank 0
+[2026-08-03 14:48:19,387][Trainer][INFO] - predicting DUKE_774
+[2026-08-03 14:48:20,529][Trainer][INFO] - DUKE_774, shape torch.Size([3, 100, 445, 455]), rank 0
+[2026-08-03 14:48:32,007][Trainer][INFO] - predicting DUKE_778
+[2026-08-03 14:48:34,300][Trainer][INFO] - DUKE_778, shape torch.Size([3, 104, 624, 624]), rank 0
+[2026-08-03 14:49:00,018][Trainer][INFO] - predicting DUKE_831
+[2026-08-03 14:49:01,278][Trainer][INFO] - DUKE_831, shape torch.Size([3, 96, 503, 509]), rank 0
+[2026-08-03 14:49:19,168][Trainer][INFO] - predicting DUKE_850
+[2026-08-03 14:49:20,290][Trainer][INFO] - DUKE_850, shape torch.Size([3, 88, 454, 454]), rank 0
+[2026-08-03 14:49:31,715][Trainer][INFO] - predicting DUKE_891
+[2026-08-03 14:49:32,752][Trainer][INFO] - DUKE_891, shape torch.Size([3, 82, 494, 504]), rank 0
+[2026-08-03 14:49:44,669][Trainer][INFO] - predicting ISPY1_1009
+[2026-08-03 14:49:44,987][Trainer][INFO] - ISPY1_1009, shape torch.Size([3, 60, 284, 284]), rank 0
+[2026-08-03 14:49:46,912][Trainer][INFO] - predicting ISPY1_1016
+[2026-08-03 14:49:47,114][Trainer][INFO] - ISPY1_1016, shape torch.Size([3, 45, 256, 256]), rank 0
+[2026-08-03 14:49:48,110][Trainer][INFO] - predicting ISPY1_1035
+[2026-08-03 14:49:48,390][Trainer][INFO] - ISPY1_1035, shape torch.Size([3, 60, 284, 284]), rank 0
+[2026-08-03 14:49:50,312][Trainer][INFO] - predicting ISPY1_1060
+[2026-08-03 14:49:50,451][Trainer][INFO] - ISPY1_1060, shape torch.Size([3, 52, 192, 245]), rank 0
+[2026-08-03 14:49:50,943][Trainer][INFO] - predicting ISPY1_1062
+[2026-08-03 14:49:51,208][Trainer][INFO] - ISPY1_1062, shape torch.Size([3, 60, 284, 284]), rank 0
+[2026-08-03 14:49:53,128][Trainer][INFO] - predicting ISPY1_1064
+[2026-08-03 14:49:53,454][Trainer][INFO] - ISPY1_1064, shape torch.Size([3, 66, 284, 284]), rank 0
+[2026-08-03 14:49:55,385][Trainer][INFO] - predicting ISPY1_1066
+[2026-08-03 14:49:55,557][Trainer][INFO] - ISPY1_1066, shape torch.Size([3, 75, 256, 256]), rank 0
+[2026-08-03 14:49:57,487][Trainer][INFO] - predicting ISPY1_1067
+[2026-08-03 14:49:57,653][Trainer][INFO] - ISPY1_1067, shape torch.Size([3, 70, 256, 256]), rank 0
+[2026-08-03 14:49:59,578][Trainer][INFO] - predicting ISPY1_1069
+[2026-08-03 14:49:59,855][Trainer][INFO] - ISPY1_1069, shape torch.Size([3, 60, 284, 284]), rank 0
+[2026-08-03 14:50:01,781][Trainer][INFO] - predicting ISPY1_1070
+[2026-08-03 14:50:02,061][Trainer][INFO] - ISPY1_1070, shape torch.Size([3, 60, 284, 284]), rank 0
+[2026-08-03 14:50:03,994][Trainer][INFO] - predicting ISPY1_1075
+[2026-08-03 14:50:04,319][Trainer][INFO] - ISPY1_1075, shape torch.Size([3, 60, 299, 299]), rank 0
+[2026-08-03 14:50:08,606][Trainer][INFO] - predicting ISPY1_1102
+[2026-08-03 14:50:09,058][Trainer][INFO] - ISPY1_1102, shape torch.Size([3, 93, 284, 284]), rank 0
+[2026-08-03 14:50:11,944][Trainer][INFO] - predicting ISPY1_1104
+[2026-08-03 14:50:12,188][Trainer][INFO] - ISPY1_1104, shape torch.Size([3, 60, 235, 290]), rank 0
+[2026-08-03 14:50:15,058][Trainer][INFO] - predicting ISPY1_1106
+[2026-08-03 14:50:15,234][Trainer][INFO] - ISPY1_1106, shape torch.Size([3, 60, 213, 264]), rank 0
+[2026-08-03 14:50:17,135][Trainer][INFO] - predicting ISPY1_1117
+[2026-08-03 14:50:17,574][Trainer][INFO] - ISPY1_1117, shape torch.Size([3, 78, 313, 313]), rank 0
+[2026-08-03 14:50:21,868][Trainer][INFO] - predicting ISPY1_1122
+[2026-08-03 14:50:22,046][Trainer][INFO] - ISPY1_1122, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 14:50:23,986][Trainer][INFO] - predicting ISPY1_1125
+[2026-08-03 14:50:24,142][Trainer][INFO] - ISPY1_1125, shape torch.Size([3, 60, 213, 239]), rank 0
+[2026-08-03 14:50:26,041][Trainer][INFO] - predicting ISPY1_1130
+[2026-08-03 14:50:26,192][Trainer][INFO] - ISPY1_1130, shape torch.Size([3, 72, 256, 256]), rank 0
+[2026-08-03 14:50:28,115][Trainer][INFO] - predicting ISPY1_1132
+[2026-08-03 14:50:28,515][Trainer][INFO] - ISPY1_1132, shape torch.Size([3, 66, 313, 313]), rank 0
+[2026-08-03 14:50:32,815][Trainer][INFO] - predicting ISPY1_1157
+[2026-08-03 14:50:33,420][Trainer][INFO] - ISPY1_1157, shape torch.Size([3, 84, 356, 356]), rank 0
+[2026-08-03 14:50:37,739][Trainer][INFO] - predicting ISPY1_1158
+[2026-08-03 14:50:38,472][Trainer][INFO] - ISPY1_1158, shape torch.Size([3, 81, 398, 398]), rank 0
+[2026-08-03 14:50:46,102][Trainer][INFO] - predicting ISPY1_1165
+[2026-08-03 14:50:46,297][Trainer][INFO] - ISPY1_1165, shape torch.Size([3, 60, 213, 233]), rank 0
+[2026-08-03 14:50:48,216][Trainer][INFO] - predicting ISPY1_1168
+[2026-08-03 14:50:48,739][Trainer][INFO] - ISPY1_1168, shape torch.Size([3, 69, 356, 356]), rank 0
+[2026-08-03 14:50:53,039][Trainer][INFO] - predicting ISPY1_1172
+[2026-08-03 14:50:53,242][Trainer][INFO] - ISPY1_1172, shape torch.Size([3, 78, 256, 256]), rank 0
+[2026-08-03 14:50:55,181][Trainer][INFO] - predicting ISPY1_1184
+[2026-08-03 14:50:55,359][Trainer][INFO] - ISPY1_1184, shape torch.Size([3, 60, 213, 249]), rank 0
+[2026-08-03 14:50:57,258][Trainer][INFO] - predicting ISPY1_1185
+[2026-08-03 14:50:57,669][Trainer][INFO] - ISPY1_1185, shape torch.Size([3, 66, 327, 327]), rank 0
+[2026-08-03 14:51:01,960][Trainer][INFO] - predicting ISPY1_1197
+[2026-08-03 14:51:02,650][Trainer][INFO] - ISPY1_1197, shape torch.Size([3, 98, 341, 341]), rank 0
+[2026-08-03 14:51:09,091][Trainer][INFO] - predicting ISPY1_1212
+[2026-08-03 14:51:09,277][Trainer][INFO] - ISPY1_1212, shape torch.Size([3, 60, 213, 229]), rank 0
+[2026-08-03 14:51:11,193][Trainer][INFO] - predicting ISPY1_1216
+[2026-08-03 14:51:11,938][Trainer][INFO] - ISPY1_1216, shape torch.Size([3, 72, 427, 427]), rank 0
+[2026-08-03 14:51:19,555][Trainer][INFO] - predicting ISPY1_1239
+[2026-08-03 14:51:20,082][Trainer][INFO] - ISPY1_1239, shape torch.Size([3, 66, 356, 356]), rank 0
+[2026-08-03 14:51:24,406][Trainer][INFO] - predicting ISPY2_102212
+[2026-08-03 14:51:24,653][Trainer][INFO] - ISPY2_102212, shape torch.Size([3, 80, 220, 220]), rank 0
+[2026-08-03 14:51:26,565][Trainer][INFO] - predicting ISPY2_111646
+[2026-08-03 14:51:26,795][Trainer][INFO] - ISPY2_111646, shape torch.Size([3, 80, 235, 233]), rank 0
+[2026-08-03 14:51:28,715][Trainer][INFO] - predicting ISPY2_111881
+[2026-08-03 14:51:28,980][Trainer][INFO] - ISPY2_111881, shape torch.Size([3, 80, 242, 238]), rank 0
+[2026-08-03 14:51:30,901][Trainer][INFO] - predicting ISPY2_115987
+[2026-08-03 14:51:31,110][Trainer][INFO] - ISPY2_115987, shape torch.Size([3, 79, 256, 256]), rank 0
+[2026-08-03 14:51:33,045][Trainer][INFO] - predicting ISPY2_119928
+[2026-08-03 14:51:34,225][Trainer][INFO] - ISPY2_119928, shape torch.Size([3, 97, 440, 440]), rank 0
+[2026-08-03 14:51:45,630][Trainer][INFO] - predicting ISPY2_134526
+[2026-08-03 14:51:45,954][Trainer][INFO] - ISPY2_134526, shape torch.Size([3, 80, 249, 243]), rank 0
+[2026-08-03 14:51:47,881][Trainer][INFO] - predicting ISPY2_136536
+[2026-08-03 14:51:48,316][Trainer][INFO] - ISPY2_136536, shape torch.Size([3, 80, 326, 328]), rank 0
+[2026-08-03 14:51:52,615][Trainer][INFO] - predicting ISPY2_146033
+[2026-08-03 14:51:52,884][Trainer][INFO] - ISPY2_146033, shape torch.Size([3, 80, 242, 242]), rank 0
+[2026-08-03 14:51:54,816][Trainer][INFO] - predicting ISPY2_146987
+[2026-08-03 14:51:55,102][Trainer][INFO] - ISPY2_146987, shape torch.Size([3, 80, 249, 249]), rank 0
+[2026-08-03 14:51:57,028][Trainer][INFO] - predicting ISPY2_148357
+[2026-08-03 14:51:57,230][Trainer][INFO] - ISPY2_148357, shape torch.Size([3, 79, 256, 256]), rank 0
+[2026-08-03 14:51:59,157][Trainer][INFO] - predicting ISPY2_152090
+[2026-08-03 14:51:59,366][Trainer][INFO] - ISPY2_152090, shape torch.Size([3, 80, 213, 213]), rank 0
+[2026-08-03 14:52:01,266][Trainer][INFO] - predicting ISPY2_156163
+[2026-08-03 14:52:01,524][Trainer][INFO] - ISPY2_156163, shape torch.Size([3, 80, 242, 240]), rank 0
+[2026-08-03 14:52:03,445][Trainer][INFO] - predicting ISPY2_162562
+[2026-08-03 14:52:03,700][Trainer][INFO] - ISPY2_162562, shape torch.Size([3, 80, 242, 242]), rank 0
+[2026-08-03 14:52:05,621][Trainer][INFO] - predicting ISPY2_167271
+[2026-08-03 14:52:05,833][Trainer][INFO] - ISPY2_167271, shape torch.Size([3, 79, 256, 256]), rank 0
+[2026-08-03 14:52:07,764][Trainer][INFO] - predicting ISPY2_172366
+[2026-08-03 14:52:08,147][Trainer][INFO] - ISPY2_172366, shape torch.Size([3, 80, 284, 284]), rank 0
+[2026-08-03 14:52:10,085][Trainer][INFO] - predicting ISPY2_174903
+[2026-08-03 14:52:10,274][Trainer][INFO] - ISPY2_174903, shape torch.Size([3, 80, 199, 199]), rank 0
+[2026-08-03 14:52:12,167][Trainer][INFO] - predicting ISPY2_179568
+[2026-08-03 14:52:12,435][Trainer][INFO] - ISPY2_179568, shape torch.Size([3, 80, 249, 249]), rank 0
+[2026-08-03 14:52:14,358][Trainer][INFO] - predicting ISPY2_200222
+[2026-08-03 14:52:14,739][Trainer][INFO] - ISPY2_200222, shape torch.Size([3, 80, 284, 284]), rank 0
+[2026-08-03 14:52:16,675][Trainer][INFO] - predicting ISPY2_201873
+[2026-08-03 14:52:16,970][Trainer][INFO] - ISPY2_201873, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 14:52:18,887][Trainer][INFO] - predicting ISPY2_202539
+[2026-08-03 14:52:19,153][Trainer][INFO] - ISPY2_202539, shape torch.Size([3, 80, 228, 228]), rank 0
+[2026-08-03 14:52:21,067][Trainer][INFO] - predicting ISPY2_208303
+[2026-08-03 14:52:21,270][Trainer][INFO] - ISPY2_208303, shape torch.Size([3, 79, 256, 256]), rank 0
+[2026-08-03 14:52:23,188][Trainer][INFO] - predicting ISPY2_209397
+[2026-08-03 14:52:23,484][Trainer][INFO] - ISPY2_209397, shape torch.Size([3, 80, 256, 255]), rank 0
+[2026-08-03 14:52:25,412][Trainer][INFO] - predicting ISPY2_223526
+[2026-08-03 14:52:25,684][Trainer][INFO] - ISPY2_223526, shape torch.Size([3, 80, 242, 242]), rank 0
+[2026-08-03 14:52:27,599][Trainer][INFO] - predicting ISPY2_225836
+[2026-08-03 14:52:27,815][Trainer][INFO] - ISPY2_225836, shape torch.Size([3, 80, 220, 220]), rank 0
+[2026-08-03 14:52:29,712][Trainer][INFO] - predicting ISPY2_227881
+[2026-08-03 14:52:29,967][Trainer][INFO] - ISPY2_227881, shape torch.Size([3, 79, 242, 242]), rank 0
+[2026-08-03 14:52:31,889][Trainer][INFO] - predicting ISPY2_229328
+[2026-08-03 14:52:32,255][Trainer][INFO] - ISPY2_229328, shape torch.Size([3, 90, 320, 319]), rank 0
+[2026-08-03 14:52:38,682][Trainer][INFO] - predicting ISPY2_233191
+[2026-08-03 14:52:38,969][Trainer][INFO] - ISPY2_233191, shape torch.Size([3, 80, 235, 235]), rank 0
+[2026-08-03 14:52:40,899][Trainer][INFO] - predicting ISPY2_233962
+[2026-08-03 14:52:42,264][Trainer][INFO] - ISPY2_233962, shape torch.Size([3, 90, 511, 511]), rank 0
+[2026-08-03 14:53:00,069][Trainer][INFO] - predicting ISPY2_240957
+[2026-08-03 14:53:00,410][Trainer][INFO] - ISPY2_240957, shape torch.Size([3, 80, 242, 242]), rank 0
+[2026-08-03 14:53:02,337][Trainer][INFO] - predicting ISPY2_241998
+[2026-08-03 14:53:02,530][Trainer][INFO] - ISPY2_241998, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 14:53:04,459][Trainer][INFO] - predicting ISPY2_245655
+[2026-08-03 14:53:05,035][Trainer][INFO] - ISPY2_245655, shape torch.Size([3, 80, 341, 340]), rank 0
+[2026-08-03 14:53:09,340][Trainer][INFO] - predicting ISPY2_246134
+[2026-08-03 14:53:09,555][Trainer][INFO] - ISPY2_246134, shape torch.Size([3, 80, 202, 205]), rank 0
+[2026-08-03 14:53:11,447][Trainer][INFO] - predicting ISPY2_264678
+[2026-08-03 14:53:11,711][Trainer][INFO] - ISPY2_264678, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 14:53:13,631][Trainer][INFO] - predicting ISPY2_267306
+[2026-08-03 14:53:13,865][Trainer][INFO] - ISPY2_267306, shape torch.Size([3, 80, 228, 228]), rank 0
+[2026-08-03 14:53:15,760][Trainer][INFO] - predicting ISPY2_269899
+[2026-08-03 14:53:16,160][Trainer][INFO] - ISPY2_269899, shape torch.Size([3, 80, 299, 299]), rank 0
+[2026-08-03 14:53:20,454][Trainer][INFO] - predicting ISPY2_273745
+[2026-08-03 14:53:20,695][Trainer][INFO] - ISPY2_273745, shape torch.Size([3, 80, 228, 228]), rank 0
+[2026-08-03 14:53:22,593][Trainer][INFO] - predicting ISPY2_282777
+[2026-08-03 14:53:23,020][Trainer][INFO] - ISPY2_282777, shape torch.Size([3, 80, 306, 306]), rank 0
+[2026-08-03 14:53:27,315][Trainer][INFO] - predicting ISPY2_284355
+[2026-08-03 14:53:27,514][Trainer][INFO] - ISPY2_284355, shape torch.Size([3, 79, 256, 255]), rank 0
+[2026-08-03 14:53:29,449][Trainer][INFO] - predicting ISPY2_287300
+[2026-08-03 14:53:29,688][Trainer][INFO] - ISPY2_287300, shape torch.Size([3, 80, 228, 228]), rank 0
+[2026-08-03 14:53:31,596][Trainer][INFO] - predicting ISPY2_289107
+[2026-08-03 14:53:31,870][Trainer][INFO] - ISPY2_289107, shape torch.Size([3, 80, 242, 242]), rank 0
+[2026-08-03 14:53:33,791][Trainer][INFO] - predicting ISPY2_296123
+[2026-08-03 14:53:34,011][Trainer][INFO] - ISPY2_296123, shape torch.Size([3, 80, 228, 228]), rank 0
+[2026-08-03 14:53:35,906][Trainer][INFO] - predicting ISPY2_299840
+[2026-08-03 14:53:36,107][Trainer][INFO] - ISPY2_299840, shape torch.Size([3, 80, 221, 221]), rank 0
+[2026-08-03 14:53:37,997][Trainer][INFO] - predicting ISPY2_303685
+[2026-08-03 14:53:38,226][Trainer][INFO] - ISPY2_303685, shape torch.Size([3, 81, 213, 213]), rank 0
+[2026-08-03 14:53:40,120][Trainer][INFO] - predicting ISPY2_303947
+[2026-08-03 14:53:41,057][Trainer][INFO] - ISPY2_303947, shape torch.Size([3, 88, 425, 425]), rank 0
+[2026-08-03 14:53:52,474][Trainer][INFO] - predicting ISPY2_309830
+[2026-08-03 14:53:52,993][Trainer][INFO] - ISPY2_309830, shape torch.Size([3, 80, 313, 312]), rank 0
+[2026-08-03 14:53:57,320][Trainer][INFO] - predicting ISPY2_318569
+[2026-08-03 14:53:57,541][Trainer][INFO] - ISPY2_318569, shape torch.Size([3, 80, 213, 213]), rank 0
+[2026-08-03 14:53:59,438][Trainer][INFO] - predicting ISPY2_342142
+[2026-08-03 14:53:59,598][Trainer][INFO] - ISPY2_342142, shape torch.Size([3, 79, 185, 185]), rank 0
+[2026-08-03 14:54:05,372][Trainer][INFO] - predicting ISPY2_345574
+[2026-08-03 14:54:05,623][Trainer][INFO] - ISPY2_345574, shape torch.Size([3, 80, 242, 242]), rank 0
+[2026-08-03 14:54:07,523][Trainer][INFO] - predicting ISPY2_347516
+[2026-08-03 14:54:07,770][Trainer][INFO] - ISPY2_347516, shape torch.Size([3, 80, 228, 228]), rank 0
+[2026-08-03 14:54:09,665][Trainer][INFO] - predicting ISPY2_357034
+[2026-08-03 14:54:09,947][Trainer][INFO] - ISPY2_357034, shape torch.Size([3, 80, 242, 242]), rank 0
+[2026-08-03 14:54:11,845][Trainer][INFO] - predicting ISPY2_360937
+[2026-08-03 14:54:12,060][Trainer][INFO] - ISPY2_360937, shape torch.Size([3, 80, 213, 213]), rank 0
+[2026-08-03 14:54:13,952][Trainer][INFO] - predicting ISPY2_367682
+[2026-08-03 14:54:14,195][Trainer][INFO] - ISPY2_367682, shape torch.Size([3, 80, 237, 242]), rank 0
+[2026-08-03 14:54:16,091][Trainer][INFO] - predicting ISPY2_371528
+[2026-08-03 14:54:16,268][Trainer][INFO] - ISPY2_371528, shape torch.Size([3, 80, 256, 255]), rank 0
+[2026-08-03 14:54:18,169][Trainer][INFO] - predicting ISPY2_374121
+[2026-08-03 14:54:18,449][Trainer][INFO] - ISPY2_374121, shape torch.Size([3, 88, 243, 243]), rank 0
+[2026-08-03 14:54:21,283][Trainer][INFO] - predicting ISPY2_382853
+[2026-08-03 14:54:22,392][Trainer][INFO] - ISPY2_382853, shape torch.Size([3, 90, 452, 454]), rank 0
+[2026-08-03 14:54:33,798][Trainer][INFO] - predicting ISPY2_384830
+[2026-08-03 14:54:34,010][Trainer][INFO] - ISPY2_384830, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 14:54:35,915][Trainer][INFO] - predicting ISPY2_397505
+[2026-08-03 14:54:36,216][Trainer][INFO] - ISPY2_397505, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 14:54:38,120][Trainer][INFO] - predicting ISPY2_411008
+[2026-08-03 14:54:39,339][Trainer][INFO] - ISPY2_411008, shape torch.Size([3, 100, 454, 454]), rank 0
+[2026-08-03 14:54:50,772][Trainer][INFO] - predicting ISPY2_411684
+[2026-08-03 14:54:51,098][Trainer][INFO] - ISPY2_411684, shape torch.Size([3, 80, 242, 240]), rank 0
+[2026-08-03 14:54:53,004][Trainer][INFO] - predicting ISPY2_411806
+[2026-08-03 14:54:54,139][Trainer][INFO] - ISPY2_411806, shape torch.Size([3, 97, 440, 440]), rank 0
+[2026-08-03 14:55:05,538][Trainer][INFO] - predicting ISPY2_411950
+[2026-08-03 14:55:06,783][Trainer][INFO] - ISPY2_411950, shape torch.Size([3, 97, 454, 454]), rank 0
+[2026-08-03 14:55:18,252][Trainer][INFO] - predicting ISPY2_417474
+[2026-08-03 14:55:18,516][Trainer][INFO] - ISPY2_417474, shape torch.Size([3, 80, 228, 228]), rank 0
+[2026-08-03 14:55:20,427][Trainer][INFO] - predicting ISPY2_419590
+[2026-08-03 14:55:20,625][Trainer][INFO] - ISPY2_419590, shape torch.Size([3, 79, 256, 256]), rank 0
+[2026-08-03 14:55:22,532][Trainer][INFO] - predicting ISPY2_421917
+[2026-08-03 14:55:22,735][Trainer][INFO] - ISPY2_421917, shape torch.Size([3, 79, 256, 256]), rank 0
+[2026-08-03 14:55:24,634][Trainer][INFO] - predicting ISPY2_426106
+[2026-08-03 14:55:25,033][Trainer][INFO] - ISPY2_426106, shape torch.Size([3, 79, 306, 306]), rank 0
+[2026-08-03 14:55:29,335][Trainer][INFO] - predicting ISPY2_433144
+[2026-08-03 14:55:29,691][Trainer][INFO] - ISPY2_433144, shape torch.Size([3, 80, 284, 284]), rank 0
+[2026-08-03 14:55:31,592][Trainer][INFO] - predicting ISPY2_436371
+[2026-08-03 14:55:31,799][Trainer][INFO] - ISPY2_436371, shape torch.Size([3, 79, 213, 213]), rank 0
+[2026-08-03 14:55:33,699][Trainer][INFO] - predicting ISPY2_437968
+[2026-08-03 14:55:33,889][Trainer][INFO] - ISPY2_437968, shape torch.Size([3, 80, 213, 213]), rank 0
+[2026-08-03 14:55:35,788][Trainer][INFO] - predicting ISPY2_442637
+[2026-08-03 14:55:36,198][Trainer][INFO] - ISPY2_442637, shape torch.Size([3, 80, 323, 328]), rank 0
+[2026-08-03 14:55:40,500][Trainer][INFO] - predicting ISPY2_443444
+[2026-08-03 14:55:42,037][Trainer][INFO] - ISPY2_443444, shape torch.Size([3, 100, 511, 511]), rank 0
+[2026-08-03 14:55:59,881][Trainer][INFO] - predicting ISPY2_459311
+[2026-08-03 14:56:00,108][Trainer][INFO] - ISPY2_459311, shape torch.Size([3, 79, 241, 253]), rank 0
+[2026-08-03 14:56:02,016][Trainer][INFO] - predicting ISPY2_461824
+[2026-08-03 14:56:02,206][Trainer][INFO] - ISPY2_461824, shape torch.Size([3, 79, 213, 213]), rank 0
+[2026-08-03 14:56:04,105][Trainer][INFO] - predicting ISPY2_464547
+[2026-08-03 14:56:05,304][Trainer][INFO] - ISPY2_464547, shape torch.Size([3, 80, 511, 511]), rank 0
+[2026-08-03 14:56:17,197][Trainer][INFO] - predicting ISPY2_472799
+[2026-08-03 14:56:17,498][Trainer][INFO] - ISPY2_472799, shape torch.Size([3, 80, 242, 240]), rank 0
+[2026-08-03 14:56:19,402][Trainer][INFO] - predicting ISPY2_477816
+[2026-08-03 14:56:20,382][Trainer][INFO] - ISPY2_477816, shape torch.Size([3, 80, 454, 454]), rank 0
+[2026-08-03 14:56:28,023][Trainer][INFO] - predicting ISPY2_478655
+[2026-08-03 14:56:28,388][Trainer][INFO] - ISPY2_478655, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 14:56:30,291][Trainer][INFO] - predicting ISPY2_493519
+[2026-08-03 14:56:31,028][Trainer][INFO] - ISPY2_493519, shape torch.Size([3, 80, 397, 397]), rank 0
+[2026-08-03 14:56:38,652][Trainer][INFO] - predicting ISPY2_494022
+[2026-08-03 14:56:39,260][Trainer][INFO] - ISPY2_494022, shape torch.Size([3, 80, 350, 350]), rank 0
+[2026-08-03 14:56:43,568][Trainer][INFO] - predicting ISPY2_496205
+[2026-08-03 14:56:43,825][Trainer][INFO] - ISPY2_496205, shape torch.Size([3, 80, 242, 242]), rank 0
+[2026-08-03 14:56:45,747][Trainer][INFO] - predicting ISPY2_502486
+[2026-08-03 14:56:46,097][Trainer][INFO] - ISPY2_502486, shape torch.Size([3, 80, 277, 276]), rank 0
+[2026-08-03 14:56:48,010][Trainer][INFO] - predicting ISPY2_504838
+[2026-08-03 14:56:48,751][Trainer][INFO] - ISPY2_504838, shape torch.Size([3, 80, 397, 397]), rank 0
+[2026-08-03 14:56:56,375][Trainer][INFO] - predicting ISPY2_517870
+[2026-08-03 14:56:56,793][Trainer][INFO] - ISPY2_517870, shape torch.Size([3, 77, 302, 298]), rank 0
+[2026-08-03 14:57:01,067][Trainer][INFO] - predicting ISPY2_539876
+[2026-08-03 14:57:01,235][Trainer][INFO] - ISPY2_539876, shape torch.Size([3, 80, 199, 199]), rank 0
+[2026-08-03 14:57:03,124][Trainer][INFO] - predicting ISPY2_541165
+[2026-08-03 14:57:03,408][Trainer][INFO] - ISPY2_541165, shape torch.Size([3, 80, 252, 256]), rank 0
+[2026-08-03 14:57:05,311][Trainer][INFO] - predicting ISPY2_542392
+[2026-08-03 14:57:06,382][Trainer][INFO] - ISPY2_542392, shape torch.Size([3, 80, 482, 482]), rank 0
+[2026-08-03 14:57:18,267][Trainer][INFO] - predicting ISPY2_547892
+[2026-08-03 14:57:18,497][Trainer][INFO] - ISPY2_547892, shape torch.Size([3, 79, 256, 256]), rank 0
+[2026-08-03 14:57:20,409][Trainer][INFO] - predicting ISPY2_554577
+[2026-08-03 14:57:20,582][Trainer][INFO] - ISPY2_554577, shape torch.Size([3, 80, 199, 199]), rank 0
+[2026-08-03 14:57:22,479][Trainer][INFO] - predicting ISPY2_559021
+[2026-08-03 14:57:22,983][Trainer][INFO] - ISPY2_559021, shape torch.Size([3, 80, 347, 339]), rank 0
+[2026-08-03 14:57:27,287][Trainer][INFO] - predicting ISPY2_567201
+[2026-08-03 14:57:27,512][Trainer][INFO] - ISPY2_567201, shape torch.Size([3, 79, 256, 256]), rank 0
+[2026-08-03 14:57:29,417][Trainer][INFO] - predicting ISPY2_570685
+[2026-08-03 14:57:29,586][Trainer][INFO] - ISPY2_570685, shape torch.Size([3, 79, 256, 256]), rank 0
+[2026-08-03 14:57:31,484][Trainer][INFO] - predicting ISPY2_570966
+[2026-08-03 14:57:31,857][Trainer][INFO] - ISPY2_570966, shape torch.Size([3, 82, 284, 282]), rank 0
+[2026-08-03 14:57:33,768][Trainer][INFO] - predicting ISPY2_572731
+[2026-08-03 14:57:33,961][Trainer][INFO] - ISPY2_572731, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 14:57:35,860][Trainer][INFO] - predicting ISPY2_573881
+[2026-08-03 14:57:36,820][Trainer][INFO] - ISPY2_573881, shape torch.Size([3, 80, 454, 454]), rank 0
+[2026-08-03 14:57:44,465][Trainer][INFO] - predicting ISPY2_575457
+[2026-08-03 14:57:44,716][Trainer][INFO] - ISPY2_575457, shape torch.Size([3, 80, 228, 228]), rank 0
+[2026-08-03 14:57:46,619][Trainer][INFO] - predicting ISPY2_580632
+[2026-08-03 14:57:46,876][Trainer][INFO] - ISPY2_580632, shape torch.Size([3, 80, 235, 235]), rank 0
+[2026-08-03 14:57:48,782][Trainer][INFO] - predicting ISPY2_586207
+[2026-08-03 14:57:49,067][Trainer][INFO] - ISPY2_586207, shape torch.Size([3, 80, 256, 252]), rank 0
+[2026-08-03 14:57:50,973][Trainer][INFO] - predicting ISPY2_587388
+[2026-08-03 14:57:51,186][Trainer][INFO] - ISPY2_587388, shape torch.Size([3, 80, 205, 205]), rank 0
+[2026-08-03 14:57:53,078][Trainer][INFO] - predicting ISPY2_596079
+[2026-08-03 14:57:54,326][Trainer][INFO] - ISPY2_596079, shape torch.Size([3, 97, 468, 468]), rank 0
+[2026-08-03 14:58:05,746][Trainer][INFO] - predicting ISPY2_604199
+[2026-08-03 14:58:07,217][Trainer][INFO] - ISPY2_604199, shape torch.Size([3, 100, 496, 496]), rank 0
+[2026-08-03 14:58:25,036][Trainer][INFO] - predicting ISPY2_609642
+[2026-08-03 14:58:26,163][Trainer][INFO] - ISPY2_609642, shape torch.Size([3, 96, 426, 426]), rank 0
+[2026-08-03 14:58:37,606][Trainer][INFO] - predicting ISPY2_622688
+[2026-08-03 14:58:37,987][Trainer][INFO] - ISPY2_622688, shape torch.Size([3, 80, 270, 270]), rank 0
+[2026-08-03 14:58:39,897][Trainer][INFO] - predicting ISPY2_627118
+[2026-08-03 14:58:40,120][Trainer][INFO] - ISPY2_627118, shape torch.Size([3, 80, 228, 227]), rank 0
+[2026-08-03 14:58:42,018][Trainer][INFO] - predicting ISPY2_635862
+[2026-08-03 14:58:42,221][Trainer][INFO] - ISPY2_635862, shape torch.Size([3, 80, 213, 213]), rank 0
+[2026-08-03 14:58:44,120][Trainer][INFO] - predicting ISPY2_637051
+[2026-08-03 14:58:44,697][Trainer][INFO] - ISPY2_637051, shape torch.Size([3, 80, 350, 349]), rank 0
+[2026-08-03 14:58:49,001][Trainer][INFO] - predicting ISPY2_641977
+[2026-08-03 14:58:49,282][Trainer][INFO] - ISPY2_641977, shape torch.Size([3, 80, 249, 249]), rank 0
+[2026-08-03 14:58:51,200][Trainer][INFO] - predicting ISPY2_646600
+[2026-08-03 14:58:51,632][Trainer][INFO] - ISPY2_646600, shape torch.Size([3, 80, 325, 328]), rank 0
+[2026-08-03 14:58:55,936][Trainer][INFO] - predicting ISPY2_649198
+[2026-08-03 14:58:56,150][Trainer][INFO] - ISPY2_649198, shape torch.Size([3, 81, 213, 213]), rank 0
+[2026-08-03 14:58:58,075][Trainer][INFO] - predicting ISPY2_651401
+[2026-08-03 14:58:58,305][Trainer][INFO] - ISPY2_651401, shape torch.Size([3, 80, 235, 235]), rank 0
+[2026-08-03 14:59:00,217][Trainer][INFO] - predicting ISPY2_653927
+[2026-08-03 14:59:00,485][Trainer][INFO] - ISPY2_653927, shape torch.Size([3, 80, 242, 242]), rank 0
+[2026-08-03 14:59:02,403][Trainer][INFO] - predicting ISPY2_663197
+[2026-08-03 14:59:02,620][Trainer][INFO] - ISPY2_663197, shape torch.Size([3, 80, 228, 228]), rank 0
+[2026-08-03 14:59:04,543][Trainer][INFO] - predicting ISPY2_663467
+[2026-08-03 14:59:04,849][Trainer][INFO] - ISPY2_663467, shape torch.Size([3, 79, 312, 305]), rank 0
+[2026-08-03 14:59:09,150][Trainer][INFO] - predicting ISPY2_676365
+[2026-08-03 14:59:10,407][Trainer][INFO] - ISPY2_676365, shape torch.Size([3, 97, 454, 454]), rank 0
+[2026-08-03 14:59:21,851][Trainer][INFO] - predicting ISPY2_677915
+[2026-08-03 14:59:22,126][Trainer][INFO] - ISPY2_677915, shape torch.Size([3, 80, 242, 241]), rank 0
+[2026-08-03 14:59:24,054][Trainer][INFO] - predicting ISPY2_683896
+[2026-08-03 14:59:24,253][Trainer][INFO] - ISPY2_683896, shape torch.Size([3, 80, 256, 255]), rank 0
+[2026-08-03 14:59:26,176][Trainer][INFO] - predicting ISPY2_685753
+[2026-08-03 14:59:26,375][Trainer][INFO] - ISPY2_685753, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 14:59:28,307][Trainer][INFO] - predicting ISPY2_697871
+[2026-08-03 14:59:28,523][Trainer][INFO] - ISPY2_697871, shape torch.Size([3, 80, 205, 205]), rank 0
+[2026-08-03 14:59:30,422][Trainer][INFO] - predicting ISPY2_720065
+[2026-08-03 14:59:30,655][Trainer][INFO] - ISPY2_720065, shape torch.Size([3, 80, 228, 228]), rank 0
+[2026-08-03 14:59:32,551][Trainer][INFO] - predicting ISPY2_721099
+[2026-08-03 14:59:32,806][Trainer][INFO] - ISPY2_721099, shape torch.Size([3, 80, 235, 235]), rank 0
+[2026-08-03 14:59:34,728][Trainer][INFO] - predicting ISPY2_723918
+[2026-08-03 14:59:34,954][Trainer][INFO] - ISPY2_723918, shape torch.Size([3, 80, 211, 217]), rank 0
+[2026-08-03 14:59:36,847][Trainer][INFO] - predicting ISPY2_728287
+[2026-08-03 14:59:37,262][Trainer][INFO] - ISPY2_728287, shape torch.Size([3, 90, 302, 302]), rank 0
+[2026-08-03 14:59:43,681][Trainer][INFO] - predicting ISPY2_729732
+[2026-08-03 14:59:44,461][Trainer][INFO] - ISPY2_729732, shape torch.Size([3, 80, 397, 397]), rank 0
+[2026-08-03 14:59:52,125][Trainer][INFO] - predicting ISPY2_738041
+[2026-08-03 14:59:52,406][Trainer][INFO] - ISPY2_738041, shape torch.Size([3, 80, 228, 228]), rank 0
+[2026-08-03 14:59:54,381][Trainer][INFO] - predicting ISPY2_741535
+[2026-08-03 14:59:54,561][Trainer][INFO] - ISPY2_741535, shape torch.Size([3, 80, 192, 192]), rank 0
+[2026-08-03 14:59:55,090][Trainer][INFO] - predicting ISPY2_753109
+[2026-08-03 14:59:55,367][Trainer][INFO] - ISPY2_753109, shape torch.Size([3, 80, 242, 242]), rank 0
+[2026-08-03 14:59:57,288][Trainer][INFO] - predicting ISPY2_759015
+[2026-08-03 14:59:57,460][Trainer][INFO] - ISPY2_759015, shape torch.Size([3, 80, 199, 199]), rank 0
+[2026-08-03 14:59:59,367][Trainer][INFO] - predicting ISPY2_760011
+[2026-08-03 14:59:59,557][Trainer][INFO] - ISPY2_760011, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 15:00:01,484][Trainer][INFO] - predicting ISPY2_775346
+[2026-08-03 15:00:01,704][Trainer][INFO] - ISPY2_775346, shape torch.Size([3, 80, 213, 213]), rank 0
+[2026-08-03 15:00:03,615][Trainer][INFO] - predicting ISPY2_779739
+[2026-08-03 15:00:03,859][Trainer][INFO] - ISPY2_779739, shape torch.Size([3, 80, 240, 242]), rank 0
+[2026-08-03 15:00:05,777][Trainer][INFO] - predicting ISPY2_786753
+[2026-08-03 15:00:06,036][Trainer][INFO] - ISPY2_786753, shape torch.Size([3, 79, 235, 235]), rank 0
+[2026-08-03 15:00:07,957][Trainer][INFO] - predicting ISPY2_790722
+[2026-08-03 15:00:08,204][Trainer][INFO] - ISPY2_790722, shape torch.Size([3, 80, 235, 235]), rank 0
+[2026-08-03 15:00:10,120][Trainer][INFO] - predicting ISPY2_792181
+[2026-08-03 15:00:10,363][Trainer][INFO] - ISPY2_792181, shape torch.Size([3, 80, 235, 242]), rank 0
+[2026-08-03 15:00:12,284][Trainer][INFO] - predicting ISPY2_793684
+[2026-08-03 15:00:12,473][Trainer][INFO] - ISPY2_793684, shape torch.Size([3, 80, 256, 255]), rank 0
+[2026-08-03 15:00:14,402][Trainer][INFO] - predicting ISPY2_794128
+[2026-08-03 15:00:14,770][Trainer][INFO] - ISPY2_794128, shape torch.Size([3, 80, 284, 284]), rank 0
+[2026-08-03 15:00:16,704][Trainer][INFO] - predicting ISPY2_797427
+[2026-08-03 15:00:16,926][Trainer][INFO] - ISPY2_797427, shape torch.Size([3, 80, 228, 223]), rank 0
+[2026-08-03 15:00:18,833][Trainer][INFO] - predicting ISPY2_798604
+[2026-08-03 15:00:20,512][Trainer][INFO] - ISPY2_798604, shape torch.Size([3, 112, 511, 511]), rank 0
+[2026-08-03 15:00:38,331][Trainer][INFO] - predicting ISPY2_800447
+[2026-08-03 15:00:38,690][Trainer][INFO] - ISPY2_800447, shape torch.Size([3, 80, 242, 242]), rank 0
+[2026-08-03 15:00:40,617][Trainer][INFO] - predicting ISPY2_812089
+[2026-08-03 15:00:40,846][Trainer][INFO] - ISPY2_812089, shape torch.Size([3, 79, 242, 242]), rank 0
+[2026-08-03 15:00:42,760][Trainer][INFO] - predicting ISPY2_815421
+[2026-08-03 15:00:42,945][Trainer][INFO] - ISPY2_815421, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 15:00:44,871][Trainer][INFO] - predicting ISPY2_824350
+[2026-08-03 15:00:45,148][Trainer][INFO] - ISPY2_824350, shape torch.Size([3, 80, 242, 242]), rank 0
+[2026-08-03 15:00:47,071][Trainer][INFO] - predicting ISPY2_831702
+[2026-08-03 15:00:47,375][Trainer][INFO] - ISPY2_831702, shape torch.Size([3, 80, 270, 270]), rank 0
+[2026-08-03 15:00:49,303][Trainer][INFO] - predicting ISPY2_836114
+[2026-08-03 15:00:49,512][Trainer][INFO] - ISPY2_836114, shape torch.Size([3, 80, 228, 228]), rank 0
+[2026-08-03 15:00:51,416][Trainer][INFO] - predicting ISPY2_840501
+[2026-08-03 15:00:52,664][Trainer][INFO] - ISPY2_840501, shape torch.Size([3, 104, 453, 453]), rank 0
+[2026-08-03 15:01:04,095][Trainer][INFO] - predicting ISPY2_841336
+[2026-08-03 15:01:04,575][Trainer][INFO] - ISPY2_841336, shape torch.Size([3, 80, 314, 320]), rank 0
+[2026-08-03 15:01:08,903][Trainer][INFO] - predicting ISPY2_843554
+[2026-08-03 15:01:09,109][Trainer][INFO] - ISPY2_843554, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 15:01:11,041][Trainer][INFO] - predicting ISPY2_860243
+[2026-08-03 15:01:11,238][Trainer][INFO] - ISPY2_860243, shape torch.Size([3, 79, 256, 256]), rank 0
+[2026-08-03 15:01:13,179][Trainer][INFO] - predicting ISPY2_875089
+[2026-08-03 15:01:13,409][Trainer][INFO] - ISPY2_875089, shape torch.Size([3, 80, 243, 243]), rank 0
+[2026-08-03 15:01:15,354][Trainer][INFO] - predicting ISPY2_883886
+[2026-08-03 15:01:16,689][Trainer][INFO] - ISPY2_883886, shape torch.Size([3, 86, 511, 511]), rank 0
+[2026-08-03 15:01:34,493][Trainer][INFO] - predicting ISPY2_889225
+[2026-08-03 15:01:35,431][Trainer][INFO] - ISPY2_889225, shape torch.Size([3, 80, 426, 426]), rank 0
+[2026-08-03 15:01:43,101][Trainer][INFO] - predicting ISPY2_889721
+[2026-08-03 15:01:43,584][Trainer][INFO] - ISPY2_889721, shape torch.Size([3, 80, 306, 306]), rank 0
+[2026-08-03 15:01:47,874][Trainer][INFO] - predicting ISPY2_898618
+[2026-08-03 15:01:48,042][Trainer][INFO] - ISPY2_898618, shape torch.Size([3, 79, 192, 192]), rank 0
+[2026-08-03 15:01:48,529][Trainer][INFO] - predicting ISPY2_900959
+[2026-08-03 15:01:48,805][Trainer][INFO] - ISPY2_900959, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 15:01:50,727][Trainer][INFO] - predicting ISPY2_906795
+[2026-08-03 15:01:50,970][Trainer][INFO] - ISPY2_906795, shape torch.Size([3, 80, 244, 256]), rank 0
+[2026-08-03 15:01:52,888][Trainer][INFO] - predicting ISPY2_913527
+[2026-08-03 15:01:53,171][Trainer][INFO] - ISPY2_913527, shape torch.Size([3, 80, 249, 249]), rank 0
+[2026-08-03 15:01:55,090][Trainer][INFO] - predicting ISPY2_914968
+[2026-08-03 15:01:55,265][Trainer][INFO] - ISPY2_914968, shape torch.Size([3, 80, 210, 221]), rank 0
+[2026-08-03 15:01:57,174][Trainer][INFO] - predicting ISPY2_928815
+[2026-08-03 15:01:57,417][Trainer][INFO] - ISPY2_928815, shape torch.Size([3, 80, 235, 233]), rank 0
+[2026-08-03 15:01:59,332][Trainer][INFO] - predicting ISPY2_941926
+[2026-08-03 15:01:59,547][Trainer][INFO] - ISPY2_941926, shape torch.Size([3, 80, 213, 213]), rank 0
+[2026-08-03 15:02:01,450][Trainer][INFO] - predicting ISPY2_943633
+[2026-08-03 15:02:01,646][Trainer][INFO] - ISPY2_943633, shape torch.Size([3, 79, 256, 256]), rank 0
+[2026-08-03 15:02:03,570][Trainer][INFO] - predicting ISPY2_946927
+[2026-08-03 15:02:03,778][Trainer][INFO] - ISPY2_946927, shape torch.Size([3, 80, 206, 206]), rank 0
+[2026-08-03 15:02:05,674][Trainer][INFO] - predicting ISPY2_950742
+[2026-08-03 15:02:05,880][Trainer][INFO] - ISPY2_950742, shape torch.Size([3, 80, 213, 213]), rank 0
+[2026-08-03 15:02:07,792][Trainer][INFO] - predicting ISPY2_955035
+[2026-08-03 15:02:07,997][Trainer][INFO] - ISPY2_955035, shape torch.Size([3, 79, 256, 256]), rank 0
+[2026-08-03 15:02:09,927][Trainer][INFO] - predicting ISPY2_966016
+[2026-08-03 15:02:10,136][Trainer][INFO] - ISPY2_966016, shape torch.Size([3, 79, 228, 228]), rank 0
+[2026-08-03 15:02:12,050][Trainer][INFO] - predicting ISPY2_974618
+[2026-08-03 15:02:12,246][Trainer][INFO] - ISPY2_974618, shape torch.Size([3, 80, 256, 256]), rank 0
+[2026-08-03 15:02:14,173][Trainer][INFO] - predicting ISPY2_982086
+[2026-08-03 15:02:14,412][Trainer][INFO] - ISPY2_982086, shape torch.Size([3, 80, 220, 220]), rank 0
+[2026-08-03 15:02:16,315][Trainer][INFO] - predicting ISPY2_988665
+[2026-08-03 15:02:16,557][Trainer][INFO] - ISPY2_988665, shape torch.Size([3, 80, 228, 228]), rank 0
+[2026-08-03 15:02:18,471][Trainer][INFO] - predicting NACT_04
+[2026-08-03 15:02:18,608][Trainer][INFO] - NACT_04, shape torch.Size([3, 66, 256, 256]), rank 0
+[2026-08-03 15:02:20,529][Trainer][INFO] - predicting NACT_06
+[2026-08-03 15:02:20,665][Trainer][INFO] - NACT_06, shape torch.Size([3, 60, 256, 256]), rank 0
+[2026-08-03 15:02:22,567][Trainer][INFO] - predicting NACT_21
+[2026-08-03 15:02:22,708][Trainer][INFO] - NACT_21, shape torch.Size([3, 69, 256, 256]), rank 0
+[2026-08-03 15:02:24,633][Trainer][INFO] - predicting NACT_34
+[2026-08-03 15:02:24,899][Trainer][INFO] - NACT_34, shape torch.Size([3, 60, 270, 270]), rank 0
+[2026-08-03 15:02:26,822][Trainer][INFO] - predicting NACT_35
+[2026-08-03 15:02:26,958][Trainer][INFO] - NACT_35, shape torch.Size([3, 60, 256, 256]), rank 0
+[2026-08-03 15:02:28,864][Trainer][INFO] - predicting NACT_42
+[2026-08-03 15:02:28,991][Trainer][INFO] - NACT_42, shape torch.Size([3, 60, 256, 256]), rank 0
+[2026-08-03 15:02:30,894][Trainer][INFO] - predicting NACT_45
+[2026-08-03 15:02:31,019][Trainer][INFO] - NACT_45, shape torch.Size([3, 60, 256, 256]), rank 0
+[2026-08-03 15:02:32,918][Trainer][INFO] - predicting NACT_48
+[2026-08-03 15:02:33,182][Trainer][INFO] - NACT_48, shape torch.Size([3, 70, 256, 256]), rank 0
+[2026-08-03 15:02:35,105][Trainer][INFO] - predicting NACT_49
+[2026-08-03 15:02:35,236][Trainer][INFO] - NACT_49, shape torch.Size([3, 60, 256, 256]), rank 0
+[2026-08-03 15:02:37,132][Trainer][INFO] - predicting NACT_53
+[2026-08-03 15:02:37,401][Trainer][INFO] - NACT_53, shape torch.Size([3, 60, 284, 284]), rank 0
+[2026-08-03 15:02:39,328][Trainer][INFO] - predicting NACT_58
+[2026-08-03 15:02:39,484][Trainer][INFO] - NACT_58, shape torch.Size([3, 60, 256, 256]), rank 0
+[2026-08-03 15:02:41,389][Trainer][INFO] - predicting NACT_64
+[2026-08-03 15:02:41,659][Trainer][INFO] - NACT_64, shape torch.Size([3, 60, 284, 284]), rank 0
+[2026-08-03 15:02:43,586][Trainer][INFO] - predicting NACT_65
+[2026-08-03 15:02:43,718][Trainer][INFO] - NACT_65, shape torch.Size([3, 60, 256, 256]), rank 0
+[2026-08-03 15:02:45,625][Trainer][INFO] - predicting NACT_68
+[2026-08-03 15:02:45,905][Trainer][INFO] - NACT_68, shape torch.Size([3, 60, 284, 284]), rank 0
+[2026-08-03 15:03:01,583][Trainer][INFO] - Validation complete
+[2026-08-03 15:03:01,584][Trainer][INFO] - Mean Validation Dice:  0.7600109882932571
+[2026-08-03 15:03:01,601][root][INFO] - Validation finished
+[2026-08-03 15:03:01,602][root][INFO] - Removing validation files
+[2026-08-03 15:03:01,627][root][INFO] - Mean Validation Dice Score: 0.7600109882932571
+[2026-08-03 15:03:01,627][root][INFO] - Runtime: 4.902063259217474
+[2026-08-03 15:03:01,628][root][INFO] - Objectives: {'loss': 0.23998901170674292, 'runtime': 4.902063259217474}

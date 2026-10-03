@@ -1,0 +1,3866 @@
+{
+    "foreground_mean": {
+        "Dice": 0.7600109882932571,
+        "FN": 5072.558333333333,
+        "FP": 10147.825,
+        "IoU": 0.6546755938722101,
+        "TN": 11848277.354166666,
+        "TP": 25172.129166666666,
+        "n_pred": 35319.95416666667,
+        "n_ref": 30244.6875
+    },
+    "mean": {
+        "1": {
+            "Dice": 0.7600109882932571,
+            "FN": 5072.558333333333,
+            "FP": 10147.825,
+            "IoU": 0.6546755938722101,
+            "TN": 11848277.354166666,
+            "TP": 25172.129166666666,
+            "n_pred": 35319.95416666667,
+            "n_ref": 30244.6875
+        }
+    },
+    "metric_per_case": [
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5536268770679562,
+                    "FN": 3457,
+                    "FP": 22850,
+                    "IoU": 0.3827690575068628,
+                    "TN": 32070019,
+                    "TP": 16314,
+                    "n_pred": 39164,
+                    "n_ref": 19771
+                }
+            },
+            "prediction_file": "./validation/DUKE_005.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_005.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6909144673615731,
+                    "FN": 2042,
+                    "FP": 14682,
+                    "IoU": 0.5277840524056924,
+                    "TN": 32077224,
+                    "TP": 18692,
+                    "n_pred": 33374,
+                    "n_ref": 20734
+                }
+            },
+            "prediction_file": "./validation/DUKE_040.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_040.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8253559439749971,
+                    "FN": 660,
+                    "FP": 11410,
+                    "IoU": 0.7026434431277869,
+                    "TN": 49242481,
+                    "TP": 28521,
+                    "n_pred": 39931,
+                    "n_ref": 29181
+                }
+            },
+            "prediction_file": "./validation/DUKE_045.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_045.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6529537921622148,
+                    "FN": 761,
+                    "FP": 2799,
+                    "IoU": 0.484730062237661,
+                    "TN": 35316995,
+                    "TP": 3349,
+                    "n_pred": 6148,
+                    "n_ref": 4110
+                }
+            },
+            "prediction_file": "./validation/DUKE_048.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_048.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.20662456728030498,
+                    "FN": 40869,
+                    "FP": 122080,
+                    "IoU": 0.11521545545371617,
+                    "TN": 45428888,
+                    "TP": 21219,
+                    "n_pred": 143299,
+                    "n_ref": 62088
+                }
+            },
+            "prediction_file": "./validation/DUKE_061.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_061.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.11874531095189825,
+                    "FN": 2517,
+                    "FP": 151358,
+                    "IoU": 0.0631202737424045,
+                    "TN": 51215982,
+                    "TP": 10367,
+                    "n_pred": 161725,
+                    "n_ref": 12884
+                }
+            },
+            "prediction_file": "./validation/DUKE_071.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_071.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5084640975064033,
+                    "FN": 2955,
+                    "FP": 30437,
+                    "IoU": 0.3408996703708821,
+                    "TN": 45562393,
+                    "TP": 17271,
+                    "n_pred": 47708,
+                    "n_ref": 20226
+                }
+            },
+            "prediction_file": "./validation/DUKE_077.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_077.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.07545992419339928,
+                    "FN": 72,
+                    "FP": 79934,
+                    "IoU": 0.039209328577776176,
+                    "TN": 28818105,
+                    "TP": 3265,
+                    "n_pred": 83199,
+                    "n_ref": 3337
+                }
+            },
+            "prediction_file": "./validation/DUKE_103.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_103.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.10029763458827215,
+                    "FN": 2118,
+                    "FP": 84033,
+                    "IoU": 0.05279649929084252,
+                    "TN": 47619255,
+                    "TP": 4802,
+                    "n_pred": 88835,
+                    "n_ref": 6920
+                }
+            },
+            "prediction_file": "./validation/DUKE_114.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_114.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7776619508562919,
+                    "FN": 552,
+                    "FP": 941,
+                    "IoU": 0.6362085769980507,
+                    "TN": 28897272,
+                    "TP": 2611,
+                    "n_pred": 3552,
+                    "n_ref": 3163
+                }
+            },
+            "prediction_file": "./validation/DUKE_144.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_144.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.43020743571491016,
+                    "FN": 25024,
+                    "FP": 66226,
+                    "IoU": 0.2740536842272749,
+                    "TN": 41817342,
+                    "TP": 34448,
+                    "n_pred": 100674,
+                    "n_ref": 59472
+                }
+            },
+            "prediction_file": "./validation/DUKE_150.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_150.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7114990250185282,
+                    "FN": 39906,
+                    "FP": 189,
+                    "IoU": 0.5521912973552537,
+                    "TN": 47620672,
+                    "TP": 49441,
+                    "n_pred": 49630,
+                    "n_ref": 89347
+                }
+            },
+            "prediction_file": "./validation/DUKE_185.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_185.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.3385773172484211,
+                    "FN": 2448,
+                    "FP": 32532,
+                    "IoU": 0.2037875856417727,
+                    "TN": 35279971,
+                    "TP": 8953,
+                    "n_pred": 41485,
+                    "n_ref": 11401
+                }
+            },
+            "prediction_file": "./validation/DUKE_192.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_192.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7253464541152896,
+                    "FN": 11810,
+                    "FP": 15877,
+                    "IoU": 0.5690538079599048,
+                    "TN": 24020233,
+                    "TP": 36560,
+                    "n_pred": 52437,
+                    "n_ref": 48370
+                }
+            },
+            "prediction_file": "./validation/DUKE_198.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_198.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.47470504752211246,
+                    "FN": 953,
+                    "FP": 35690,
+                    "IoU": 0.3112218045112782,
+                    "TN": 47657008,
+                    "TP": 16557,
+                    "n_pred": 52247,
+                    "n_ref": 17510
+                }
+            },
+            "prediction_file": "./validation/DUKE_298.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_298.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.4293992659841607,
+                    "FN": 9383,
+                    "FP": 31973,
+                    "IoU": 0.2733981060140204,
+                    "TN": 46080427,
+                    "TP": 15561,
+                    "n_pred": 47534,
+                    "n_ref": 24944
+                }
+            },
+            "prediction_file": "./validation/DUKE_345.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_345.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.22837370242214533,
+                    "FN": 2301,
+                    "FP": 35163,
+                    "IoU": 0.12890625,
+                    "TN": 16340992,
+                    "TP": 5544,
+                    "n_pred": 40707,
+                    "n_ref": 7845
+                }
+            },
+            "prediction_file": "./validation/DUKE_363.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_363.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.762085680597406,
+                    "FN": 967,
+                    "FP": 6297,
+                    "IoU": 0.6156207006032385,
+                    "TN": 47691310,
+                    "TP": 11634,
+                    "n_pred": 17931,
+                    "n_ref": 12601
+                }
+            },
+            "prediction_file": "./validation/DUKE_395.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_395.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.3720516323888969,
+                    "FN": 11889,
+                    "FP": 57969,
+                    "IoU": 0.22854019193179684,
+                    "TN": 46046791,
+                    "TP": 20695,
+                    "n_pred": 78664,
+                    "n_ref": 32584
+                }
+            },
+            "prediction_file": "./validation/DUKE_444.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_444.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9027761996742795,
+                    "FN": 676,
+                    "FP": 1891,
+                    "IoU": 0.8227821884708318,
+                    "TN": 45598571,
+                    "TP": 11918,
+                    "n_pred": 13809,
+                    "n_ref": 12594
+                }
+            },
+            "prediction_file": "./validation/DUKE_501.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_501.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.10497543422600512,
+                    "FN": 1180,
+                    "FP": 50556,
+                    "IoU": 0.055395289392002924,
+                    "TN": 28846606,
+                    "TP": 3034,
+                    "n_pred": 53590,
+                    "n_ref": 4214
+                }
+            },
+            "prediction_file": "./validation/DUKE_506.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_506.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6654752983224765,
+                    "FN": 452,
+                    "FP": 5351,
+                    "IoU": 0.49866090712742983,
+                    "TN": 35312329,
+                    "TP": 5772,
+                    "n_pred": 11123,
+                    "n_ref": 6224
+                }
+            },
+            "prediction_file": "./validation/DUKE_534.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_534.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.32961783439490444,
+                    "FN": 140,
+                    "FP": 7438,
+                    "IoU": 0.19733079122974262,
+                    "TN": 46652191,
+                    "TP": 1863,
+                    "n_pred": 9301,
+                    "n_ref": 2003
+                }
+            },
+            "prediction_file": "./validation/DUKE_610.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_610.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9093120305234291,
+                    "FN": 2643,
+                    "FP": 8766,
+                    "IoU": 0.8337050155231973,
+                    "TN": 51835905,
+                    "TP": 57198,
+                    "n_pred": 65964,
+                    "n_ref": 59841
+                }
+            },
+            "prediction_file": "./validation/DUKE_633.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_633.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8019072658115602,
+                    "FN": 2310,
+                    "FP": 23157,
+                    "IoU": 0.6693198639208455,
+                    "TN": 41866026,
+                    "TP": 51547,
+                    "n_pred": 74704,
+                    "n_ref": 53857
+                }
+            },
+            "prediction_file": "./validation/DUKE_685.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_685.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8141808415398388,
+                    "FN": 1677,
+                    "FP": 3512,
+                    "IoU": 0.6865978136135773,
+                    "TN": 39305043,
+                    "TP": 11368,
+                    "n_pred": 14880,
+                    "n_ref": 13045
+                }
+            },
+            "prediction_file": "./validation/DUKE_723.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_723.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9173263447977738,
+                    "FN": 1023,
+                    "FP": 5097,
+                    "IoU": 0.8472787163426746,
+                    "TN": 35283831,
+                    "TP": 33953,
+                    "n_pred": 39050,
+                    "n_ref": 34976
+                }
+            },
+            "prediction_file": "./validation/DUKE_724.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_724.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.10950623568338,
+                    "FN": 344,
+                    "FP": 27646,
+                    "IoU": 0.057924674363030525,
+                    "TN": 47680497,
+                    "TP": 1721,
+                    "n_pred": 29367,
+                    "n_ref": 2065
+                }
+            },
+            "prediction_file": "./validation/DUKE_774.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_774.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6920124518023276,
+                    "FN": 17448,
+                    "FP": 17378,
+                    "IoU": 0.5290665440629606,
+                    "TN": 41672481,
+                    "TP": 39125,
+                    "n_pred": 56503,
+                    "n_ref": 56573
+                }
+            },
+            "prediction_file": "./validation/DUKE_778.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_778.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6649921625653906,
+                    "FN": 33040,
+                    "FP": 37916,
+                    "IoU": 0.4981185457631914,
+                    "TN": 45471676,
+                    "TP": 70424,
+                    "n_pred": 108340,
+                    "n_ref": 103464
+                }
+            },
+            "prediction_file": "./validation/DUKE_831.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_831.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.837123396431407,
+                    "FN": 4141,
+                    "FP": 15348,
+                    "IoU": 0.7198729373886046,
+                    "TN": 35254332,
+                    "TP": 50083,
+                    "n_pred": 65431,
+                    "n_ref": 54224
+                }
+            },
+            "prediction_file": "./validation/DUKE_850.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_850.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.12519234320182188,
+                    "FN": 27,
+                    "FP": 28399,
+                    "IoU": 0.06677609980302035,
+                    "TN": 42961156,
+                    "TP": 2034,
+                    "n_pred": 30433,
+                    "n_ref": 2061
+                }
+            },
+            "prediction_file": "./validation/DUKE_891.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/DUKE_891.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9415583001154457,
+                    "FN": 1071,
+                    "FP": 1612,
+                    "IoU": 0.8895702996378004,
+                    "TN": 3907864,
+                    "TP": 21613,
+                    "n_pred": 23225,
+                    "n_ref": 22684
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1009.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1009.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8685651362677026,
+                    "FN": 2837,
+                    "FP": 1460,
+                    "IoU": 0.7676669370100027,
+                    "TN": 3913665,
+                    "TP": 14198,
+                    "n_pred": 15658,
+                    "n_ref": 17035
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1016.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1016.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6982869940199652,
+                    "FN": 20066,
+                    "FP": 43253,
+                    "IoU": 0.5364369802038187,
+                    "TN": 3795568,
+                    "TP": 73273,
+                    "n_pred": 116526,
+                    "n_ref": 93339
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1035.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1035.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.83106935451572,
+                    "FN": 7112,
+                    "FP": 13134,
+                    "IoU": 0.7109654945964852,
+                    "TN": 4517473,
+                    "TP": 49801,
+                    "n_pred": 62935,
+                    "n_ref": 56913
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1060.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1060.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7506251223065382,
+                    "FN": 3959,
+                    "FP": 7510,
+                    "IoU": 0.6008005569091542,
+                    "TN": 3903430,
+                    "TP": 17261,
+                    "n_pred": 24771,
+                    "n_ref": 21220
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1062.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1062.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8389402532825733,
+                    "FN": 2908,
+                    "FP": 3311,
+                    "IoU": 0.7225642398286938,
+                    "TN": 3909744,
+                    "TP": 16197,
+                    "n_pred": 19508,
+                    "n_ref": 19105
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1064.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1064.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9417269247128881,
+                    "FN": 276,
+                    "FP": 546,
+                    "IoU": 0.889871382636656,
+                    "TN": 3924696,
+                    "TP": 6642,
+                    "n_pred": 7188,
+                    "n_ref": 6918
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1066.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1066.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5758185864151744,
+                    "FN": 3504,
+                    "FP": 499,
+                    "IoU": 0.4043154761904762,
+                    "TN": 3663296,
+                    "TP": 2717,
+                    "n_pred": 3216,
+                    "n_ref": 6221
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1067.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1067.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8981012658227848,
+                    "FN": 511,
+                    "FP": 1099,
+                    "IoU": 0.8150488225157955,
+                    "TN": 3923455,
+                    "TP": 7095,
+                    "n_pred": 8194,
+                    "n_ref": 7606
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1069.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1069.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8729449456200995,
+                    "FN": 717,
+                    "FP": 790,
+                    "IoU": 0.7745362058647517,
+                    "TN": 3925476,
+                    "TP": 5177,
+                    "n_pred": 5967,
+                    "n_ref": 5894
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1070.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1070.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8980561115445941,
+                    "FN": 115,
+                    "FP": 2890,
+                    "IoU": 0.8149744473862447,
+                    "TN": 3915919,
+                    "TP": 13236,
+                    "n_pred": 16126,
+                    "n_ref": 13351
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1075.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1075.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.0,
+                    "FN": 6067,
+                    "FP": 9155,
+                    "IoU": 0.0,
+                    "TN": 4834442,
+                    "TP": 0,
+                    "n_pred": 9155,
+                    "n_ref": 6067
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1102.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1102.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8868856721851435,
+                    "FN": 4977,
+                    "FP": 243,
+                    "IoU": 0.7967606291854852,
+                    "TN": 3906476,
+                    "TP": 20464,
+                    "n_pred": 20707,
+                    "n_ref": 25441
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1104.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1104.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9320649433594407,
+                    "FN": 998,
+                    "FP": 3044,
+                    "IoU": 0.8727730563424615,
+                    "TN": 3900390,
+                    "TP": 27728,
+                    "n_pred": 30772,
+                    "n_ref": 28726
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1106.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1106.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8276882604406445,
+                    "FN": 415,
+                    "FP": 633,
+                    "IoU": 0.7060308555399719,
+                    "TN": 3928595,
+                    "TP": 2517,
+                    "n_pred": 3150,
+                    "n_ref": 2932
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1117.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1117.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.43880612728325524,
+                    "FN": 2543,
+                    "FP": 8118,
+                    "IoU": 0.28107087463753455,
+                    "TN": 4179475,
+                    "TP": 4168,
+                    "n_pred": 12286,
+                    "n_ref": 6711
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1122.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1122.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8411866228141587,
+                    "FN": 1339,
+                    "FP": 3538,
+                    "IoU": 0.7259034451750689,
+                    "TN": 3914367,
+                    "TP": 12916,
+                    "n_pred": 16454,
+                    "n_ref": 14255
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1125.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1125.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8645700781676059,
+                    "FN": 74,
+                    "FP": 671,
+                    "IoU": 0.7614473262888248,
+                    "TN": 3797965,
+                    "TP": 2378,
+                    "n_pred": 3049,
+                    "n_ref": 2452
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1130.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1130.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7949367088607595,
+                    "FN": 202,
+                    "FP": 1337,
+                    "IoU": 0.6596638655462185,
+                    "TN": 3927638,
+                    "TP": 2983,
+                    "n_pred": 4320,
+                    "n_ref": 3185
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1132.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1132.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6976318499027572,
+                    "FN": 1131,
+                    "FP": 1512,
+                    "IoU": 0.5356640899508082,
+                    "TN": 3926468,
+                    "TP": 3049,
+                    "n_pred": 4561,
+                    "n_ref": 4180
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1157.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1157.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5978567399887197,
+                    "FN": 10,
+                    "FP": 1416,
+                    "IoU": 0.4263877715205149,
+                    "TN": 3929674,
+                    "TP": 1060,
+                    "n_pred": 2476,
+                    "n_ref": 1070
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1158.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1158.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8121706623763346,
+                    "FN": 34768,
+                    "FP": 20803,
+                    "IoU": 0.6837435620180405,
+                    "TN": 3756445,
+                    "TP": 120144,
+                    "n_pred": 140947,
+                    "n_ref": 154912
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1165.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1165.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8725408370096578,
+                    "FN": 951,
+                    "FP": 118,
+                    "IoU": 0.7739001692047377,
+                    "TN": 3927432,
+                    "TP": 3659,
+                    "n_pred": 3777,
+                    "n_ref": 4610
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1168.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1168.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9176149294492489,
+                    "FN": 1731,
+                    "FP": 1346,
+                    "IoU": 0.847771236333053,
+                    "TN": 4043019,
+                    "TP": 17136,
+                    "n_pred": 18482,
+                    "n_ref": 18867
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1172.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1172.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8344808126410835,
+                    "FN": 5665,
+                    "FP": 201,
+                    "IoU": 0.7159734663245049,
+                    "TN": 3911507,
+                    "TP": 14787,
+                    "n_pred": 14988,
+                    "n_ref": 20452
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1184.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1184.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.47353206009193877,
+                    "FN": 1518,
+                    "FP": 9591,
+                    "IoU": 0.31021421918658804,
+                    "TN": 3916055,
+                    "TP": 4996,
+                    "n_pred": 14587,
+                    "n_ref": 6514
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1185.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1185.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8302139037433155,
+                    "FN": 774,
+                    "FP": 9894,
+                    "IoU": 0.7097142857142857,
+                    "TN": 5075058,
+                    "TP": 26082,
+                    "n_pred": 35976,
+                    "n_ref": 26856
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1197.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1197.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9293866193491148,
+                    "FN": 687,
+                    "FP": 1064,
+                    "IoU": 0.8680879915624529,
+                    "TN": 3918886,
+                    "TP": 11523,
+                    "n_pred": 12587,
+                    "n_ref": 12210
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1212.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1212.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.17569368714406883,
+                    "FN": 4029,
+                    "FP": 2774,
+                    "IoU": 0.09630712008501593,
+                    "TN": 3924632,
+                    "TP": 725,
+                    "n_pred": 3499,
+                    "n_ref": 4754
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1216.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1216.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.751634896340615,
+                    "FN": 1634,
+                    "FP": 151,
+                    "IoU": 0.6020954079358003,
+                    "TN": 3927674,
+                    "TP": 2701,
+                    "n_pred": 2852,
+                    "n_ref": 4335
+                }
+            },
+            "prediction_file": "./validation/ISPY1_1239.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY1_1239.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6081711826392677,
+                    "FN": 737,
+                    "FP": 25119,
+                    "IoU": 0.43695832063063456,
+                    "TN": 5196958,
+                    "TP": 20066,
+                    "n_pred": 45185,
+                    "n_ref": 20803
+                }
+            },
+            "prediction_file": "./validation/ISPY2_102212.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_102212.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8549930949092814,
+                    "FN": 1364,
+                    "FP": 1681,
+                    "IoU": 0.7467143570121444,
+                    "TN": 5230858,
+                    "TP": 8977,
+                    "n_pred": 10658,
+                    "n_ref": 10341
+                }
+            },
+            "prediction_file": "./validation/ISPY2_111646.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_111646.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9241661123253825,
+                    "FN": 778,
+                    "FP": 818,
+                    "IoU": 0.8590230545004858,
+                    "TN": 8770503,
+                    "TP": 9725,
+                    "n_pred": 10543,
+                    "n_ref": 10503
+                }
+            },
+            "prediction_file": "./validation/ISPY2_111881.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_111881.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9293170605037653,
+                    "FN": 152,
+                    "FP": 1209,
+                    "IoU": 0.8679666278618549,
+                    "TN": 4708284,
+                    "TP": 8947,
+                    "n_pred": 10156,
+                    "n_ref": 9099
+                }
+            },
+            "prediction_file": "./validation/ISPY2_115987.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_115987.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.46993422794192513,
+                    "FN": 276,
+                    "FP": 25755,
+                    "IoU": 0.3071333510779878,
+                    "TN": 25914686,
+                    "TP": 11539,
+                    "n_pred": 37294,
+                    "n_ref": 11815
+                }
+            },
+            "prediction_file": "./validation/ISPY2_119928.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_119928.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8455095393206142,
+                    "FN": 106,
+                    "FP": 558,
+                    "IoU": 0.732365981459089,
+                    "TN": 8779343,
+                    "TP": 1817,
+                    "n_pred": 2375,
+                    "n_ref": 1923
+                }
+            },
+            "prediction_file": "./validation/ISPY2_134526.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_134526.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6508358662613982,
+                    "FN": 70,
+                    "FP": 1768,
+                    "IoU": 0.48239932413404674,
+                    "TN": 4190753,
+                    "TP": 1713,
+                    "n_pred": 3481,
+                    "n_ref": 1783
+                }
+            },
+            "prediction_file": "./validation/ISPY2_136536.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_136536.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9150371640937679,
+                    "FN": 365,
+                    "FP": 378,
+                    "IoU": 0.843381112984823,
+                    "TN": 5238136,
+                    "TP": 4001,
+                    "n_pred": 4379,
+                    "n_ref": 4366
+                }
+            },
+            "prediction_file": "./validation/ISPY2_146033.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_146033.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9280858229900829,
+                    "FN": 773,
+                    "FP": 380,
+                    "IoU": 0.8658210171069475,
+                    "TN": 5234287,
+                    "TP": 7440,
+                    "n_pred": 7820,
+                    "n_ref": 8213
+                }
+            },
+            "prediction_file": "./validation/ISPY2_146987.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_146987.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9543855021551336,
+                    "FN": 3284,
+                    "FP": 4325,
+                    "IoU": 0.9127508313266827,
+                    "TN": 4631382,
+                    "TP": 79601,
+                    "n_pred": 83926,
+                    "n_ref": 82885
+                }
+            },
+            "prediction_file": "./validation/ISPY2_148357.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_148357.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9382347958665086,
+                    "FN": 996,
+                    "FP": 4473,
+                    "IoU": 0.8836556257578658,
+                    "TN": 5195873,
+                    "TP": 41538,
+                    "n_pred": 46011,
+                    "n_ref": 42534
+                }
+            },
+            "prediction_file": "./validation/ISPY2_152090.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_152090.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9078395279533735,
+                    "FN": 8170,
+                    "FP": 13509,
+                    "IoU": 0.8312327274142696,
+                    "TN": 5114425,
+                    "TP": 106776,
+                    "n_pred": 120285,
+                    "n_ref": 114946
+                }
+            },
+            "prediction_file": "./validation/ISPY2_156163.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_156163.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9300602130616026,
+                    "FN": 677,
+                    "FP": 380,
+                    "IoU": 0.8692640692640693,
+                    "TN": 5234795,
+                    "TP": 7028,
+                    "n_pred": 7408,
+                    "n_ref": 7705
+                }
+            },
+            "prediction_file": "./validation/ISPY2_162562.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_162562.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.44703595724003886,
+                    "FN": 718,
+                    "FP": 4972,
+                    "IoU": 0.2878598247809762,
+                    "TN": 4710602,
+                    "TP": 2300,
+                    "n_pred": 7272,
+                    "n_ref": 3018
+                }
+            },
+            "prediction_file": "./validation/ISPY2_167271.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_167271.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9426342936218393,
+                    "FN": 732,
+                    "FP": 1092,
+                    "IoU": 0.8914931588340274,
+                    "TN": 6536790,
+                    "TP": 14986,
+                    "n_pred": 16078,
+                    "n_ref": 15718
+                }
+            },
+            "prediction_file": "./validation/ISPY2_172366.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_172366.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8944393414823713,
+                    "FN": 2283,
+                    "FP": 705,
+                    "IoU": 0.8090368760784815,
+                    "TN": 5227233,
+                    "TP": 12659,
+                    "n_pred": 13364,
+                    "n_ref": 14942
+                }
+            },
+            "prediction_file": "./validation/ISPY2_174903.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_174903.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9531793555745651,
+                    "FN": 632,
+                    "FP": 189,
+                    "IoU": 0.910546960122031,
+                    "TN": 5233702,
+                    "TP": 8357,
+                    "n_pred": 8546,
+                    "n_ref": 8989
+                }
+            },
+            "prediction_file": "./validation/ISPY2_179568.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_179568.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7703600139811255,
+                    "FN": 2935,
+                    "FP": 350,
+                    "IoU": 0.626492325184764,
+                    "TN": 8773029,
+                    "TP": 5510,
+                    "n_pred": 5860,
+                    "n_ref": 8445
+                }
+            },
+            "prediction_file": "./validation/ISPY2_200222.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_200222.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.4354341239730327,
+                    "FN": 40744,
+                    "FP": 624,
+                    "IoU": 0.2783098689834441,
+                    "TN": 8724503,
+                    "TP": 15953,
+                    "n_pred": 16577,
+                    "n_ref": 56697
+                }
+            },
+            "prediction_file": "./validation/ISPY2_201873.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_201873.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9414880809053696,
+                    "FN": 4684,
+                    "FP": 10868,
+                    "IoU": 0.8894449499545041,
+                    "TN": 8641152,
+                    "TP": 125120,
+                    "n_pred": 135988,
+                    "n_ref": 129804
+                }
+            },
+            "prediction_file": "./validation/ISPY2_202539.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_202539.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8307344064386318,
+                    "FN": 2598,
+                    "FP": 2786,
+                    "IoU": 0.7104753710475371,
+                    "TN": 4699996,
+                    "TP": 13212,
+                    "n_pred": 15998,
+                    "n_ref": 15810
+                }
+            },
+            "prediction_file": "./validation/ISPY2_208303.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_208303.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8997003675902758,
+                    "FN": 1190,
+                    "FP": 5304,
+                    "IoU": 0.8176866928691746,
+                    "TN": 8746204,
+                    "TP": 29126,
+                    "n_pred": 34430,
+                    "n_ref": 30316
+                }
+            },
+            "prediction_file": "./validation/ISPY2_209397.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_209397.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5854346676071239,
+                    "FN": 7030,
+                    "FP": 23,
+                    "IoU": 0.41386187983046624,
+                    "TN": 5230847,
+                    "TP": 4980,
+                    "n_pred": 5003,
+                    "n_ref": 12010
+                }
+            },
+            "prediction_file": "./validation/ISPY2_223526.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_223526.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9269069418501393,
+                    "FN": 2131,
+                    "FP": 256,
+                    "IoU": 0.8637712589886999,
+                    "TN": 5225358,
+                    "TP": 15135,
+                    "n_pred": 15391,
+                    "n_ref": 17266
+                }
+            },
+            "prediction_file": "./validation/ISPY2_225836.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_225836.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9309054909309479,
+                    "FN": 5927,
+                    "FP": 3844,
+                    "IoU": 0.8707419999206276,
+                    "TN": 4249783,
+                    "TP": 65822,
+                    "n_pred": 69666,
+                    "n_ref": 71749
+                }
+            },
+            "prediction_file": "./validation/ISPY2_227881.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_227881.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.546052240727172,
+                    "FN": 737,
+                    "FP": 22186,
+                    "IoU": 0.37556524107872513,
+                    "TN": 9179290,
+                    "TP": 13787,
+                    "n_pred": 35973,
+                    "n_ref": 14524
+                }
+            },
+            "prediction_file": "./validation/ISPY2_229328.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_229328.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.1533996023856859,
+                    "FN": 191,
+                    "FP": 106269,
+                    "IoU": 0.08307135782266052,
+                    "TN": 5126775,
+                    "TP": 9645,
+                    "n_pred": 115914,
+                    "n_ref": 9836
+                }
+            },
+            "prediction_file": "./validation/ISPY2_233191.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_233191.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6388407910325344,
+                    "FN": 249,
+                    "FP": 3714,
+                    "IoU": 0.4693358328869845,
+                    "TN": 10609364,
+                    "TP": 3505,
+                    "n_pred": 7219,
+                    "n_ref": 3754
+                }
+            },
+            "prediction_file": "./validation/ISPY2_233962.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_233962.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.960350790513834,
+                    "FN": 4038,
+                    "FP": 1098,
+                    "IoU": 0.9237257930378995,
+                    "TN": 5175544,
+                    "TP": 62200,
+                    "n_pred": 63298,
+                    "n_ref": 66238
+                }
+            },
+            "prediction_file": "./validation/ISPY2_240957.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_240957.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.848907190370605,
+                    "FN": 1241,
+                    "FP": 190,
+                    "IoU": 0.7374793615850302,
+                    "TN": 5237429,
+                    "TP": 4020,
+                    "n_pred": 4210,
+                    "n_ref": 5261
+                }
+            },
+            "prediction_file": "./validation/ISPY2_241998.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_241998.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9459752952355097,
+                    "FN": 841,
+                    "FP": 1547,
+                    "IoU": 0.8974887314874437,
+                    "TN": 8758529,
+                    "TP": 20907,
+                    "n_pred": 22454,
+                    "n_ref": 21748
+                }
+            },
+            "prediction_file": "./validation/ISPY2_245655.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_245655.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9329914014180117,
+                    "FN": 2029,
+                    "FP": 192,
+                    "IoU": 0.87439914041735,
+                    "TN": 10468077,
+                    "TP": 15462,
+                    "n_pred": 15654,
+                    "n_ref": 17491
+                }
+            },
+            "prediction_file": "./validation/ISPY2_246134.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_246134.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.3932755311403799,
+                    "FN": 2336,
+                    "FP": 6831,
+                    "IoU": 0.24476849563354755,
+                    "TN": 8769686,
+                    "TP": 2971,
+                    "n_pred": 9802,
+                    "n_ref": 5307
+                }
+            },
+            "prediction_file": "./validation/ISPY2_264678.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_264678.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8642409937391234,
+                    "FN": 4688,
+                    "FP": 2099,
+                    "IoU": 0.7609369496301515,
+                    "TN": 13078810,
+                    "TP": 21603,
+                    "n_pred": 23702,
+                    "n_ref": 26291
+                }
+            },
+            "prediction_file": "./validation/ISPY2_267306.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_267306.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9112998602300828,
+                    "FN": 224,
+                    "FP": 601,
+                    "IoU": 0.837053130555007,
+                    "TN": 8776761,
+                    "TP": 4238,
+                    "n_pred": 4839,
+                    "n_ref": 4462
+                }
+            },
+            "prediction_file": "./validation/ISPY2_269899.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_269899.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8408817831833452,
+                    "FN": 4897,
+                    "FP": 1592,
+                    "IoU": 0.7254495451660673,
+                    "TN": 13083565,
+                    "TP": 17146,
+                    "n_pred": 18738,
+                    "n_ref": 22043
+                }
+            },
+            "prediction_file": "./validation/ISPY2_273745.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_273745.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7713656387665199,
+                    "FN": 512,
+                    "FP": 3640,
+                    "IoU": 0.6278235926855503,
+                    "TN": 4183148,
+                    "TP": 7004,
+                    "n_pred": 10644,
+                    "n_ref": 7516
+                }
+            },
+            "prediction_file": "./validation/ISPY2_282777.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_282777.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8789284960978696,
+                    "FN": 939,
+                    "FP": 209,
+                    "IoU": 0.7840075258701787,
+                    "TN": 4713277,
+                    "TP": 4167,
+                    "n_pred": 4376,
+                    "n_ref": 5106
+                }
+            },
+            "prediction_file": "./validation/ISPY2_284355.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_284355.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8798274445357437,
+                    "FN": 732,
+                    "FP": 438,
+                    "IoU": 0.7854392077755364,
+                    "TN": 5237427,
+                    "TP": 4283,
+                    "n_pred": 4721,
+                    "n_ref": 5015
+                }
+            },
+            "prediction_file": "./validation/ISPY2_287300.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_287300.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.915067902565208,
+                    "FN": 233,
+                    "FP": 555,
+                    "IoU": 0.8434333399562884,
+                    "TN": 8776791,
+                    "TP": 4245,
+                    "n_pred": 4800,
+                    "n_ref": 4478
+                }
+            },
+            "prediction_file": "./validation/ISPY2_289107.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_289107.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9066557191974136,
+                    "FN": 1057,
+                    "FP": 762,
+                    "IoU": 0.8292499765324322,
+                    "TN": 8771171,
+                    "TP": 8834,
+                    "n_pred": 9596,
+                    "n_ref": 9891
+                }
+            },
+            "prediction_file": "./validation/ISPY2_296123.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_296123.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8223390876872071,
+                    "FN": 224,
+                    "FP": 2884,
+                    "IoU": 0.6982817202213377,
+                    "TN": 4184003,
+                    "TP": 7193,
+                    "n_pred": 10077,
+                    "n_ref": 7417
+                }
+            },
+            "prediction_file": "./validation/ISPY2_299840.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_299840.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7980613893376414,
+                    "FN": 124,
+                    "FP": 1126,
+                    "IoU": 0.6639784946236559,
+                    "TN": 8122744,
+                    "TP": 2470,
+                    "n_pred": 3596,
+                    "n_ref": 2594
+                }
+            },
+            "prediction_file": "./validation/ISPY2_303685.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_303685.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.714176245210728,
+                    "FN": 157,
+                    "FP": 962,
+                    "IoU": 0.5554231227651967,
+                    "TN": 10483243,
+                    "TP": 1398,
+                    "n_pred": 2360,
+                    "n_ref": 1555
+                }
+            },
+            "prediction_file": "./validation/ISPY2_303947.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_303947.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6796155906559959,
+                    "FN": 4931,
+                    "FP": 34541,
+                    "IoU": 0.5147104023998919,
+                    "TN": 10404423,
+                    "TP": 41865,
+                    "n_pred": 76406,
+                    "n_ref": 46796
+                }
+            },
+            "prediction_file": "./validation/ISPY2_309830.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_309830.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8595890410958904,
+                    "FN": 728,
+                    "FP": 748,
+                    "IoU": 0.7537537537537538,
+                    "TN": 5236886,
+                    "TP": 4518,
+                    "n_pred": 5266,
+                    "n_ref": 5246
+                }
+            },
+            "prediction_file": "./validation/ISPY2_318569.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_318569.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9077870922129078,
+                    "FN": 663,
+                    "FP": 250,
+                    "IoU": 0.8311448122803773,
+                    "TN": 4319969,
+                    "TP": 4494,
+                    "n_pred": 4744,
+                    "n_ref": 5157
+                }
+            },
+            "prediction_file": "./validation/ISPY2_342142.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_342142.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8345968297725707,
+                    "FN": 352,
+                    "FP": 608,
+                    "IoU": 0.7161442933175636,
+                    "TN": 5239498,
+                    "TP": 2422,
+                    "n_pred": 3030,
+                    "n_ref": 2774
+                }
+            },
+            "prediction_file": "./validation/ISPY2_345574.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_345574.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9496227016686152,
+                    "FN": 1206,
+                    "FP": 690,
+                    "IoU": 0.9040777091976121,
+                    "TN": 4174538,
+                    "TP": 17870,
+                    "n_pred": 18560,
+                    "n_ref": 19076
+                }
+            },
+            "prediction_file": "./validation/ISPY2_347516.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_347516.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8801319329919278,
+                    "FN": 411,
+                    "FP": 970,
+                    "IoU": 0.7859246628429701,
+                    "TN": 4187853,
+                    "TP": 5070,
+                    "n_pred": 6040,
+                    "n_ref": 5481
+                }
+            },
+            "prediction_file": "./validation/ISPY2_357034.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_357034.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5911065852002716,
+                    "FN": 6814,
+                    "FP": 5232,
+                    "IoU": 0.41955379945068183,
+                    "TN": 5222127,
+                    "TP": 8707,
+                    "n_pred": 13939,
+                    "n_ref": 15521
+                }
+            },
+            "prediction_file": "./validation/ISPY2_360937.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_360937.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9492940640655837,
+                    "FN": 525,
+                    "FP": 811,
+                    "IoU": 0.9034821557578384,
+                    "TN": 5229038,
+                    "TP": 12506,
+                    "n_pred": 13317,
+                    "n_ref": 13031
+                }
+            },
+            "prediction_file": "./validation/ISPY2_367682.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_367682.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9387577118123971,
+                    "FN": 1044,
+                    "FP": 2748,
+                    "IoU": 0.8845837772028611,
+                    "TN": 5210025,
+                    "TP": 29063,
+                    "n_pred": 31811,
+                    "n_ref": 30107
+                }
+            },
+            "prediction_file": "./validation/ISPY2_371528.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_371528.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9210646000472994,
+                    "FN": 1296,
+                    "FP": 3043,
+                    "IoU": 0.8536790989411209,
+                    "TN": 8536618,
+                    "TP": 25315,
+                    "n_pred": 28358,
+                    "n_ref": 26611
+                }
+            },
+            "prediction_file": "./validation/ISPY2_374121.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_374121.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7372088490400546,
+                    "FN": 1993,
+                    "FP": 8793,
+                    "IoU": 0.5837931699787767,
+                    "TN": 10590917,
+                    "TP": 15129,
+                    "n_pred": 23922,
+                    "n_ref": 17122
+                }
+            },
+            "prediction_file": "./validation/ISPY2_382853.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_382853.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9389999440058234,
+                    "FN": 934,
+                    "FP": 4513,
+                    "IoU": 0.885014038124591,
+                    "TN": 5195509,
+                    "TP": 41924,
+                    "n_pred": 46437,
+                    "n_ref": 42858
+                }
+            },
+            "prediction_file": "./validation/ISPY2_384830.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_384830.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5838298291397902,
+                    "FN": 1067,
+                    "FP": 15837,
+                    "IoU": 0.41225965717464624,
+                    "TN": 8753063,
+                    "TP": 11857,
+                    "n_pred": 27694,
+                    "n_ref": 12924
+                }
+            },
+            "prediction_file": "./validation/ISPY2_397505.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_397505.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8860781577110955,
+                    "FN": 277,
+                    "FP": 2335,
+                    "IoU": 0.7954581049334377,
+                    "TN": 23580190,
+                    "TP": 10158,
+                    "n_pred": 12493,
+                    "n_ref": 10435
+                }
+            },
+            "prediction_file": "./validation/ISPY2_411008.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_411008.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9341892896650527,
+                    "FN": 982,
+                    "FP": 2647,
+                    "IoU": 0.8765058190975294,
+                    "TN": 8752438,
+                    "TP": 25757,
+                    "n_pred": 28404,
+                    "n_ref": 26739
+                }
+            },
+            "prediction_file": "./validation/ISPY2_411684.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_411684.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.526233634465669,
+                    "FN": 586,
+                    "FP": 23695,
+                    "IoU": 0.35706720330455965,
+                    "TN": 25914490,
+                    "TP": 13485,
+                    "n_pred": 37180,
+                    "n_ref": 14071
+                }
+            },
+            "prediction_file": "./validation/ISPY2_411806.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_411806.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7270070015634559,
+                    "FN": 6352,
+                    "FP": 1680,
+                    "IoU": 0.5711005500080099,
+                    "TN": 25933529,
+                    "TP": 10695,
+                    "n_pred": 12375,
+                    "n_ref": 17047
+                }
+            },
+            "prediction_file": "./validation/ISPY2_411950.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_411950.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8495722929271855,
+                    "FN": 615,
+                    "FP": 106,
+                    "IoU": 0.7384838592673195,
+                    "TN": 5240123,
+                    "TP": 2036,
+                    "n_pred": 2142,
+                    "n_ref": 2651
+                }
+            },
+            "prediction_file": "./validation/ISPY2_417474.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_417474.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8885939129610315,
+                    "FN": 1682,
+                    "FP": 668,
+                    "IoU": 0.7995222658249446,
+                    "TN": 4706870,
+                    "TP": 9372,
+                    "n_pred": 10040,
+                    "n_ref": 11054
+                }
+            },
+            "prediction_file": "./validation/ISPY2_419590.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_419590.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.641607767544799,
+                    "FN": 18944,
+                    "FP": 1136,
+                    "IoU": 0.4723287959215851,
+                    "TN": 4680538,
+                    "TP": 17974,
+                    "n_pred": 19110,
+                    "n_ref": 36918
+                }
+            },
+            "prediction_file": "./validation/ISPY2_421917.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_421917.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9169771912752475,
+                    "FN": 4667,
+                    "FP": 2329,
+                    "IoU": 0.8466831759111131,
+                    "TN": 8605121,
+                    "TP": 38635,
+                    "n_pred": 40964,
+                    "n_ref": 43302
+                }
+            },
+            "prediction_file": "./validation/ISPY2_426106.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_426106.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6549010619604247,
+                    "FN": 1608,
+                    "FP": 2909,
+                    "IoU": 0.48687947290696354,
+                    "TN": 8773021,
+                    "TP": 4286,
+                    "n_pred": 7195,
+                    "n_ref": 5894
+                }
+            },
+            "prediction_file": "./validation/ISPY2_433144.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_433144.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9484890247068928,
+                    "FN": 1545,
+                    "FP": 1034,
+                    "IoU": 0.9020248451924173,
+                    "TN": 4299053,
+                    "TP": 23744,
+                    "n_pred": 24778,
+                    "n_ref": 25289
+                }
+            },
+            "prediction_file": "./validation/ISPY2_436371.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_436371.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9355844927464475,
+                    "FN": 602,
+                    "FP": 699,
+                    "IoU": 0.8789654851614104,
+                    "TN": 5232131,
+                    "TP": 9448,
+                    "n_pred": 10147,
+                    "n_ref": 10050
+                }
+            },
+            "prediction_file": "./validation/ISPY2_437968.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_437968.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.876959619952494,
+                    "FN": 511,
+                    "FP": 266,
+                    "IoU": 0.7808798646362098,
+                    "TN": 4190758,
+                    "TP": 2769,
+                    "n_pred": 3035,
+                    "n_ref": 3280
+                }
+            },
+            "prediction_file": "./validation/ISPY2_442637.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_442637.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6181598480925254,
+                    "FN": 1354,
+                    "FP": 3070,
+                    "IoU": 0.44734540911930043,
+                    "TN": 11788475,
+                    "TP": 3581,
+                    "n_pred": 6651,
+                    "n_ref": 4935
+                }
+            },
+            "prediction_file": "./validation/ISPY2_443444.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_443444.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9515448482373758,
+                    "FN": 173,
+                    "FP": 539,
+                    "IoU": 0.9075684798130599,
+                    "TN": 4710889,
+                    "TP": 6991,
+                    "n_pred": 7530,
+                    "n_ref": 7164
+                }
+            },
+            "prediction_file": "./validation/ISPY2_459311.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_459311.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8266232255061671,
+                    "FN": 1715,
+                    "FP": 520,
+                    "IoU": 0.7044823482744943,
+                    "TN": 4317813,
+                    "TP": 5328,
+                    "n_pred": 5848,
+                    "n_ref": 7043
+                }
+            },
+            "prediction_file": "./validation/ISPY2_461824.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_461824.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.3066994327185871,
+                    "FN": 1739,
+                    "FP": 28448,
+                    "IoU": 0.1811252170138889,
+                    "TN": 9400320,
+                    "TP": 6677,
+                    "n_pred": 35125,
+                    "n_ref": 8416
+                }
+            },
+            "prediction_file": "./validation/ISPY2_464547.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_464547.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8700700017073587,
+                    "FN": 2803,
+                    "FP": 241,
+                    "IoU": 0.7700211544273194,
+                    "TN": 8768588,
+                    "TP": 10192,
+                    "n_pred": 10433,
+                    "n_ref": 12995
+                }
+            },
+            "prediction_file": "./validation/ISPY2_472799.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_472799.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7094709239549591,
+                    "FN": 2819,
+                    "FP": 4715,
+                    "IoU": 0.5497519870913763,
+                    "TN": 23576227,
+                    "TP": 9199,
+                    "n_pred": 13914,
+                    "n_ref": 12018
+                }
+            },
+            "prediction_file": "./validation/ISPY2_477816.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_477816.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8801001251564455,
+                    "FN": 4322,
+                    "FP": 947,
+                    "IoU": 0.7858739383102369,
+                    "TN": 8757217,
+                    "TP": 19338,
+                    "n_pred": 20285,
+                    "n_ref": 23660
+                }
+            },
+            "prediction_file": "./validation/ISPY2_478655.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_478655.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.2378647895585863,
+                    "FN": 2645,
+                    "FP": 59719,
+                    "IoU": 0.1349866844207723,
+                    "TN": 23520864,
+                    "TP": 9732,
+                    "n_pred": 69451,
+                    "n_ref": 12377
+                }
+            },
+            "prediction_file": "./validation/ISPY2_493519.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_493519.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8925681563550355,
+                    "FN": 4772,
+                    "FP": 10762,
+                    "IoU": 0.8059802158273381,
+                    "TN": 4114240,
+                    "TP": 64530,
+                    "n_pred": 75292,
+                    "n_ref": 69302
+                }
+            },
+            "prediction_file": "./validation/ISPY2_494022.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_494022.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9540470617223112,
+                    "FN": 2743,
+                    "FP": 987,
+                    "IoU": 0.9121319199057715,
+                    "TN": 5200430,
+                    "TP": 38720,
+                    "n_pred": 39707,
+                    "n_ref": 41463
+                }
+            },
+            "prediction_file": "./validation/ISPY2_496205.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_496205.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9425156267774274,
+                    "FN": 23107,
+                    "FP": 16309,
+                    "IoU": 0.8912809027193566,
+                    "TN": 7424971,
+                    "TP": 323133,
+                    "n_pred": 339442,
+                    "n_ref": 346240
+                }
+            },
+            "prediction_file": "./validation/ISPY2_502486.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_502486.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7718031341513335,
+                    "FN": 3003,
+                    "FP": 18738,
+                    "IoU": 0.6284034389047465,
+                    "TN": 23534453,
+                    "TP": 36766,
+                    "n_pred": 55504,
+                    "n_ref": 39769
+                }
+            },
+            "prediction_file": "./validation/ISPY2_504838.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_504838.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9284646871548308,
+                    "FN": 559,
+                    "FP": 542,
+                    "IoU": 0.8664807179238418,
+                    "TN": 13098954,
+                    "TP": 7145,
+                    "n_pred": 7687,
+                    "n_ref": 7704
+                }
+            },
+            "prediction_file": "./validation/ISPY2_517870.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_517870.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.924235294117647,
+                    "FN": 791,
+                    "FP": 980,
+                    "IoU": 0.8591426071741033,
+                    "TN": 5230307,
+                    "TP": 10802,
+                    "n_pred": 11782,
+                    "n_ref": 11593
+                }
+            },
+            "prediction_file": "./validation/ISPY2_539876.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_539876.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.497489075849475,
+                    "FN": 202,
+                    "FP": 15208,
+                    "IoU": 0.33110513065370256,
+                    "TN": 8758786,
+                    "TP": 7628,
+                    "n_pred": 22836,
+                    "n_ref": 7830
+                }
+            },
+            "prediction_file": "./validation/ISPY2_541165.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_541165.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9034448216372641,
+                    "FN": 264,
+                    "FP": 1471,
+                    "IoU": 0.8238936256597645,
+                    "TN": 23583108,
+                    "TP": 8117,
+                    "n_pred": 9588,
+                    "n_ref": 8381
+                }
+            },
+            "prediction_file": "./validation/ISPY2_542392.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_542392.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9501340482573727,
+                    "FN": 1348,
+                    "FP": 605,
+                    "IoU": 0.9050051072522982,
+                    "TN": 4698033,
+                    "TP": 18606,
+                    "n_pred": 19211,
+                    "n_ref": 19954
+                }
+            },
+            "prediction_file": "./validation/ISPY2_547892.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_547892.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8410732902895396,
+                    "FN": 1148,
+                    "FP": 7541,
+                    "IoU": 0.7257346674663048,
+                    "TN": 5211199,
+                    "TP": 22992,
+                    "n_pred": 30533,
+                    "n_ref": 24140
+                }
+            },
+            "prediction_file": "./validation/ISPY2_554577.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_554577.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8373514108259296,
+                    "FN": 150618,
+                    "FP": 102458,
+                    "IoU": 0.7202102325869354,
+                    "TN": 12139574,
+                    "TP": 651446,
+                    "n_pred": 753904,
+                    "n_ref": 802064
+                }
+            },
+            "prediction_file": "./validation/ISPY2_559021.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_559021.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7786038077969175,
+                    "FN": 249,
+                    "FP": 3414,
+                    "IoU": 0.6374703087885986,
+                    "TN": 4708488,
+                    "TP": 6441,
+                    "n_pred": 9855,
+                    "n_ref": 6690
+                }
+            },
+            "prediction_file": "./validation/ISPY2_567201.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_567201.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.721588819418904,
+                    "FN": 46,
+                    "FP": 711,
+                    "IoU": 0.5644418872266973,
+                    "TN": 4716854,
+                    "TP": 981,
+                    "n_pred": 1692,
+                    "n_ref": 1027
+                }
+            },
+            "prediction_file": "./validation/ISPY2_570685.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_570685.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6760098928277,
+                    "FN": 1077,
+                    "FP": 23289,
+                    "IoU": 0.5105853051058531,
+                    "TN": 13876614,
+                    "TP": 25420,
+                    "n_pred": 48709,
+                    "n_ref": 26497
+                }
+            },
+            "prediction_file": "./validation/ISPY2_570966.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_570966.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9354665994771818,
+                    "FN": 601,
+                    "FP": 1448,
+                    "IoU": 0.8787573964497042,
+                    "TN": 5225980,
+                    "TP": 14851,
+                    "n_pred": 16299,
+                    "n_ref": 15452
+                }
+            },
+            "prediction_file": "./validation/ISPY2_572731.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_572731.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.777994379604547,
+                    "FN": 1445,
+                    "FP": 24862,
+                    "IoU": 0.6366536835999006,
+                    "TN": 23520558,
+                    "TP": 46095,
+                    "n_pred": 70957,
+                    "n_ref": 47540
+                }
+            },
+            "prediction_file": "./validation/ISPY2_573881.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_573881.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8658126217604345,
+                    "FN": 590,
+                    "FP": 8502,
+                    "IoU": 0.7633770560066625,
+                    "TN": 5204456,
+                    "TP": 29332,
+                    "n_pred": 37834,
+                    "n_ref": 29922
+                }
+            },
+            "prediction_file": "./validation/ISPY2_575457.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_575457.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.580239299370914,
+                    "FN": 510,
+                    "FP": 6296,
+                    "IoU": 0.4086880973066898,
+                    "TN": 5231370,
+                    "TP": 4704,
+                    "n_pred": 11000,
+                    "n_ref": 5214
+                }
+            },
+            "prediction_file": "./validation/ISPY2_580632.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_580632.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9342585519056107,
+                    "FN": 426,
+                    "FP": 2672,
+                    "IoU": 0.8766277726892597,
+                    "TN": 8756713,
+                    "TP": 22013,
+                    "n_pred": 24685,
+                    "n_ref": 22439
+                }
+            },
+            "prediction_file": "./validation/ISPY2_586207.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_586207.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9573462762367009,
+                    "FN": 1244,
+                    "FP": 1410,
+                    "IoU": 0.918182378691658,
+                    "TN": 10453322,
+                    "TP": 29784,
+                    "n_pred": 31194,
+                    "n_ref": 31028
+                }
+            },
+            "prediction_file": "./validation/ISPY2_587388.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_587388.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5142345671883121,
+                    "FN": 557,
+                    "FP": 16267,
+                    "IoU": 0.3461075051498309,
+                    "TN": 25926527,
+                    "TP": 8905,
+                    "n_pred": 25172,
+                    "n_ref": 9462
+                }
+            },
+            "prediction_file": "./validation/ISPY2_596079.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_596079.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.3732495144638659,
+                    "FN": 3967,
+                    "FP": 20559,
+                    "IoU": 0.22944484589525277,
+                    "TN": 11764651,
+                    "TP": 7303,
+                    "n_pred": 27862,
+                    "n_ref": 11270
+                }
+            },
+            "prediction_file": "./validation/ISPY2_604199.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_604199.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.4616447823082239,
+                    "FN": 193,
+                    "FP": 3702,
+                    "IoU": 0.3000898472596586,
+                    "TN": 23587395,
+                    "TP": 1670,
+                    "n_pred": 5372,
+                    "n_ref": 1863
+                }
+            },
+            "prediction_file": "./validation/ISPY2_609642.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_609642.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8688126013050164,
+                    "FN": 9913,
+                    "FP": 2713,
+                    "IoU": 0.7680536419582988,
+                    "TN": 8727389,
+                    "TP": 41809,
+                    "n_pred": 44522,
+                    "n_ref": 51722
+                }
+            },
+            "prediction_file": "./validation/ISPY2_622688.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_622688.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7743601409134784,
+                    "FN": 33390,
+                    "FP": 3311,
+                    "IoU": 0.6318007163136933,
+                    "TN": 5143203,
+                    "TP": 62976,
+                    "n_pred": 66287,
+                    "n_ref": 96366
+                }
+            },
+            "prediction_file": "./validation/ISPY2_627118.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_627118.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9201550508274048,
+                    "FN": 3569,
+                    "FP": 1560,
+                    "IoU": 0.8521177522128996,
+                    "TN": 5208197,
+                    "TP": 29554,
+                    "n_pred": 31114,
+                    "n_ref": 33123
+                }
+            },
+            "prediction_file": "./validation/ISPY2_635862.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_635862.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8473401490209669,
+                    "FN": 426,
+                    "FP": 455,
+                    "IoU": 0.7351172579675286,
+                    "TN": 4190978,
+                    "TP": 2445,
+                    "n_pred": 2900,
+                    "n_ref": 2871
+                }
+            },
+            "prediction_file": "./validation/ISPY2_637051.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_637051.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9472874182377837,
+                    "FN": 1192,
+                    "FP": 178,
+                    "IoU": 0.8998538011695907,
+                    "TN": 5229200,
+                    "TP": 12310,
+                    "n_pred": 12488,
+                    "n_ref": 13502
+                }
+            },
+            "prediction_file": "./validation/ISPY2_641977.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_641977.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7865979381443299,
+                    "FN": 587,
+                    "FP": 8935,
+                    "IoU": 0.6482582837723024,
+                    "TN": 4167233,
+                    "TP": 17549,
+                    "n_pred": 26484,
+                    "n_ref": 18136
+                }
+            },
+            "prediction_file": "./validation/ISPY2_646600.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_646600.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7730659025787966,
+                    "FN": 2694,
+                    "FP": 474,
+                    "IoU": 0.6300794021485288,
+                    "TN": 8117900,
+                    "TP": 5396,
+                    "n_pred": 5870,
+                    "n_ref": 8090
+                }
+            },
+            "prediction_file": "./validation/ISPY2_649198.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_649198.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9193203468253043,
+                    "FN": 1491,
+                    "FP": 584,
+                    "IoU": 0.8506871986759732,
+                    "TN": 4966839,
+                    "TP": 11822,
+                    "n_pred": 12406,
+                    "n_ref": 13313
+                }
+            },
+            "prediction_file": "./validation/ISPY2_651401.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_651401.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9069445968184312,
+                    "FN": 3943,
+                    "FP": 298,
+                    "IoU": 0.8297334189818533,
+                    "TN": 5217972,
+                    "TP": 20667,
+                    "n_pred": 20965,
+                    "n_ref": 24610
+                }
+            },
+            "prediction_file": "./validation/ISPY2_653927.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_653927.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6169078446306169,
+                    "FN": 2389,
+                    "FP": 11192,
+                    "IoU": 0.4460352422907489,
+                    "TN": 4169788,
+                    "TP": 10935,
+                    "n_pred": 22127,
+                    "n_ref": 13324
+                }
+            },
+            "prediction_file": "./validation/ISPY2_663197.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_663197.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9436259558447481,
+                    "FN": 5677,
+                    "FP": 3472,
+                    "IoU": 0.8932687820811945,
+                    "TN": 6338984,
+                    "TP": 76571,
+                    "n_pred": 80043,
+                    "n_ref": 82248
+                }
+            },
+            "prediction_file": "./validation/ISPY2_663467.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_663467.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.752895752895753,
+                    "FN": 413,
+                    "FP": 6243,
+                    "IoU": 0.6037151702786377,
+                    "TN": 25935460,
+                    "TP": 10140,
+                    "n_pred": 16383,
+                    "n_ref": 10553
+                }
+            },
+            "prediction_file": "./validation/ISPY2_676365.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_676365.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9617332486394616,
+                    "FN": 1281,
+                    "FP": 948,
+                    "IoU": 0.9262872449485764,
+                    "TN": 4557281,
+                    "TP": 28010,
+                    "n_pred": 28958,
+                    "n_ref": 29291
+                }
+            },
+            "prediction_file": "./validation/ISPY2_677915.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_677915.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8762931983270966,
+                    "FN": 814,
+                    "FP": 310,
+                    "IoU": 0.7798237022526935,
+                    "TN": 5237775,
+                    "TP": 3981,
+                    "n_pred": 4291,
+                    "n_ref": 4795
+                }
+            },
+            "prediction_file": "./validation/ISPY2_683896.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_683896.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6753079531310356,
+                    "FN": 4677,
+                    "FP": 2888,
+                    "IoU": 0.5097848626231208,
+                    "TN": 5227448,
+                    "TP": 7867,
+                    "n_pred": 10755,
+                    "n_ref": 12544
+                }
+            },
+            "prediction_file": "./validation/ISPY2_685753.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_685753.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9198976494058462,
+                    "FN": 787,
+                    "FP": 2907,
+                    "IoU": 0.8516763702067858,
+                    "TN": 10460855,
+                    "TP": 21211,
+                    "n_pred": 24118,
+                    "n_ref": 21998
+                }
+            },
+            "prediction_file": "./validation/ISPY2_697871.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_697871.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9279839964436541,
+                    "FN": 714,
+                    "FP": 582,
+                    "IoU": 0.865643790172092,
+                    "TN": 5233234,
+                    "TP": 8350,
+                    "n_pred": 8932,
+                    "n_ref": 9064
+                }
+            },
+            "prediction_file": "./validation/ISPY2_720065.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_720065.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9412028851281188,
+                    "FN": 1367,
+                    "FP": 728,
+                    "IoU": 0.88893601229921,
+                    "TN": 8762961,
+                    "TP": 16768,
+                    "n_pred": 17496,
+                    "n_ref": 18135
+                }
+            },
+            "prediction_file": "./validation/ISPY2_721099.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_721099.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9056737817676882,
+                    "FN": 785,
+                    "FP": 2136,
+                    "IoU": 0.8276085930122757,
+                    "TN": 10468816,
+                    "TP": 14023,
+                    "n_pred": 16159,
+                    "n_ref": 14808
+                }
+            },
+            "prediction_file": "./validation/ISPY2_723918.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_723918.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8270512001460254,
+                    "FN": 848,
+                    "FP": 1047,
+                    "IoU": 0.7051042639277934,
+                    "TN": 15353574,
+                    "TP": 4531,
+                    "n_pred": 5578,
+                    "n_ref": 5379
+                }
+            },
+            "prediction_file": "./validation/ISPY2_728287.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_728287.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.26839158138636804,
+                    "FN": 1389,
+                    "FP": 28923,
+                    "IoU": 0.15499553969669938,
+                    "TN": 23557088,
+                    "TP": 5560,
+                    "n_pred": 34483,
+                    "n_ref": 6949
+                }
+            },
+            "prediction_file": "./validation/ISPY2_729732.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_729732.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9056451612903226,
+                    "FN": 1404,
+                    "FP": 234,
+                    "IoU": 0.8275607958732498,
+                    "TN": 5233381,
+                    "TP": 7861,
+                    "n_pred": 8095,
+                    "n_ref": 9265
+                }
+            },
+            "prediction_file": "./validation/ISPY2_738041.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_738041.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9507032853653873,
+                    "FN": 9281,
+                    "FP": 4384,
+                    "IoU": 0.9060385609769515,
+                    "TN": 5097448,
+                    "TP": 131767,
+                    "n_pred": 136151,
+                    "n_ref": 141048
+                }
+            },
+            "prediction_file": "./validation/ISPY2_741535.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_741535.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7783491204330176,
+                    "FN": 173,
+                    "FP": 646,
+                    "IoU": 0.6371289322108994,
+                    "TN": 5240623,
+                    "TP": 1438,
+                    "n_pred": 2084,
+                    "n_ref": 1611
+                }
+            },
+            "prediction_file": "./validation/ISPY2_753109.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_753109.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.867268684485184,
+                    "FN": 917,
+                    "FP": 2008,
+                    "IoU": 0.7656437785433859,
+                    "TN": 5230399,
+                    "TP": 9556,
+                    "n_pred": 11564,
+                    "n_ref": 10473
+                }
+            },
+            "prediction_file": "./validation/ISPY2_759015.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_759015.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7234814143245694,
+                    "FN": 1147,
+                    "FP": 73,
+                    "IoU": 0.5667613636363636,
+                    "TN": 5240064,
+                    "TP": 1596,
+                    "n_pred": 1669,
+                    "n_ref": 2743
+                }
+            },
+            "prediction_file": "./validation/ISPY2_760011.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_760011.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5792038224093479,
+                    "FN": 17391,
+                    "FP": 18189,
+                    "IoU": 0.4076614447200626,
+                    "TN": 5182813,
+                    "TP": 24487,
+                    "n_pred": 42676,
+                    "n_ref": 41878
+                }
+            },
+            "prediction_file": "./validation/ISPY2_775346.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_775346.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8037400831129581,
+                    "FN": 221,
+                    "FP": 1857,
+                    "IoU": 0.6718774672351177,
+                    "TN": 5236547,
+                    "TP": 4255,
+                    "n_pred": 6112,
+                    "n_ref": 4476
+                }
+            },
+            "prediction_file": "./validation/ISPY2_779739.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_779739.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6302718635351666,
+                    "FN": 9892,
+                    "FP": 1899,
+                    "IoU": 0.46014376631106635,
+                    "TN": 10332847,
+                    "TP": 10050,
+                    "n_pred": 11949,
+                    "n_ref": 19942
+                }
+            },
+            "prediction_file": "./validation/ISPY2_786753.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_786753.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9299638989169675,
+                    "FN": 2856,
+                    "FP": 927,
+                    "IoU": 0.8690958164642375,
+                    "TN": 5213981,
+                    "TP": 25116,
+                    "n_pred": 26043,
+                    "n_ref": 27972
+                }
+            },
+            "prediction_file": "./validation/ISPY2_790722.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_790722.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9194494584837545,
+                    "FN": 234,
+                    "FP": 480,
+                    "IoU": 0.8509083315932345,
+                    "TN": 5238091,
+                    "TP": 4075,
+                    "n_pred": 4555,
+                    "n_ref": 4309
+                }
+            },
+            "prediction_file": "./validation/ISPY2_792181.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_792181.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8939891815378394,
+                    "FN": 989,
+                    "FP": 3205,
+                    "IoU": 0.8083005759210166,
+                    "TN": 5221002,
+                    "TP": 17684,
+                    "n_pred": 20889,
+                    "n_ref": 18673
+                }
+            },
+            "prediction_file": "./validation/ISPY2_793684.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_793684.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9589553507668243,
+                    "FN": 1244,
+                    "FP": 1170,
+                    "IoU": 0.9211471875612465,
+                    "TN": 8161386,
+                    "TP": 28200,
+                    "n_pred": 29370,
+                    "n_ref": 29444
+                }
+            },
+            "prediction_file": "./validation/ISPY2_794128.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_794128.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7649310872894334,
+                    "FN": 90,
+                    "FP": 1138,
+                    "IoU": 0.6193428394296342,
+                    "TN": 5239654,
+                    "TP": 1998,
+                    "n_pred": 3136,
+                    "n_ref": 2088
+                }
+            },
+            "prediction_file": "./validation/ISPY2_797427.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_797427.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.34060987004162063,
+                    "FN": 447,
+                    "FP": 7316,
+                    "IoU": 0.20526208026208026,
+                    "TN": 23583192,
+                    "TP": 2005,
+                    "n_pred": 9321,
+                    "n_ref": 2452
+                }
+            },
+            "prediction_file": "./validation/ISPY2_798604.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_798604.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8113835160773685,
+                    "FN": 2827,
+                    "FP": 235,
+                    "IoU": 0.6826285240464345,
+                    "TN": 8772176,
+                    "TP": 6586,
+                    "n_pred": 6821,
+                    "n_ref": 9413
+                }
+            },
+            "prediction_file": "./validation/ISPY2_800447.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_800447.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9477838494231937,
+                    "FN": 1972,
+                    "FP": 780,
+                    "IoU": 0.9007501442585113,
+                    "TN": 4297648,
+                    "TP": 24976,
+                    "n_pred": 25756,
+                    "n_ref": 26948
+                }
+            },
+            "prediction_file": "./validation/ISPY2_812089.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_812089.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9048543689320389,
+                    "FN": 2064,
+                    "FP": 1366,
+                    "IoU": 0.8262411347517731,
+                    "TN": 5223140,
+                    "TP": 16310,
+                    "n_pred": 17676,
+                    "n_ref": 18374
+                }
+            },
+            "prediction_file": "./validation/ISPY2_815421.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_815421.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9265167755122389,
+                    "FN": 252,
+                    "FP": 2696,
+                    "IoU": 0.8630938559420425,
+                    "TN": 5221347,
+                    "TP": 18585,
+                    "n_pred": 21281,
+                    "n_ref": 18837
+                }
+            },
+            "prediction_file": "./validation/ISPY2_824350.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_824350.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.281648675171737,
+                    "FN": 1509,
+                    "FP": 1419,
+                    "IoU": 0.163906339234723,
+                    "TN": 8778322,
+                    "TP": 574,
+                    "n_pred": 1993,
+                    "n_ref": 2083
+                }
+            },
+            "prediction_file": "./validation/ISPY2_831702.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_831702.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9576149145681703,
+                    "FN": 1274,
+                    "FP": 1993,
+                    "IoU": 0.9186767231722799,
+                    "TN": 5202707,
+                    "TP": 36906,
+                    "n_pred": 38899,
+                    "n_ref": 38180
+                }
+            },
+            "prediction_file": "./validation/ISPY2_836114.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_836114.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6210293031273085,
+                    "FN": 264,
+                    "FP": 15126,
+                    "IoU": 0.45035714285714284,
+                    "TN": 10457760,
+                    "TP": 12610,
+                    "n_pred": 27736,
+                    "n_ref": 12874
+                }
+            },
+            "prediction_file": "./validation/ISPY2_840501.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_840501.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8900469648642539,
+                    "FN": 2113,
+                    "FP": 6643,
+                    "IoU": 0.8018780405023193,
+                    "TN": 4150109,
+                    "TP": 35439,
+                    "n_pred": 42082,
+                    "n_ref": 37552
+                }
+            },
+            "prediction_file": "./validation/ISPY2_841336.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_841336.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9653732302255673,
+                    "FN": 854,
+                    "FP": 655,
+                    "IoU": 0.9330642299503193,
+                    "TN": 5220336,
+                    "TP": 21035,
+                    "n_pred": 21690,
+                    "n_ref": 21889
+                }
+            },
+            "prediction_file": "./validation/ISPY2_843554.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_843554.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9227677755901517,
+                    "FN": 5850,
+                    "FP": 1760,
+                    "IoU": 0.8566098884534218,
+                    "TN": 4665520,
+                    "TP": 45462,
+                    "n_pred": 47222,
+                    "n_ref": 51312
+                }
+            },
+            "prediction_file": "./validation/ISPY2_860243.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_860243.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.913312693498452,
+                    "FN": 1343,
+                    "FP": 785,
+                    "IoU": 0.8404558404558404,
+                    "TN": 10472422,
+                    "TP": 11210,
+                    "n_pred": 11995,
+                    "n_ref": 12553
+                }
+            },
+            "prediction_file": "./validation/ISPY2_875089.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_875089.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.48123355176007204,
+                    "FN": 1127,
+                    "FP": 28244,
+                    "IoU": 0.31685816625575663,
+                    "TN": 21190670,
+                    "TP": 13623,
+                    "n_pred": 41867,
+                    "n_ref": 14750
+                }
+            },
+            "prediction_file": "./validation/ISPY2_883886.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_883886.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.26288229490779386,
+                    "FN": 21219,
+                    "FP": 7920,
+                    "IoU": 0.15133245958934033,
+                    "TN": 23558625,
+                    "TP": 5196,
+                    "n_pred": 13116,
+                    "n_ref": 26415
+                }
+            },
+            "prediction_file": "./validation/ISPY2_889225.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_889225.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9042036030883615,
+                    "FN": 611,
+                    "FP": 729,
+                    "IoU": 0.8251565762004175,
+                    "TN": 4186640,
+                    "TP": 6324,
+                    "n_pred": 7053,
+                    "n_ref": 6935
+                }
+            },
+            "prediction_file": "./validation/ISPY2_889721.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_889721.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8695056605293905,
+                    "FN": 1278,
+                    "FP": 1961,
+                    "IoU": 0.7691375623663578,
+                    "TN": 4311346,
+                    "TP": 10791,
+                    "n_pred": 12752,
+                    "n_ref": 12069
+                }
+            },
+            "prediction_file": "./validation/ISPY2_898618.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_898618.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.867379759144289,
+                    "FN": 1161,
+                    "FP": 612,
+                    "IoU": 0.7658169330339453,
+                    "TN": 8774253,
+                    "TP": 5798,
+                    "n_pred": 6410,
+                    "n_ref": 6959
+                }
+            },
+            "prediction_file": "./validation/ISPY2_900959.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_900959.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8955609529223296,
+                    "FN": 1541,
+                    "FP": 480,
+                    "IoU": 0.8108740408010481,
+                    "TN": 10475074,
+                    "TP": 8665,
+                    "n_pred": 9145,
+                    "n_ref": 10206
+                }
+            },
+            "prediction_file": "./validation/ISPY2_906795.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_906795.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9269204757926562,
+                    "FN": 354,
+                    "FP": 1483,
+                    "IoU": 0.8637947653295767,
+                    "TN": 5229393,
+                    "TP": 11650,
+                    "n_pred": 13133,
+                    "n_ref": 12004
+                }
+            },
+            "prediction_file": "./validation/ISPY2_913527.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_913527.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8808612573638558,
+                    "FN": 3211,
+                    "FP": 35234,
+                    "IoU": 0.787088520668114,
+                    "TN": 10305192,
+                    "TP": 142123,
+                    "n_pred": 177357,
+                    "n_ref": 145334
+                }
+            },
+            "prediction_file": "./validation/ISPY2_914968.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_914968.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7292337666072353,
+                    "FN": 276292,
+                    "FP": 25008,
+                    "IoU": 0.5738535911992917,
+                    "TN": 4535846,
+                    "TP": 405734,
+                    "n_pred": 430742,
+                    "n_ref": 682026
+                }
+            },
+            "prediction_file": "./validation/ISPY2_928815.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_928815.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9580383827215403,
+                    "FN": 2020,
+                    "FP": 8075,
+                    "IoU": 0.9194565009255122,
+                    "TN": 5117544,
+                    "TP": 115241,
+                    "n_pred": 123316,
+                    "n_ref": 117261
+                }
+            },
+            "prediction_file": "./validation/ISPY2_941926.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_941926.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9358020943997571,
+                    "FN": 142,
+                    "FP": 704,
+                    "IoU": 0.8793496862521392,
+                    "TN": 4711580,
+                    "TP": 6166,
+                    "n_pred": 6870,
+                    "n_ref": 6308
+                }
+            },
+            "prediction_file": "./validation/ISPY2_943633.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_943633.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8080536912751678,
+                    "FN": 2101,
+                    "FP": 616,
+                    "IoU": 0.6779279279279279,
+                    "TN": 5234444,
+                    "TP": 5719,
+                    "n_pred": 6335,
+                    "n_ref": 7820
+                }
+            },
+            "prediction_file": "./validation/ISPY2_946927.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_946927.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9292495665813588,
+                    "FN": 1582,
+                    "FP": 132,
+                    "IoU": 0.8678488820354665,
+                    "TN": 5229910,
+                    "TP": 11256,
+                    "n_pred": 11388,
+                    "n_ref": 12838
+                }
+            },
+            "prediction_file": "./validation/ISPY2_950742.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_950742.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9467145911768178,
+                    "FN": 5832,
+                    "FP": 2292,
+                    "IoU": 0.898820569663607,
+                    "TN": 4638299,
+                    "TP": 72169,
+                    "n_pred": 74461,
+                    "n_ref": 78001
+                }
+            },
+            "prediction_file": "./validation/ISPY2_955035.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_955035.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9209785667893483,
+                    "FN": 973,
+                    "FP": 487,
+                    "IoU": 0.8535313001605136,
+                    "TN": 4315408,
+                    "TP": 8508,
+                    "n_pred": 8995,
+                    "n_ref": 9481
+                }
+            },
+            "prediction_file": "./validation/ISPY2_966016.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_966016.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9121355397951143,
+                    "FN": 373,
+                    "FP": 519,
+                    "IoU": 0.8384643245201014,
+                    "TN": 4188782,
+                    "TP": 4630,
+                    "n_pred": 5149,
+                    "n_ref": 5003
+                }
+            },
+            "prediction_file": "./validation/ISPY2_974618.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_974618.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9291073342520287,
+                    "FN": 295,
+                    "FP": 168,
+                    "IoU": 0.8676008006863025,
+                    "TN": 5239383,
+                    "TP": 3034,
+                    "n_pred": 3202,
+                    "n_ref": 3329
+                }
+            },
+            "prediction_file": "./validation/ISPY2_982086.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_982086.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8822754694536494,
+                    "FN": 669,
+                    "FP": 4873,
+                    "IoU": 0.7893496522102702,
+                    "TN": 5216571,
+                    "TP": 20767,
+                    "n_pred": 25640,
+                    "n_ref": 21436
+                }
+            },
+            "prediction_file": "./validation/ISPY2_988665.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/ISPY2_988665.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7740135598352058,
+                    "FN": 107,
+                    "FP": 20792,
+                    "IoU": 0.6313394132900563,
+                    "TN": 3875471,
+                    "TP": 35790,
+                    "n_pred": 56582,
+                    "n_ref": 35897
+                }
+            },
+            "prediction_file": "./validation/NACT_04.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_04.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9273890005481454,
+                    "FN": 2031,
+                    "FP": 3930,
+                    "IoU": 0.8646088852548378,
+                    "TN": 3888132,
+                    "TP": 38067,
+                    "n_pred": 41997,
+                    "n_ref": 40098
+                }
+            },
+            "prediction_file": "./validation/NACT_06.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_06.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5735764555342291,
+                    "FN": 3171,
+                    "FP": 7493,
+                    "IoU": 0.402108095985647,
+                    "TN": 3914324,
+                    "TP": 7172,
+                    "n_pred": 14665,
+                    "n_ref": 10343
+                }
+            },
+            "prediction_file": "./validation/NACT_21.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_21.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7036152012503747,
+                    "FN": 1924,
+                    "FP": 99907,
+                    "IoU": 0.5427518140671025,
+                    "TN": 3709456,
+                    "TP": 120873,
+                    "n_pred": 220780,
+                    "n_ref": 122797
+                }
+            },
+            "prediction_file": "./validation/NACT_34.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_34.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8661909009812667,
+                    "FN": 198,
+                    "FP": 2202,
+                    "IoU": 0.7639653815892997,
+                    "TN": 3921992,
+                    "TP": 7768,
+                    "n_pred": 9970,
+                    "n_ref": 7966
+                }
+            },
+            "prediction_file": "./validation/NACT_35.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_35.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7417429367290092,
+                    "FN": 53,
+                    "FP": 2543,
+                    "IoU": 0.5895003162555345,
+                    "TN": 3925836,
+                    "TP": 3728,
+                    "n_pred": 6271,
+                    "n_ref": 3781
+                }
+            },
+            "prediction_file": "./validation/NACT_42.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_42.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9234284603043414,
+                    "FN": 302,
+                    "FP": 1273,
+                    "IoU": 0.8577492774566474,
+                    "TN": 3921088,
+                    "TP": 9497,
+                    "n_pred": 10770,
+                    "n_ref": 9799
+                }
+            },
+            "prediction_file": "./validation/NACT_45.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_45.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7733585439748778,
+                    "FN": 9794,
+                    "FP": 31200,
+                    "IoU": 0.6304682922432054,
+                    "TN": 16666281,
+                    "TP": 69941,
+                    "n_pred": 101141,
+                    "n_ref": 79735
+                }
+            },
+            "prediction_file": "./validation/NACT_48.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_48.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9483994528043775,
+                    "FN": 513,
+                    "FP": 1373,
+                    "IoU": 0.9018628369237174,
+                    "TN": 3912942,
+                    "TP": 17332,
+                    "n_pred": 18705,
+                    "n_ref": 17845
+                }
+            },
+            "prediction_file": "./validation/NACT_49.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_49.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7747200277801892,
+                    "FN": 49,
+                    "FP": 2546,
+                    "IoU": 0.6322800056681309,
+                    "TN": 3925103,
+                    "TP": 4462,
+                    "n_pred": 7008,
+                    "n_ref": 4511
+                }
+            },
+            "prediction_file": "./validation/NACT_53.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_53.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9057503887437914,
+                    "FN": 1593,
+                    "FP": 10893,
+                    "IoU": 0.827736541486162,
+                    "TN": 3859678,
+                    "TP": 59996,
+                    "n_pred": 70889,
+                    "n_ref": 61589
+                }
+            },
+            "prediction_file": "./validation/NACT_58.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_58.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.917696867061812,
+                    "FN": 467,
+                    "FP": 4393,
+                    "IoU": 0.8479111250195588,
+                    "TN": 3900205,
+                    "TP": 27095,
+                    "n_pred": 31488,
+                    "n_ref": 27562
+                }
+            },
+            "prediction_file": "./validation/NACT_64.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_64.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8517992424242424,
+                    "FN": 545,
+                    "FP": 1959,
+                    "IoU": 0.7418556701030928,
+                    "TN": 3922460,
+                    "TP": 7196,
+                    "n_pred": 9155,
+                    "n_ref": 7741
+                }
+            },
+            "prediction_file": "./validation/NACT_65.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_65.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.5643719925365805,
+                    "FN": 392,
+                    "FP": 8480,
+                    "IoU": 0.39311854436007937,
+                    "TN": 3917541,
+                    "TP": 5747,
+                    "n_pred": 14227,
+                    "n_ref": 6139
+                }
+            },
+            "prediction_file": "./validation/NACT_68.nii.gz",
+            "reference_file": "/home/hailt/BC_MAMAMIA/AutoNNUnet/data/nnUNet_preprocessed/Dataset501_MAMAMIA/gt_segmentations/NACT_68.nii.gz"
+        }
+    ]
+}

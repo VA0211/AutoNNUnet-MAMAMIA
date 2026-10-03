@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Stoll
+    given-names: Danny
+  - family-names: Mallik
+    given-names: Neeratyoy
+  - family-names: Schrodi
+    given-names: Simon
+  - family-names: Bergman
+    given-names: Eddie
+  - family-names: Janowski
+    given-names: Maciej
+  - family-names: Garibov
+    given-names: Samir
+  - family-names: Abou Chakra
+    given-names: Tarek
+  - family-names: Rogalla
+    given-names: Daniel
+  - family-names: Hvarfner
+    given-names: Carl
+  - family-names: Binxin
+    given-names: Ru
+  - family-names: Kober
+    given-names: Nils
+  - family-names: Vallaeys
+    given-names: Théophane
+  - family-names: Hutter
+    given-names: Frank
+title: "Neural Pipeline Search (NePS)"
+version: 0.12.1
+date-released: 2024-07-03
+url: "https://github.com/automl/neps"

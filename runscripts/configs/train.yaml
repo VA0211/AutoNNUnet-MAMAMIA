@@ -1,0 +1,20 @@
+# @package _global_
+defaults:
+  - base
+  - _self_
+  - cluster: gpu
+  - dataset: Dataset001_BrainTumour
+
+pipeline:
+  return_if_done: false
+  continue_training: true
+
+hydra:
+  output_subdir: "."
+  run: 
+    dir: output/baseline_${hp_config.encoder_type}/${dataset.name}/${trainer.configuration}
+  sweep:
+    dir: output/baseline_${hp_config.encoder_type}/${dataset.name}/${trainer.configuration}
+    subdir: fold_${fold}     
+  job:
+    chdir: true

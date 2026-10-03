@@ -1,0 +1,6 @@
+- cluster=local
+- dataset=Dataset501_MAMAMIA
+- fold=4
+- trainer.use_compressed_data=true
+- hp_config.num_epochs=300
+- hp_config.total_epochs=300

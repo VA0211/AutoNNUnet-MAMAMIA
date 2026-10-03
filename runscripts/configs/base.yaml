@@ -1,0 +1,77 @@
+seed: 42
+fold: 0
+device: cuda
+
+load: null
+save: null
+
+pipeline:
+  return_if_done: true
+  run_training: true
+  run_validation: true
+  validate_with_best: true
+  continue_training: true
+  remove_validation_files: true
+
+trainer:
+  configuration: 3d_fullres
+  fold: ${fold}
+  plans_identifier: nnUNetPlans
+  pretrained_weights_file: null
+  use_compressed_data: false
+  export_validation_probabilities: false
+  disable_checkpointing: false
+
+hp_config:
+  # Fidelity
+  num_epochs: 1000
+  total_epochs: 1000
+
+  # Base Hyperparameters
+  optimizer: SGD
+  momentum: 0.99
+  initial_lr: 1e-2
+  weight_decay: 3e-5
+  lr_scheduler: PolyLRScheduler
+  oversample_foreground_percent: 0.33
+  loss_function: DiceAndCrossEntropyLoss
+  aug_factor: 1.
+
+  # Fine-grained data augmentation
+  aug_scale_prob: 0.2
+  aug_rotate_prob: 0.2
+  aug_gaussian_noise_prob: 0.1
+  aug_gaussian_blur_prob: 0.2
+  aug_brightness_prob: 0.15
+  aug_contrast_prob: 0.15
+  aug_lowres_prob: 0.25
+  aug_gamma_1_prob: 0.1
+  aug_gamma_2_prob: 0.3
+
+  # NAS
+  encoder_type: ConvolutionalEncoder
+  base_num_features: 32
+  max_features: 320
+  activation: LeakyReLU
+  dropout_rate: 0.0
+  model_scale: 1
+  normalization: InstanceNorm
+
+hydra:
+  job_logging:
+    stdout: true  
+    stderr: true  
+  job:
+    env_set:
+      nnUNet_datasets: ${hydra:runtime.cwd}/data/nnUNet_datasets
+      nnUNet_raw: ${hydra:runtime.cwd}/data/nnUNet_raw
+      nnUNet_preprocessed: ${hydra:runtime.cwd}/data/nnUNet_preprocessed
+      nnUNet_results: ${hydra:runtime.cwd}/data/nnUNet_results
+
+      nnUNet_n_proc_DA: 30
+
+      OMP_NUM_THREADS: 1
+      MKL_NUM_THREADS: 1
+      OPENBLAS_NUM_THREADS: 1
+  
+
