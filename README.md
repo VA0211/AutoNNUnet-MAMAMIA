@@ -16,7 +16,7 @@ kept unchanged.
 
 | Item | Where it is |
 |---|---|
-| Model checkpoints (`*.pth`) | Google Drive, see *Model checkpoints* below |
+| Model checkpoints (`*.pth`) | Zenodo, see *Model checkpoints* below |
 | Imaging data (MAMA-MIA) | Public release by the dataset authors, see *Data* below |
 | Clinical metadata (`clinical_and_imaging_info.xlsx`) | Synapse `syn60868042`, gated by the dataset authors |
 | Full training outputs (`output/`), predicted masks | Derived artefacts; the per-run records are in `run_records/`, the summary numbers in `paper_data/` |
@@ -102,13 +102,20 @@ scripts. The dataset entry used by the pipeline is
 
 ## Model checkpoints
 
-The trained weights are too large for GitHub and are archived on Google Drive:
+The trained weights are too large for GitHub and are archived on Zenodo:
 
-> **Google Drive link:** _(add the shared link here before submission)_
+> **https://doi.org/10.5281/zenodo.23096318**
 
-The archive contains the `checkpoint_best.pth` of all five folds for both backbones, together
+That is the concept DOI, so it always resolves to the latest version. Cite it as:
+
+> Ly, D.-V.-A., Le, T.-H., & Pham, T.-T.-H. (2026). Deep Learning-Based Breast Tumor
+> Segmentation on Multi-Center DCE-MRI (MAMA-MIA Dataset) [Checkpoints]. Zenodo.
+> https://doi.org/10.5281/zenodo.23096318
+
+The record contains the `checkpoint_best.pth` of all five folds for both backbones, together
 with the `plans.json`, `dataset.json` and `dataset_fingerprint.json` needed to run inference,
-and a `MANIFEST.md` with SHA-256 checksums.
+a `MANIFEST.md` giving each fold's size and validation Dice, and `SHA256SUMS.txt`. The two
+archives are 6.4 GB to download and 6.5 GiB unpacked.
 
 ## Reproducing
 
@@ -116,7 +123,7 @@ and a `MANIFEST.md` with SHA-256 checksums.
 2. `bash setup_local_env.sh`
 3. Train: `bash run_resencl_fold0_only.sh` … `run_resencl_fold4_only.sh` (and the
    `run_fold*_only_local.sh` counterparts for the ConvolutionalEncoder baseline).
-   Alternatively, download the checkpoints from Google Drive and skip to step 4.
+   Alternatively, download the checkpoints from Zenodo and skip to step 4.
 4. Evaluate: `bash run_test_eval_resencl.sh`, then `bash run_official_scores_all.sh`.
 
 ### Paths
